@@ -1,0 +1,15 @@
+@import 'reset';
+#container{
+
+	height:100%;
+	.header{
+		width:100%;
+		height:0.9374rem;
+		background:red;
+		.sousuo{
+			width:5rem;
+			height:0.625rem;
+			background:blue;
+		}
+	}
+}
