@@ -13,7 +13,9 @@ $mainColor:#f36 !default;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-
+body,html{
+    height:100%;
+}
 body,
 h1,
 h2,
