@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>header</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <script src="jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="../css/"> -->
+</head>
+
+<body>
+    <!-- .........动态加载的头部 .........-->
+    <div class="header clearfix">
+        <div class="top">
+            <img src="../img/public/header-top.jpg">
+            <!-- 点击关闭top广告 -->
+            <span class="closebtn"></span>
+        </div>
+        <!-- 地址栏 -->
+        <div class="header-add clearfix">
+            <img src="../img/public/header-delveriIcon.png" alt="" class="delveri">
+            <span>广东</span><img src="../img/public/downarrow.png" class="loadmore">
+            <img src="../img/public/search.png" class="search">
+        </div>
+        <!-- tab标签切换 -->
+        <ul class="nav clearfix">
+            <li><a href="#" class="active">特价</a></li>
+            <li><a href="#">零食</a></li>
+            <li><a href="#">乳品</a></li>
+            <li><a href="#">速食</a></li>
+            <li><a href="#">水果</a></li>
+            <li><a href="#">饮品</a></li>
+            <li><a href="#">粮油</a></li>
+        </ul>
+        <!-- 轮播图 -->
+        <div class="banner">
+            <img src="../img/public/header-banner.jpg" alt="">
+        </div>
+        <!-- 图标方式导航   -->
+        <ul class="navIcon">
+            <li>
+                <a href="#">
+                    <img src="../img/public/header-icon1.PNG" alt="">
+                    <p>新人专享</p>
+                </a>
+            </li>
+            <li>
+                <a href="#"><img src="../img/public/header-icon2.PNG" alt="">
+                    <p>邀请有理</p>
+                </a>
+            </li>
+            <li>
+                <a href="#"><img src="../img/public/header-icon3.PNG" alt="">
+                    <p>每日签到</p>
+                </a>
+            </li>
+            <li>
+                <a href="#"><img src="../img/public/header-icon4.PNG" alt="">
+                    <p>会员任务</p>
+                </a>
+            </li>
+        </ul>
+        <!-- 随机内容推荐（小鲜说） -->
+        <div class="notice">
+            <div class="wrap clearfix">
+                <img src="../img/public/header-xxs.png" alt="">
+                <ul>
+                    <li>火山村妃子笑荔枝 19.9元/500g 你想吃它 比杨贵妃更快得到</li>
+                    <li>所选商品实付满39，即可免运费哦</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--.................. 头部分割线.................................  -->
+    <script>
+    // 顶部点击跳转
+    $('.top').on('click', function(e) {
+            if (e.target.className != "closebtn") {
+
+                window.open('http://www.baidu.com')
+
+            }
+        })
+        // 顶部点击收起 
+    $('.top .closebtn').on('click', function() {
+        setTimeout(function() {
+            $('.top').slideUp()
+        }, 500)
+    })
+
+    //导航栏tab标签切换（暂时只有切换类名功能）
+    $('.nav li a').on('click', function() {
+        $('.nav li a').attr('class', '');
+        $(this).attr('class', 'active');
+    });
+
+    // <!-- 随机内容推荐（小鲜说） -->
+    var idx = 0;
+    function changeIdx(){
+        idx++;
+        if(idx>1){
+            idx=0
+        }
+    }
+    setInterval(function(){
+        changeIdx()
+        $('.notice .wrap ul').animate({
+            top: -38*idx 
+        })
+    },3000)
+    
+    </script>
+</body>
+
+</html>

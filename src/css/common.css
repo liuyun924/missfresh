@@ -1,0 +1,29 @@
+@charset "UTF-8";
+::before, ::after { /* 清除默认的间距和边距*/ padding: 0; margin: 0; /*去除移动端特有的点击高亮效果*/ -webkit-tap-highlight-color: transparent; /*设置所有的盒子都以边框开始计算宽度*/ -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body, h1, h2, h3, h4, h5, h6, p, dl, dd, ul, ol, pre, form, input, textarea, th, td, select { margin: 0; padding: 0; }
+
+em { font-style: normal; }
+
+ul, li { list-style: none; }
+
+a { text-decoration: none; color: #333; }
+
+img { border: none; }
+
+table { border-collapse: collapse; }
+
+textarea { resize: none; overflow: hidden; }
+
+body { font-family: '微软雅黑', sans-serif; color: #555; font-size: 14px; }
+
+.wrap { width: 80%; min-width: 800px; /*width: 1200px;*/ margin: 0 auto; }
+
+input { border: none; /*获取焦点时的外边框*/ outline: none; /*清除移动端默认的表单样式:-webkit-appearance是用来改变按钮和其他控件的外观，使其外观类似于原生控件.
+通常我们可以在相应的元素上加上-webkit-appearance: none;来移除原生控件样式。*/ /*-webkit-appearance: none;*/ }
+
+.clear { zoom: 1; }
+
+.clear:after { content: ''; display: block; clear: both; }
+
+.clearfix::before, .clearfix::after { display: block; height: 0; clear: both; content: ""; height: 0; line-height: 0; display: block; clear: both; visibility: hidden; }
