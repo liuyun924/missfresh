@@ -13,8 +13,46 @@ table { border-collapse: collapse; }
 
 textarea { resize: none; overflow: hidden; }
 
-#container { height: 100%; }
+body { font-family: "-apple-system","Helvetica Neue",Roboto,"Segoe UI",sans-serif; }
 
-#container .header { width: 100%; height: 0.9374rem; background: red; }
+body, html { height: 100%; }
 
-#container .header .sousuo { width: 5rem; height: 0.625rem; background: blue; }
+#container { display: flex; height: 100%; flex-direction: column; font-size: 14px; }
+
+#container .header { height: 1.28125rem; font-size: 14px; background: #000; }
+
+#container .main { overflow-x: hidden; overflow-y: auto; flex: 1; }
+
+#container .main .content_box { padding-top: 10px; }
+
+#container .main .content_box .banner .banner_img { width: 100%; display: block; height: 1.265625rem; }
+
+#container .main .content_box .wares_news { display: flex; border-bottom: 1px solid #f7f7f7; }
+
+#container .main .content_box .wares_news .w_n_img_box { margin: 10px 15px; height: 90px; }
+
+#container .main .content_box .wares_news .w_n_img_box .w_n_img { width: 90px; height: 90px; display: inline-block; }
+
+#container .main .content_box .wares_news .w_n_text { flex: 1; position: relative; padding-top: 0.0935rem; }
+
+#container .main .content_box .wares_news .w_n_text .text_p1, #container .main .content_box .wares_news .w_n_text .text_p2 { font-size: 14px; }
+
+#container .main .content_box .wares_news .w_n_text .text_p2 { color: #969696; }
+
+#container .main .content_box .wares_news .w_n_text .text_tips .tips_span { color: #ff4891; display: inline-block; border: 0.015625rem solid; font-size: 9px; border-radius: 0.03125rem; border-color: #ff4891; }
+
+#container .main .content_box .wares_news .w_n_text .text_prices { margin-top: 0.0625rem; color: #ffc38d; }
+
+#container .main .content_box .wares_news .w_n_text .text_prices .t_p_num { font-size: 14px; }
+
+#container .main .content_box .wares_news .w_n_text .text_prices, #container .main .content_box .wares_news .w_n_text .text_vip_prices { font-size: 12px; }
+
+#container .main .content_box .wares_news .w_n_text .text_vip_prices { color: #ff4891; }
+
+#container .main .content_box .wares_news .w_n_text .text_vip_prices .t_v_p_num { vertical-align: sub; font-size: 20px; display: inline-block; }
+
+#container .main .content_box .wares_news .w_n_text .shop_car_box { position: absolute; bottom: 8px; right: 10px; }
+
+#container .main .content_box .wares_news .w_n_text .shop_car_box .s_car { width: 49px; height: 49px; display: block; position: absolute; bottom: -8px; right: -10px; }
+
+#container .footer { height: 0.765625rem; background: skyblue; }
