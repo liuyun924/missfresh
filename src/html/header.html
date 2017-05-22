@@ -67,7 +67,7 @@
             <div class="wrap clearfix">
                 <img src="../img/public/header-xxs.png" alt="">
                 <ul>
-                    <li>火山村妃子笑荔枝 19.9元/500g 你想吃它 比杨贵妃更快得到</li>
+                    <li class="first">火山村妃子笑荔枝 19.9元/500g 你想吃它 比杨贵妃更快得到</li>
                     <li>所选商品实付满39，即可免运费哦</li>
                 </ul>
             </div>
@@ -96,17 +96,30 @@
         $(this).attr('class', 'active');
     });
 
-    // <!-- 随机内容推荐（小鲜说） -->
+    // <!-- 内容推荐（小鲜说） -->
     var idx = 0;
+    var $ul = $('.notice .wrap ul');
+    var $lis = $ul.find('li')
+    // function changeIdx(){
+    //     idx++;
+    //     if(idx>1){
+    //         idx=0
+    //     }
+        
+    //     克隆第一个标签,插到末尾
+        $ul.find('.first').clone('true').appendTo($ul);
+
     function changeIdx(){
         idx++;
-        if(idx>1){
-            idx=0
+        if(idx>2){
+            // 立即切换到初始状态 实现无缝
+            $ul.css({top: 0 })
+            idx=1
         }
     }
     setInterval(function(){
         changeIdx()
-        $('.notice .wrap ul').animate({
+        $ul.animate({
             top: -38*idx 
         })
     },3000)
