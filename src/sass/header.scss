@@ -1,0 +1,144 @@
+@import 'common';
+%ir {
+    $mainColor: #ff489;
+    $fontcolor: rgb(38, 38, 38);
+    $fontsize: 14px;
+}
+
+
+/*@mixin spirt{background:url(../images/spirt.png) no-repeat; }
+@mixin header-arrowPoint{height:44px;width:44px;background-position: 0 0;}
+@mixin header-icon3{height:132px;width:132px;background-position: -44px 0;}
+@mixin header-icon4{height:132px;width:132px;background-position: -176px 0;}
+@mixin header-xxs{height:39px;width:132px;background-position: -308px 0;}
+@mixin header-icon2{height:132px;width:132px;background-position: -440px 0;}
+@mixin header-icon1{height:132px;width:132px;background-position: -572px 0;}
+@mixin header-delveriIcon{height:42px;width:165px;background-position: -704px 0;}
+@mixin header-countDownBgi{height:132px;width:1125px;background-position: -869px 0;}*/
+
+.header {
+    .top {
+        position: relative;
+        top: 0;
+        width: 100%;
+        display: block;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .closebtn {
+            z-index: 999;
+            width: 50px;
+            height: 50px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            margin-top: -15px;
+            background-color: #f90;
+        }
+    }
+    /*<!-- 地址栏 -->*/
+    .spirt {
+        display: inline-block;
+        background: url(../img/public/spirt.png) no-repeat;
+    }
+    .header-add {
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        vertical-align: baseline;
+        img.loadmore {
+            width: 8px;
+            height: 5px;
+            margin-top: -10px;
+            margin-left: 5px;
+        }
+        img.search {
+            height: 30px;
+            float: right;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        img.delveri {
+            width: 74px;
+            height: 16px;
+            margin-right: 10px;
+        }
+    }
+    /*<!-- tab标签切换 -->*/
+    .nav {
+        height: 40px;
+        line-height: 40px;
+        li {
+            float: left;
+            white-space: nowrap;
+            text-align: center;
+            display: inline-block;
+            line-height: 40px;
+            background-size: contain;
+            background-position: center right;
+            background-repeat: no-repeat;
+            a {
+                display: block;
+                margin: 0 10px;
+                color: #262626;
+                font-size: 14px;
+                padding: 0 3px;
+            }
+            a.active {
+                border-bottom: 2px solid #ff4891;
+            }
+        }
+    }
+    /*<!-- 轮播图 -->*/
+    .banner {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    /*<!-- 图标方式导航   -->*/
+    ul.navIcon {
+        margin: 5px 0;
+        display: flex;
+        li {
+            display: inline-block;
+            text-align: center;
+            width: 25%;
+            a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                img {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+        }
+    }
+    /*<!-- 随机内容推荐（小鲜说） -->*/
+    .notice {
+        height: 38px;
+        overflow: hidden;
+        line-height: 38px;
+        .wrap {
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            img {
+                width: 49px;
+                margin-top: 10px;
+                height: 14px;
+            }
+            ul{
+                float: left;
+                position: absolute;
+                top: 0;
+                left: 50px;
+            }
+        }
+    }
+}
