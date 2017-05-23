@@ -1,17 +1,19 @@
-  // 顶部点击跳转
-  $('.top').on('click', function(e) {
+define(['jquery'],function($){
+  return{
+    head:function(){
+          $('.top').on('click', function(e) {
           if (e.target.className != "closebtn") {
 
-              window.open('http://www.baidu.com')
+              window.open('http://www.baidu.com');
 
           }
       })
-      // 顶部点击收起 
-  $('.top .closebtn').on('click', function() {
-          setTimeout(function() {
+          // 顶部点击收起 
+          $('.top .closebtn').on('click', function() {
+            setTimeout(function() {
               $('.top').slideUp()
-          }, 500)
-      })
+            }, 500)
+          })
       // 轮播图
 
   //导航栏tab标签切换（暂时只有切换类名功能）
@@ -70,6 +72,12 @@
           slidesPerView: 1,
           paginationClickable: true,
           spaceBetween: 30,
-          loop: true
-      })
+          loop: true,
+          
+          // autoplayDisableOnInteraction : false,
+      });
   })
+
+    }
+  }
+});

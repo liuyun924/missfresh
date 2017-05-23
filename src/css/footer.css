@@ -1,15 +1,19 @@
-.footer { margin-top: 10px; display: flex; }
+.footer { margin-top: 5px; display: flex; font-size: 12px; }
 
-.footer .icon { display: inline-block; background: url(../img/public/footer/icon.png) no-repeat; background-size: 138px 34px; }
+.footer .a_foot { height: 100%; }
 
-.footer .mine { height: 34px; width: 34px; background-position: 0 0; }
+.footer .icon { display: block; margin: 0px auto; background: url(../img/public/footer/icon.png) no-repeat; width: 23px; height: 25px; background-size: auto 23px !important; vertical-align: middle; }
 
-.footer .redpac { height: 34px; width: 34px; background-position: -34px 0; }
+.footer .mine { background-position: 0 0; }
 
-.footer .car { height: 34px; width: 34px; background-position: -69px 0; }
+.footer .redpac { background-position: -23px 0; }
 
-.footer .home { height: 34px; width: 34px; background-position: -103px 0; }
+.footer .car { background-position: -46px 0; }
+
+.footer .home { background-position: -69px 0; }
 
 .footer li { width: 25%; text-align: center; }
 
 .footer li a { width: 100%; }
+
+.footer .act { color: #ff4891; }
