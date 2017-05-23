@@ -1,0 +1,177 @@
+@import 'base';
+#container{
+	display:flex;
+	height:100%;
+	flex-direction:column;
+	font-size:14px;
+	.header{
+		
+		height:1.28125rem;
+		font-size:14px;
+		background:#000;
+	}
+	.main{
+		flex:1;
+		width:200%;
+		background:#f0f0f0;
+		overflow-x: hidden;
+	   	overflow-y: auto;
+	   	display:flex;		
+		.main1{
+
+			flex:1;
+			.content_box{
+				padding-top:10px;
+
+				.banner{
+					.banner_img{
+						width:100%;
+						display:block;
+						height:1.265625rem;
+					}
+					
+				}
+				.wares_news{
+					
+					display:flex;
+					border-bottom:1px solid #f7f7f7;
+					.w_n_img_box{
+						
+						margin:10px 15px;
+						height:90px;
+						.w_n_img{
+							width:90px;
+							height:90px;
+							display:inline-block;
+							
+						}
+						
+					}
+					.w_n_text{
+						flex:1;
+						position: relative;
+						
+						padding-top:0.0935rem;
+						.text_p1,.text_p2{
+							font-size:14px;
+						}
+						.text_p2{
+							color:#969696;
+						}
+						.text_tips{
+							.tips_span{
+								color:rgb(255, 72, 145);
+								display:inline-block;
+								border:0.015625rem solid;
+								font-size:9px;
+								border-radius:0.03125rem;
+								border-color:rgb(255, 72, 145);
+							}
+						}
+						.text_prices{
+							margin-top:0.0625rem;
+							
+							color:rgb(255, 195, 141);
+							.t_p_num{
+								font-size:14px;	
+							}
+						}
+						.text_prices,.text_vip_prices{
+							font-size:12px;
+						}
+						.text_vip_prices{
+							    color: rgb(255, 72, 145);
+								line-height:22px;
+							.t_v_p_num{
+								vertical-align:bottom;
+								letter-spacing: -1px;
+								font: inherit;
+								font-size:20px;
+								height:22px;
+								    
+								// line-height:0.1875rem;
+								display:inline-block;
+							}
+						}
+						.shop_car_box{
+							position:absolute;
+							bottom:2px;
+							right:5px;
+							.s_car{
+								width:49px;
+								height:49px;
+								display:block;
+								position:absolute;
+								bottom:-8px;
+								right:-8px;
+							}
+							.add_remove{
+								display:none;
+								span{
+									display:inline-block;
+								}
+								.car_remove,.car_add{
+									width:22px;
+									height:22px;
+									text-align:center;
+    								background-repeat: no-repeat;
+    								background-size: 100% 100%;
+								}
+								.car_remove{
+									
+									background-image:url('../img/remove-img.png');
+								}
+								.car_add{
+									background-image:url('../img/add-img.png');
+								}
+								.car_num{
+									width:25px;
+									height:22px;
+									text-align:center;
+									vertical-align: top;
+								}
+							}
+						}
+					}
+				}
+				.wares_news,.remind{
+					background:#fff;
+				}
+				.remind{
+					height:50px;
+					line-height:50px;
+					text-align:center;
+					.decorate,span,.block{
+						display:inline-block;
+
+					}
+					span{
+						font-size:18px;
+						height:48px;
+						line-height:48px;
+						margin-left:5px;
+						margin-right:5px;
+						display:inline-block;
+					}
+					.block{
+							margin-right:5px;
+							margin-left:5px;
+						    margin-bottom:3px;
+							width:4px;
+							height:4px;
+							background:#000;
+							transform:rotateZ(45deg);
+						}
+				}
+			}
+			.countdown{
+				padding-top:0px;
+			}
+		}
+	}
+
+	.footer{
+		height:0.765625rem;
+		background:skyblue;
+	}
+}
