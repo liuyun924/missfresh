@@ -37,5 +37,27 @@ require(['config'],function(){
 			})
 		});
 		
+<<<<<<< HEAD
+=======
+			var left;
+			// var top;
+			$('.main').addEventListener('touchstart',function(e){
+				left = e.targetTouches[0].clientX;
+				// top = e.targetTouches[0].clientY;
+			});
+			$('.main').addEventListener('touchmove',function(e){
+				var e_left = e.targetTouches[0].clientX;
+				if(e.targetTouches[0].clientX<left){
+					$('.main').css('tarnsform','translate(-'+ (left-e_left) +')')
+				}
+				left = e.targetTouches[0].clientX;
+				// top = e.targetTouches[0].clientY;
+			});
+		
+
+		// $('.main')[0].addEventListener('touchmove',function(e){
+		// 	console.log(e.targetTouches);
+		// });
+>>>>>>> dzy
 	})
 });

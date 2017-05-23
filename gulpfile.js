@@ -55,7 +55,7 @@ gulp.task('server',function(){
 		
 		//监听文件修改，自动刷新浏览器
 		//.是本目录的意思
-		files:['./src/*.html','./src/html/*.html','./src/css/*.css','./src/js/*.js','./src/lib/*.js']
+		files:['./src/*.html','./src/html/*.html','./src/css/*.css','./src/js/*.js','./lib/*.js']
 	});
 	// 监听sass文件修改，执行编译sass文件
 	// 这句代替了上文的jianting事件

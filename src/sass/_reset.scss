@@ -7,3 +7,11 @@ a{text-decoration:none;color:blue;}
 img{border:none;vertical-align: baseline;display:inline-block}
 table{border-collapse: collapse;}
 textarea{resize: none;overflow: hidden;}
+body{
+	font-family: "-apple-system","Helvetica Neue",Roboto,"Segoe UI",sans-serif;
+	// overflow-x:hidden;
+	// overflow-y:hidden;	
+}
+body,html{
+	height:100%;
+}
