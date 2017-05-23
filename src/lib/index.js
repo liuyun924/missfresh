@@ -37,8 +37,6 @@ require(['config'],function(){
 			})
 		});
 		
-<<<<<<< HEAD
-=======
 			var left;
 			// var top;
 			$('.main').addEventListener('touchstart',function(e){
@@ -58,6 +56,6 @@ require(['config'],function(){
 		// $('.main')[0].addEventListener('touchmove',function(e){
 		// 	console.log(e.targetTouches);
 		// });
->>>>>>> dzy
+
 	})
 });
