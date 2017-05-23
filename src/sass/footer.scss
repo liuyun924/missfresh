@@ -1,0 +1,36 @@
+.footer {
+    margin-top: 10px;
+    display: flex;
+    .icon {
+        display: inline-block;
+        background: url(../img/public/footer/icon.png) no-repeat;
+        background-size: 138px 34px
+    }
+    .mine {
+        height: 34px;
+        width: 34px;
+        background-position: 0 0;
+    }
+    .redpac {
+        height: 34px;
+        width: 34px;
+        background-position: -34px 0;
+    }
+    .car {
+        height: 34px;
+        width: 34px;
+        background-position: -69px 0;
+    }
+    .home {
+        height: 34px;
+        width: 34px;
+        background-position: -103px 0;
+    }
+    li {
+        width: 25%;
+        text-align: center;
+        a {
+            width: 100%;
+        }
+    }
+}

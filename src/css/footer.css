@@ -1,0 +1,15 @@
+.footer { margin-top: 10px; display: flex; }
+
+.footer .icon { display: inline-block; background: url(../img/public/footer/icon.png) no-repeat; background-size: 138px 34px; }
+
+.footer .mine { height: 34px; width: 34px; background-position: 0 0; }
+
+.footer .redpac { height: 34px; width: 34px; background-position: -34px 0; }
+
+.footer .car { height: 34px; width: 34px; background-position: -69px 0; }
+
+.footer .home { height: 34px; width: 34px; background-position: -103px 0; }
+
+.footer li { width: 25%; text-align: center; }
+
+.footer li a { width: 100%; }

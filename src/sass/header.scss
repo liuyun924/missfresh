@@ -5,17 +5,6 @@
     $fontsize: 14px;
 }
 
-
-/*@mixin spirt{background:url(../images/spirt.png) no-repeat; }
-@mixin header-arrowPoint{height:44px;width:44px;background-position: 0 0;}
-@mixin header-icon3{height:132px;width:132px;background-position: -44px 0;}
-@mixin header-icon4{height:132px;width:132px;background-position: -176px 0;}
-@mixin header-xxs{height:39px;width:132px;background-position: -308px 0;}
-@mixin header-icon2{height:132px;width:132px;background-position: -440px 0;}
-@mixin header-icon1{height:132px;width:132px;background-position: -572px 0;}
-@mixin header-delveriIcon{height:42px;width:165px;background-position: -704px 0;}
-@mixin header-countDownBgi{height:132px;width:1125px;background-position: -869px 0;}*/
-
 .header {
     .top {
         position: relative;
@@ -94,12 +83,10 @@
         }
     }
     /*<!-- 轮播图 -->*/
-    .banner {
-        width: 100%;
-        img {
-            width: 100%;
-        }
-    }
+    .swiper-container {
+    width: 100%;
+    img{width: 100%;}
+	}  
     /*<!-- 图标方式导航   -->*/
     ul.navIcon {
         margin: 5px 0;
@@ -133,7 +120,7 @@
                 margin-top: 10px;
                 height: 14px;
             }
-            ul{
+            ul {
                 float: left;
                 position: absolute;
                 top: 0;
@@ -141,4 +128,54 @@
             }
         }
     }
+    /*分割线*/
+    .box{
+width: 100%;
+    	border-top: 10px solid #f7f7f7;
+    	padding-bottom: 10px;
+    	margin-bottom: 10px;
+    	position: relative;
+    }
+    .seckill {
+		position: relative;
+		top: 10px;
+        width: 100%;
+        text-align: center;
+        height: 44px;
+        line-height: 44px;
+        background: url(../img/public/bgseckill.PNG) no-repeat center;
+        background-size: 100% 100%;
+
+        .hour,
+        .min,
+        .sec,
+        .milsec {
+            display: inline-block;
+            font-size: 12px;
+            color: #fff;
+            width: 20px;
+            height: 20px;
+            background: #000;
+            vertical-align: middle;
+            text-align: center;
+            border-radius: 4px;
+            line-height: 20px;
+        }
+    }
+}
+
+.footer{
+	margin-top: 10px;
+	display: flex;
+		.icon{display: inline-block;background:url(../img/public/footer/icon.png) no-repeat;background-size:138px 34px }
+		.mine{height:34px;width:34px;background-position: 0 0;}
+		.redpac{height:34px;width:34px;background-position: -34px 0;}
+		.car{height:34px;width:34px;background-position: -69px 0;}
+		.home{height:34px;width:34px;background-position: -103px 0;}
+		li{
+			width: 25%;text-align: center;
+			a{width: 100%;
+				}
+
+		}
 }
