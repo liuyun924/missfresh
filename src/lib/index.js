@@ -39,8 +39,25 @@ require(['config'],function(){
 			})
 		});
 		
+		//搜索页面效果
+		
 		$('#header').load('html/header.html',function(){
 			h.head();
+			var $header_width = parseInt($('#header').css('width'));
+			$('.search_box').css('left',$header_width);
+			$('.search').on('click',function(){
+				$('.search_box').css('display','block');
+				$('.search_box').animate({
+					left:0,
+
+				},500);
+			});
+
+			$('.back').on('click',function(){
+				$('.search_box').animate({
+					left:$header_width,
+				},500);
+			})
 		});
 		$('#footer').load('html/footer.html');		
 
