@@ -1,1 +1,11 @@
+﻿#过滤根目录下的文件
 /node_modules
+
+#过滤文件
+*.zip
+
+/php/1701.php
+
+/libs
+
+src/css/cart_rem.css

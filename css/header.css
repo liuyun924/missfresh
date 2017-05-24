@@ -1,11 +1,22 @@
 @charset "UTF-8";
 body, html, h1, h2, h3, h4, p, ul, ol, li, img { padding: 0; margin: 0; list-style: none; }
 
-body, html { width: 100%; height: 100%; margin: 0 auto; position: relative; }
+body, html { width: 100%; height: 100%; margin: 0 auto; }
 
 * { box-sizing: border-box; }
 
-.header { /*<!-- 地址栏 -->*/ /*<!-- tab标签切换 -->*/ /*<!-- 轮播图 -->*/ /*<!-- 图标方式导航   -->*/ /*<!-- 随机内容推荐（小鲜说） -->*/ /*分割线*/ }
+main::-webkit-scrollbar { width: 0; height: 0; }
+
+/*@mixin spirt{background:url(../images/spirt.png) no-repeat; }
+@mixin header-arrowPoint{height:44px;width:44px;background-position: 0 0;}
+@mixin header-icon3{height:132px;width:132px;background-position: -44px 0;}
+@mixin header-icon4{height:132px;width:132px;background-position: -176px 0;}
+@mixin header-xxs{height:39px;width:132px;background-position: -308px 0;}
+@mixin header-icon2{height:132px;width:132px;background-position: -440px 0;}
+@mixin header-icon1{height:132px;width:132px;background-position: -572px 0;}
+@mixin header-delveriIcon{height:42px;width:165px;background-position: -704px 0;}
+@mixin header-countDownBgi{height:132px;width:1125px;background-position: -869px 0;}*/
+.header { /*<!-- 地址栏 -->*/ /*<!-- tab标签切换 -->*/ /*<!-- 轮播图 -->*/ /*<!-- 图标方式导航   -->*/ /*<!-- 随机内容推荐（小鲜说） -->*/ }
 
 .header .top { position: relative; top: 0; width: 100%; display: block; }
 
@@ -31,9 +42,9 @@ body, html { width: 100%; height: 100%; margin: 0 auto; position: relative; }
 
 .header .nav li a.active { border-bottom: 2px solid #ff4891; }
 
-.header .swiper-container { width: 100%; }
+.header .banner { width: 100%; }
 
-.header .swiper-container img { width: 100%; }
+.header .banner img { width: 100%; }
 
 .header ul.navIcon { margin: 5px 0; display: flex; }
 
@@ -50,25 +61,3 @@ body, html { width: 100%; height: 100%; margin: 0 auto; position: relative; }
 .header .notice .wrap img { width: 49px; margin-top: 10px; height: 14px; }
 
 .header .notice .wrap ul { float: left; position: absolute; top: 0; left: 50px; }
-
-.header .box { width: 100%; border-top: 10px solid #f7f7f7; padding-bottom: 10px; margin-bottom: 10px; position: relative; }
-
-.header .seckill { position: relative; top: 10px; width: 100%; text-align: center; height: 44px; line-height: 44px; background: url(../img/public/bgseckill.PNG) no-repeat center; background-size: 100% 100%; }
-
-.header .seckill .hour, .header .seckill .min, .header .seckill .sec, .header .seckill .milsec { display: inline-block; font-size: 12px; color: #fff; width: 20px; height: 20px; background: #000; vertical-align: middle; text-align: center; border-radius: 4px; line-height: 20px; }
-
-.footer { margin-top: 10px; display: flex; }
-
-.footer .icon { display: inline-block; background: url(../img/public/footer/icon.png) no-repeat; background-size: 138px 34px; }
-
-.footer .mine { height: 34px; width: 34px; background-position: 0 0; }
-
-.footer .redpac { height: 34px; width: 34px; background-position: -34px 0; }
-
-.footer .car { height: 34px; width: 34px; background-position: -69px 0; }
-
-.footer .home { height: 34px; width: 34px; background-position: -103px 0; }
-
-.footer li { width: 25%; text-align: center; }
-
-.footer li a { width: 100%; }
