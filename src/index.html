@@ -3,42 +3,79 @@
 
 <head>
 
-<<<<<<< HEAD
+
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <link rel="stylesheet" type="text/css" href="./css/swiper-3.4.2.min.css">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<script type="text/javascript" data-main="./lib/index.js" src="./lib/require.js"></script>
-
-</head>
-
-<body>	
-=======
-
-	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="../css/index.css">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<<<<<<< HEAD
-	<script type="text/javascript" data-main="../lib/index.js" src="../lib/require.js"></script>
-   <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/header.css">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
-=======
-	<script type="text/javascript" data-main="./lib/index.js" src="./lib/require.js"></script>
->>>>>>> dzy
 </head>
 
 <body>
 
-	
->>>>>>> bf
 	<div id="container">
-		<div class="header">
-			<div class="sousuo"></div>
+		<div id="header">
+			
 		</div>
 		<div class="main">
 			<div class="main1">
+				<div class="swiper-container">
+	       			<div class="swiper-wrapper">
+		            	<div class="swiper-slide carousel">
+		            	<img class="s_img" src="../img/public/header-banner1.jpg" alt="">
+		            	</div>
+		            	<div class="swiper-slide carousel">
+		            	<img class="s_img" src="../img/public/header-banner2.jpg" alt="">
+		            	</div>
+	        		</div>
+	        		<div class="swiper-pagination"></div>
+    			</div>
+
+			    <ul class="navIcon">
+			        <li>
+			            <a href="#">
+			                <img class="navIcon_img" src="../img/public/header-icon1.PNG" alt="">
+			                <p>新人专享</p>
+			            </a>
+			        </li>
+			        <li>
+			            <a href="#"><img class="navIcon_img" src="../img/public/header-icon2.PNG" alt="">
+			                <p>邀请有理</p>
+			            </a>
+			        </li>
+			        <li>
+			            <a href="#"><img class="navIcon_img" src="../img/public/header-icon3.PNG" alt="">
+			                <p>每日签到</p>
+			            </a>
+			        </li>
+			        <li>
+			            <a href="#"><img class="navIcon_img" src="../img/public/header-icon4.PNG" alt="">
+			                <p>会员任务</p>
+			            </a>
+			        </li>
+			    </ul>
+
+			    <div class="notice">
+			        <div class="wrap clearfix">
+			            <img src="../img/public/header-xxs.png" alt="">
+			            <ul>
+			                <li class="first">火山村妃子笑荔枝 19.9元/500g 你想吃它 比杨贵妃更快得到</li>
+			                <li>所选商品实付满39，即可免运费哦</li>
+			            </ul>
+			        </div>
+			    </div>
+				<div class="box">
+			        <div class="seckill">
+			            <span style="color: rgb(255, 29, 63);">每日特价 </span>&nbsp;
+			            <span class="hour">00</span>&nbsp;&nbsp;:
+			            <span class="min">00</span>&nbsp;&nbsp;:
+			            <span class="sec">00</span>&nbsp;&nbsp;:
+			            <span class="milsec" style="background-color:#ff4891;">00</span>
+			        </div>
+			  	</div>			        			
 				<div class="content_box countdown">
 					<div class="wares_news">
 						<div class="w_n_img_box">
@@ -798,32 +835,10 @@
 			</div>			
 		</div>
 
-		<div class="footer">
+		<div id="footer">
 			
 		</div>
 	</div>
-<<<<<<< HEAD
-=======
-
-    <script type="text/javascript">
-    // 把尺寸放大N倍（N是window.devicePixelRatio）
-    var wd = document.documentElement.clientWidth * window.devicePixelRatio / 10;
-    //物理像素*设备像素比=真实像素
-    document.getElementsByTagName("html")[0].style.fontSize = wd + "px";
-    // 把屏幕的倍率缩小到N分之一（N是window.devicePixelRatio）
-    var scale = 1 / window.devicePixelRatio;
-    var mstr = 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no';
-    document.getElementById("vp").content = mstr;
-    </script>
-    <div id="container">
-        
-        <div class="main">
-        </div>
-        <div class="footer">
-        </div>
-    </div>
-
->>>>>>> bf
 </body>
 
 </html>

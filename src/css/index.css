@@ -32,21 +32,53 @@ input { border: none; /*获取焦点时的外边框*/ outline: none; /*清除移
 
 #container { display: flex; height: 100%; flex-direction: column; font-size: 14px; }
 
-#container .header { height: 1.28125rem; font-size: 14px; background: #000; }
+#container .header { font-size: 14px; }
 
-#container .main { flex: 1; width: 200%; background: #f0f0f0; overflow-x: hidden; overflow-y: auto; display: flex; }
+#container .main { flex: 1; width: 600%; background: #f0f0f0; overflow-x: hidden; overflow-y: auto; display: flex; }
 
-#container .main .main1 { flex: 1; }
+#container .main .main1 { flex: 1; /*分割线*/ }
+
+#container .main .main1 .swiper-container { width: 5rem; height: 1.859375rem; margin: 0px; }
+
+#container .main .main1 .swiper-container .carousel .s_img { width: 100%; height: 100%; display: inline-block; }
+
+#container .main .main1 ul.navIcon { background: #fff; padding: 10px 0px; font-size: 12px; display: flex; width: 5rem; border-bottom: 1px solid #f7f7f7; }
+
+#container .main .main1 ul.navIcon li { display: inline-block; text-align: center; width: 25%; }
+
+#container .main .main1 ul.navIcon li a { display: inline-block; width: 100%; height: 100%; }
+
+#container .main .main1 ul.navIcon li a .navIcon_img { vertical-align: middle; width: 36px; height: 36px; }
+
+@media screen and (min-width: 375px) { #container .main .main1 ul.navIcon li a .navIcon_img { width: 48px; height: 48px; } }
+
+#container .main .main1 .notice { height: 38px; overflow: hidden; line-height: 38px; background: #fff; font-size: 14px; }
+
+#container .main .main1 .notice .wrap { position: relative; width: 80%; margin: 0 auto; }
+
+#container .main .main1 .notice .wrap img { margin-left: 5px; vertical-align: sub; margin-top: 10px; height: 14px; }
+
+#container .main .main1 .notice .wrap ul { margin-left: 5px; float: left; position: absolute; top: 0; left: 50px; }
+
+#container .main .main1 .box { width: 100%; padding-bottom: 10px; position: relative; }
+
+#container .main .main1 .seckill { border-top: 10px solid #fff; position: relative; top: 10px; width: 5rem; text-align: center; height: 44px; line-height: 44px; background: url(../img/public/bgseckill.PNG) no-repeat center; background-size: 100% 100%; }
+
+#container .main .main1 .seckill .hour, #container .main .main1 .seckill .min, #container .main .main1 .seckill .sec, #container .main .main1 .seckill .milsec { display: inline-block; font-size: 12px; color: #fff; width: 20px; height: 20px; background: #000; vertical-align: middle; text-align: center; border-radius: 4px; line-height: 20px; }
 
 #container .main .main1 .content_box { padding-top: 10px; }
 
-#container .main .main1 .content_box .banner .banner_img { width: 100%; display: block; height: 1.265625rem; }
+#container .main .main1 .content_box .banner .banner_img { display: block; height: 1.265625rem; }
 
-#container .main .main1 .content_box .wares_news { display: flex; border-bottom: 1px solid #f7f7f7; }
+#container .main .main1 .content_box .last_tips { margin: 0px auto; width: 80%; height: 30px; line-height: 30px; font-size: 16px; background: #fff; border-radius: 2px; border: 1px solid #f7f7f7; margin-top: 10px; margin-bottom: 10px; color: #a7a7a7; text-align: center; }
+
+#container .main .main1 .content_box .wares_news { width: 5rem; display: flex; border-bottom: 1px solid #f7f7f7; }
 
 #container .main .main1 .content_box .wares_news .w_n_img_box { margin: 10px 15px; height: 90px; }
 
 #container .main .main1 .content_box .wares_news .w_n_img_box .w_n_img { width: 90px; height: 90px; display: inline-block; }
+
+@media screen and (min-width: 375px) { #container .main .main1 .content_box .wares_news .w_n_img_box .w_n_img { width: 105px; height: 105px; } }
 
 #container .main .main1 .content_box .wares_news .w_n_text { flex: 1; position: relative; padding-top: 0.0935rem; }
 
@@ -84,7 +116,7 @@ input { border: none; /*获取焦点时的外边框*/ outline: none; /*清除移
 
 #container .main .main1 .content_box .wares_news, #container .main .main1 .content_box .remind { background: #fff; }
 
-#container .main .main1 .content_box .remind { height: 50px; line-height: 50px; text-align: center; }
+#container .main .main1 .content_box .remind { width: 5rem; height: 50px; line-height: 50px; text-align: center; }
 
 #container .main .main1 .content_box .remind .decorate, #container .main .main1 .content_box .remind span, #container .main .main1 .content_box .remind .block { display: inline-block; }
 
@@ -94,4 +126,4 @@ input { border: none; /*获取焦点时的外边框*/ outline: none; /*清除移
 
 #container .main .main1 .countdown { padding-top: 0px; }
 
-#container .footer { height: 0.765625rem; background: skyblue; }
+#container #footer { box-shadow: 0 0 10px rgba(0, 0, 0, 0.06); border-color: #ddd; border-top: 2px solid #ddd; }
