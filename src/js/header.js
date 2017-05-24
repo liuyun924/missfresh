@@ -27,9 +27,7 @@ define(['jquery'],function($){
     })
   });
 
-  document.addEventListener('touchstart',function(e){
-    console.log($('.main').css('left'));
-  });
+  
   // <!-- 内容推荐（小鲜说） -->
   var idx = 0;
   var $ul = $('.notice .wrap ul');
