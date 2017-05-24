@@ -79,13 +79,19 @@ define(['jquery'],function($){
           paginationClickable: true,
           spaceBetween: 30,
           loop: true,
-          
+          preventClicks : false,
           autoplayDisableOnInteraction : false,
       });
 
       var indexSwiper = new Swiper('.swiper_box',{
-
+          preventClicks : false,
+         onSlideChangeEnd: function(swiper){
+          $('.nav li a').attr('class','');
+          $('.nav li a').eq(swiper.activeIndex).attr('class','active');
+          // alert(swiper.activeIndex) //切换结束时，告诉我现在是第几个slide
+          }
       });
+
   });
 
     }

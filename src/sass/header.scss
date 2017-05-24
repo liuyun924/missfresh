@@ -102,85 +102,85 @@
         }
     }
     /*<!-- 轮播图 -->*/
-    .swiper-container {
-    width: 100%;
-    img{width: 100%;}
-	}  
+ //    .swiper-container {
+ //    width: 100%;
+ //    img{width: 100%;}
+	// }  
     /*<!-- 图标方式导航   -->*/
-    ul.navIcon {
-        margin: 5px 0;
-        display: flex;
-        li {
-            display: inline-block;
-            text-align: center;
-            width: 25%;
-            a {
-                display: inline-block;
-                width: 100%;
-                height: 100%;
-                img {
-                    width: 48px;
-                    height: 48px;
-                }
-            }
-        }
-    }
+    // ul.navIcon {
+    //     margin: 5px 0;
+    //     display: flex;
+    //     li {
+    //         display: inline-block;
+    //         text-align: center;
+    //         width: 25%;
+    //         a {
+    //             display: inline-block;
+    //             width: 100%;
+    //             height: 100%;
+    //             img {
+    //                 width: 48px;
+    //                 height: 48px;
+    //             }
+    //         }
+    //     }
+    // }
     /*<!-- 随机内容推荐（小鲜说） -->*/
-    .notice {
-        height: 38px;
-        overflow: hidden;
-        line-height: 38px;
-        .wrap {
-            position: relative;
-            width: 80%;
-            margin: 0 auto;
-            img {
-                width: 49px;
-                margin-top: 10px;
-                height: 14px;
-            }
-            ul {
-                float: left;
-                position: absolute;
-                top: 0;
-                left: 50px;
-            }
-        }
-    }
+    // .notice {
+    //     height: 38px;
+    //     overflow: hidden;
+    //     line-height: 38px;
+    //     .wrap {
+    //         position: relative;
+    //         width: 80%;
+    //         margin: 0 auto;
+    //         img {
+    //             width: 49px;
+    //             margin-top: 10px;
+    //             height: 14px;
+    //         }
+    //         ul {
+    //             float: left;
+    //             position: absolute;
+    //             top: 0;
+    //             left: 50px;
+    //         }
+    //     }
+    // }
     /*分割线*/
-    .box{
-        width: 100%;
-    	border-top: 10px solid #f7f7f7;
-    	padding-bottom: 10px;
-    	margin-bottom: 10px;
-    	position: relative;
-    }
-    .seckill {
-		position: relative;
-		top: 10px;
-        width: 100%;
-        text-align: center;
-        height: 44px;
-        line-height: 44px;
-        background: url(../img/public/bgseckill.PNG) no-repeat center;
-        background-size: 100% 100%;
+  //   .box{
+  //       width: 100%;
+  //   	border-top: 10px solid #f7f7f7;
+  //   	padding-bottom: 10px;
+  //   	margin-bottom: 10px;
+  //   	position: relative;
+  //   }
+  //   .seckill {
+		// position: relative;
+		// top: 10px;
+  //       width: 100%;
+  //       text-align: center;
+  //       height: 44px;
+  //       line-height: 44px;
+  //       background: url(../img/public/bgseckill.PNG) no-repeat center;
+  //       background-size: 100% 100%;
 
-        .hour,
-        .min,
-        .sec,
-        .milsec {
-            display: inline-block;
-            font-size: 12px;
-            color: #fff;
-            width: 20px;
-            height: 20px;
-            background: #000;
-            vertical-align: middle;
-            text-align: center;
-            border-radius: 4px;
-            line-height: 20px;
-        }
-    }
+  //       .hour,
+  //       .min,
+  //       .sec,
+  //       .milsec {
+  //           display: inline-block;
+  //           font-size: 12px;
+  //           color: #fff;
+  //           width: 20px;
+  //           height: 20px;
+  //           background: #000;
+  //           vertical-align: middle;
+  //           text-align: center;
+  //           border-radius: 4px;
+  //           line-height: 20px;
+  //       }
+  //   }
 }
 
 // .footer{
