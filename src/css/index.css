@@ -34,7 +34,7 @@ input { border: none; /*获取焦点时的外边框*/ outline: none; /*清除移
 
 #container .header { font-size: 14px; }
 
-#container .main { flex: 1; width: 200%; background: #f0f0f0; overflow-x: hidden; overflow-y: auto; display: flex; }
+#container .main { flex: 1; width: 600%; background: #f0f0f0; overflow-x: hidden; overflow-y: auto; display: flex; }
 
 #container .main .main1 { flex: 1; /*分割线*/ }
 
@@ -69,6 +69,8 @@ input { border: none; /*获取焦点时的外边框*/ outline: none; /*清除移
 #container .main .main1 .content_box { padding-top: 10px; }
 
 #container .main .main1 .content_box .banner .banner_img { display: block; height: 1.265625rem; }
+
+#container .main .main1 .content_box .last_tips { margin: 0px auto; width: 80%; height: 30px; line-height: 30px; font-size: 16px; background: #fff; border-radius: 2px; border: 1px solid #f7f7f7; margin-top: 10px; margin-bottom: 10px; color: #a7a7a7; text-align: center; }
 
 #container .main .main1 .content_box .wares_news { width: 5rem; display: flex; border-bottom: 1px solid #f7f7f7; }
 
