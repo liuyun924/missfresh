@@ -1,4 +1,4 @@
-data-id,imgUrl,adword,title,originPrice,discount,sellCounts,sellPoint,goodDetails
+﻿dataId,imgUrl,adword,title,originPrice,discount,sellCounts,sellPoint,goodDetails
 1, ../img/1.jpg,"三种台湾味道一次就满足",流心馅马术榴莲/奶黄/芒果味45g,19.5,9.9,3188,"{sp1:'馅料满满，香甜到心坎',sp2:'香浓榴莲、流沙奶黄、丝滑芒果、想吃哪一种',sp3:'传承台湾手作精神，口感软糯Q弹'}","{norms:135g,weight:135g,package:袋装,expirationDate:2个月,save:冷藏}"
 2, ../img/2.jpg,"香美味道令食客难以忘却",飘香腊肉200g,37.6,20.9,568,"{sp1:'总是想多吃一口的美味',sp2:'这块老腊肉,远远就闻到肉香',sp3:'炒、煮、蒸、烫,满足吃货的多种需求'}","{norms:1袋,weight:200g,package:袋装,expirationDate:180天,save:常温}"
 3, ../img/3.jpg,"香港做煲仔饭都犯这个肠",风味香肠200g,25.9,13.9,1376,"{sp1:'总是会被香肠的美味征服',sp2:'过年餐桌上少不了的菜肴',sp3:'煲仔饭少不了我的增味'}","{norms:1袋,weight:200g,package:袋装,expirationDate:180天,save:常温}"

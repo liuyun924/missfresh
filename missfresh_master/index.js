@@ -14,26 +14,28 @@ $(function(){
     // $('.accounts').click(function(){
     //     $('.boxaccounts').css('display','block').siblings().css('display','none');
     // }); 
+         var erp = erp || {};
+        erp.baseUrl = 'http://127.0.0.1:888/';
 
     $('.goodslist').click(function(){
         $('.boxgoodslist').css('display','block').siblings().css('display','none');
             // 从数据库获得商品数据
 
-                var erp = erp || {};
-                erp.baseUrl = 'http://127.0.0.1:888/';
+               
             $.post(erp.baseUrl +  'getgoods', function(response){
                     var data_arr=JSON.parse(response);
 
                    $('.boxgoodslist').find('tbody').html(
                    data_arr.map(function(item){
                         return `<tr>
-                                <th><input type="checkbox"></th>
-                                <th>${item.dataId}</th>
+                                <td><input type="checkbox" class="danxuan"></td>
+                                <td>${item.dataId}</td>
                                 <td><img src="${item.imgUrl}"></td>
                                 <td>${item.title}</td>
                                 <td>${item.originPrice}</td>
                                 <td>${item.discount}</td>
                                 <td>${item.sellCounts}</td>
+                                <td><button class="btn btn-sm delgoods">删除该商品</button></td>
                                 </tr>`
                       })
                     )
@@ -67,8 +69,21 @@ $(function(){
         var sellpoint=$('.addwindow').find('textarea').eq(0).val();
         var gooddetails=$('.addwindow').find('textarea').eq(1).val();
 
-        var erp = erp || {};
-        erp.baseUrl = 'http://127.0.0.1:888/';
+        // 添加到页面
+        var newgoods=`
+                        <td><input type="checkbox" class="danxuan"></td>
+                        <td>${dataid}</td>
+                        <td><img src="${img}"></td>
+                        <td>${title}</td>
+                        <td>${originprice}</td>
+                        <td>${discount}</td>
+                        <td>${sellcounts}</td>
+                        <td><button class="btn btn-sm delgoods">删除该商品</button></td>
+                        `
+        var $tr=$('<tr/>');
+        $tr.html(newgoods).appendTo($('tbody'));
+
+
         $.post(erp.baseUrl +  'addgoods', {
                     dataId:dataid,
                     imgUrl:img,
@@ -83,13 +98,47 @@ $(function(){
                     if(response.status){
                         console.log(response.status)
                        alert('商品添加成功');
+
                     } else {
                         alert(response.status);
                         console.log(response.status)
                     }
                 })
 
+       })      
+
+
+    // 删除单个商品
+    var $tbody = $('.boxgoodslist').find('tbody');
+
+        $tbody.on('click','button',function(e){
+         var dataid = $(this).parents('tr').find('td').eq(1).text();
+         
+                      
+                $.post(erp.baseUrl +  'delgoods',{dataId:dataid},function(response){
+                    if(response.status){
+                        console.log(response.status)
+                       alert('成功删除此商品');
+                    } else {
+                        alert(response.status);
+                        console.log(response.status);
+                    }
+                })
+                $(this).parents('tr').remove();
+        })
+        
+        
+      
+       
+       
+
+
+    
+         
+
             
 
-    })
+
+
+   
 });

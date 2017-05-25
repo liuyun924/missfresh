@@ -25,7 +25,7 @@ exports.Register = function(app){
 		saveUninitialized: true,
 	}))
 
-
+	// 获取商品接口
 app.post('/getgoods', urlencodedParser, function(request, response){
 		db.read('goodslist',function(data){
 			var _data=JSON.stringify(data);
@@ -34,7 +34,7 @@ app.post('/getgoods', urlencodedParser, function(request, response){
 			
 	})
 
-
+	// 添加商品接口
 app.post('/addgoods', urlencodedParser, function(request, response){
 		db.exists('goodslist',request.body,'dataId',function(result){
 			
@@ -47,6 +47,23 @@ app.post('/addgoods', urlencodedParser, function(request, response){
 		})
 			
 	})
+
+// 删除商品接口
+app.post('/delgoods', urlencodedParser, function(request, response){
+		db.del('goodslist',request.body,'dataId',function(result){
+			
+			if(result){
+				response.send(apiResult(ture, '该商品已删除'));
+			}else{
+
+				response.send(apiResult(false));
+			
+			}
+		})
+			
+	})
+
+
 
 
 

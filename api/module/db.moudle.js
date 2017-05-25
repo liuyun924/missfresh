@@ -61,6 +61,30 @@ var read = function(_collection, callback){
 		})
 	})
 }
+
+var del = function(_collection, data, key, callback){
+	db.open(function(error, db){
+		if(error){
+			console.log('connect db:', error);
+		}
+		//Account => 集合名（表名）
+		db.collection(_collection, function(error, collection){
+			if(error){
+				console.log(error)	
+			} else {
+				var obj = {};
+				obj[key] = data[key];
+				collection.remove(obj);
+				callback(true);
+					
+			
+			}
+			db.close();
+		})
+	})	
+}
+
 exports.exists = exists;
 exports.save = save;
 exports.read=read;
+exports.del=del;
