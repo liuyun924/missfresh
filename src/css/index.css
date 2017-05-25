@@ -1,20 +1,155 @@
-/*reset*/
-body, h1, h2, h3, h4, h5, h6, p, dl, dd, ul, ol, pre, form, input, textarea, th, td, select, figure, figcaption, button { margin: 0; padding: 0; }
+@charset "UTF-8";
+::before, ::after { /* 清除默认的间距和边距*/ padding: 0; margin: 0; /*去除移动端特有的点击高亮效果*/ -webkit-tap-highlight-color: transparent; /*设置所有的盒子都以边框开始计算宽度*/ -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body, html { height: 100%; overflow-x: hidden; }
+
+body, h1, h2, h3, h4, h5, h6, p, dl, dd, ul, ol, pre, form, input, textarea, th, td, select { margin: 0; padding: 0; }
 
 em { font-style: normal; }
 
-li { list-style: none; }
+ul, li { list-style: none; }
 
-a { text-decoration: none; color: blue; }
+a { text-decoration: none; color: #333; }
 
-img { border: none; vertical-align: baseline; display: inline-block; }
+img { border: none; }
 
 table { border-collapse: collapse; }
 
 textarea { resize: none; overflow: hidden; }
 
-#container { height: 100%; }
+body { font-family: '微软雅黑', sans-serif; color: #555; font-size: 14px; }
 
-#container .header { width: 100%; height: 0.9374rem; background: red; }
+.wrap { /*width: 80%;*/ min-width: 1000px; width: 1200px; margin: 0 auto; }
 
-#container .header .sousuo { width: 5rem; height: 0.625rem; background: blue; }
+input { border: none; /*获取焦点时的外边框*/ outline: none; /*清除移动端默认的表单样式:-webkit-appearance是用来改变按钮和其他控件的外观，使其外观类似于原生控件.
+通常我们可以在相应的元素上加上-webkit-appearance: none;来移除原生控件样式。*/ /*-webkit-appearance: none;*/ }
+
+.clear { zoom: 1; }
+
+.clear:after { content: ''; display: block; clear: both; }
+
+.clearfix::before, .clearfix::after { display: block; height: 0; clear: both; content: ""; height: 0; line-height: 0; display: block; clear: both; visibility: hidden; }
+
+#container { display: flex; height: 100%; flex-direction: column; font-size: 14px; }
+
+#container .header { font-size: 14px; }
+
+#container .main { flex: 1; width: 600%; background: #f0f0f0; overflow-x: hidden; overflow-y: auto; display: flex; }
+
+#container .main .main1 { flex: 1; /*分割线*/ }
+
+#container .main .main1 .swiper-container { width: 5rem; height: 1.859375rem; margin: 0px; }
+
+#container .main .main1 .swiper-container .carousel .s_img { width: 100%; height: 100%; display: inline-block; }
+
+@media screen and (min-width: 411px) and (max-width: 750px) { #container .main .main1 .swiper-container { width: 412px; height: 153px; margin: 0px; }
+  #container .main .main1 .swiper-container .swiper-wrapper { width: 412px; height: 153px; }
+  #container .main .main1 .swiper-container .carousel .s_img { display: inline-block; } }
+
+#container .main .main1 ul.navIcon { background: #fff; padding: 10px 0px; font-size: 12px; display: flex; border-bottom: 1px solid #f7f7f7; }
+
+#container .main .main1 ul.navIcon li { display: inline-block; text-align: center; width: 25%; }
+
+#container .main .main1 ul.navIcon li a { display: inline-block; width: 100%; height: 100%; }
+
+#container .main .main1 ul.navIcon li a .navIcon_img { vertical-align: middle; width: 36px; height: 36px; }
+
+@media screen and (min-width: 375px) { #container .main .main1 ul.navIcon li a .navIcon_img { width: 48px; height: 48px; } }
+
+#container .main .main1 .notice { height: 38px; overflow: hidden; line-height: 38px; background: #fff; font-size: 14px; }
+
+#container .main .main1 .notice .wrap { position: relative; width: 100%; margin: 0 auto; }
+
+#container .main .main1 .notice .wrap img { margin-left: 5px; vertical-align: sub; margin-top: 10px; height: 14px; }
+
+#container .main .main1 .notice .wrap ul { margin-left: 5px; float: left; position: absolute; top: 0; left: 50px; }
+
+#container .main .main1 .box { width: 100%; padding-bottom: 10px; position: relative; }
+
+#container .main .main1 .seckill { border-top: 10px solid #fff; position: relative; top: 10px; width: 100%; text-align: center; height: 44px; line-height: 44px; background: url(../img/public/bgseckill.PNG) no-repeat center; background-size: 100% 100%; }
+
+#container .main .main1 .seckill .hour, #container .main .main1 .seckill .min, #container .main .main1 .seckill .sec, #container .main .main1 .seckill .milsec { display: inline-block; font-size: 12px; color: #fff; width: 20px; height: 20px; background: #000; vertical-align: middle; text-align: center; border-radius: 4px; line-height: 20px; }
+
+#container .main .main1 .content_box { padding-top: 10px; }
+
+#container .main .main1 .content_box .banner .banner_img { display: block; height: 1.265625rem; }
+
+@media screen and (min-width: 410px) and (max-height: 720px) { #container .main .main1 .content_box .banner .banner_img { height: 0.962962962962963rem; } }
+
+#container .main .main1 .content_box .last_tips { margin: 0px auto; width: 80%; height: 30px; line-height: 30px; font-size: 16px; background: #fff; border-radius: 2px; border: 1px solid #f7f7f7; margin-top: 10px; margin-bottom: 10px; color: #a7a7a7; text-align: center; }
+
+#container .main .main1 .content_box .wares_news { width: 5rem; display: flex; border-bottom: 1px solid #f7f7f7; }
+
+#container .main .main1 .content_box .wares_news .w_n_img_box { margin: 10px 15px; height: 90px; }
+
+#container .main .main1 .content_box .wares_news .w_n_img_box .w_n_img { width: 90px; height: 90px; display: inline-block; }
+
+@media screen and (min-width: 375px) { #container .main .main1 .content_box .wares_news .w_n_img_box .w_n_img { width: 105px; height: 105px; } }
+
+#container .main .main1 .content_box .wares_news .w_n_text { flex: 1; position: relative; padding-top: 0.0935rem; }
+
+#container .main .main1 .content_box .wares_news .w_n_text .text_p1, #container .main .main1 .content_box .wares_news .w_n_text .text_p2 { font-size: 14px; }
+
+#container .main .main1 .content_box .wares_news .w_n_text .text_p2 { color: #969696; }
+
+#container .main .main1 .content_box .wares_news .w_n_text .text_tips .tips_span { color: #ff4891; display: inline-block; border: 0.015625rem solid; font-size: 9px; border-radius: 0.03125rem; border-color: #ff4891; }
+
+#container .main .main1 .content_box .wares_news .w_n_text .text_prices { margin-top: 0.0625rem; color: #ffc38d; }
+
+#container .main .main1 .content_box .wares_news .w_n_text .text_prices .t_p_num { font-size: 14px; }
+
+#container .main .main1 .content_box .wares_news .w_n_text .text_prices, #container .main .main1 .content_box .wares_news .w_n_text .text_vip_prices { font-size: 12px; }
+
+#container .main .main1 .content_box .wares_news .w_n_text .text_vip_prices { color: #ff4891; line-height: 22px; }
+
+#container .main .main1 .content_box .wares_news .w_n_text .text_vip_prices .t_v_p_num { vertical-align: bottom; letter-spacing: -1px; font: inherit; font-size: 20px; height: 22px; display: inline-block; }
+
+#container .main .main1 .content_box .wares_news .w_n_text .shop_car_box { position: absolute; bottom: 2px; right: 5px; }
+
+#container .main .main1 .content_box .wares_news .w_n_text .shop_car_box .s_car { width: 49px; height: 49px; display: block; position: absolute; bottom: -8px; right: -8px; }
+
+#container .main .main1 .content_box .wares_news .w_n_text .shop_car_box .add_remove { display: none; }
+
+#container .main .main1 .content_box .wares_news .w_n_text .shop_car_box .add_remove span { display: inline-block; }
+
+#container .main .main1 .content_box .wares_news .w_n_text .shop_car_box .add_remove .car_remove, #container .main .main1 .content_box .wares_news .w_n_text .shop_car_box .add_remove .car_add { width: 22px; height: 22px; text-align: center; background-repeat: no-repeat; background-size: 100% 100%; }
+
+#container .main .main1 .content_box .wares_news .w_n_text .shop_car_box .add_remove .car_remove { background-image: url("../img/remove-img.png"); }
+
+#container .main .main1 .content_box .wares_news .w_n_text .shop_car_box .add_remove .car_add { background-image: url("../img/add-img.png"); }
+
+#container .main .main1 .content_box .wares_news .w_n_text .shop_car_box .add_remove .car_num { width: 25px; height: 22px; text-align: center; vertical-align: top; }
+
+@media screen and (min-width: 411px) { #container .main .main1 .content_box .wares_news { width: 100%; } }
+
+#container .main .main1 .content_box .wares_news, #container .main .main1 .content_box .remind { background: #fff; }
+
+#container .main .main1 .content_box .remind { width: 100%; height: 50px; line-height: 50px; text-align: center; }
+
+#container .main .main1 .content_box .remind .decorate, #container .main .main1 .content_box .remind span, #container .main .main1 .content_box .remind .block { display: inline-block; }
+
+#container .main .main1 .content_box .remind span { font-size: 18px; height: 48px; line-height: 48px; margin-left: 5px; margin-right: 5px; display: inline-block; }
+
+#container .main .main1 .content_box .remind .block { margin-right: 5px; margin-left: 5px; margin-bottom: 3px; width: 4px; height: 4px; background: #000; transform: rotateZ(45deg); }
+
+#container .main .main1 .countdown { padding-top: 0px; }
+
+#container #footer { box-shadow: 0 0 10px rgba(0, 0, 0, 0.06); border-color: #ddd; border-top: 2px solid #ddd; }
+
+#container .search_box { width: 100%; height: 1000px; background: #f0f0f0; position: absolute; top: 0; z-index: 99; }
+
+#container .search_box .search_div { display: flex; background: #fff; height: 44px; box-sizing: border-box; padding: 5px 0; }
+
+#container .search_box .search_div .back img { margin: 8px 15px; width: 18px; height: 18px; }
+
+#container .search_box .search_div .input_box { flex: 1; border-radius: 4px; background: #e6e6e6; height: 100%; line-height: 30px; }
+
+#container .search_box .search_div .input_box img { vertical-align: inherit; width: 14px; height: 14px; margin-left: 10px; margin-right: 6px; }
+
+#container .search_box .search_div .input_box input { background: #e6e6e6; font-size: 14px; }
+
+#container .search_box .search_div .back, #container .search_box .search_div .input_box, #container .search_box .search_div .search_button { vertical-align: middle; display: inline-block; }
+
+#container .search_box .search_div .back, #container .search_box .search_div .search_button { width: 48px; height: 34px; }
+
+#container .search_box .search_div .search_button { text-align: center; line-height: 30px; font-size: 16px; }

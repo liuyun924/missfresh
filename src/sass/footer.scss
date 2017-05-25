@@ -1,30 +1,37 @@
 .footer {
-    margin-top: 10px;
+    margin-top:5px;
     display: flex;
+    font-size:12px;
+
+    .a_foot{
+        height:100%;
+        
+    }
     .icon {
-        display: inline-block;
+        display:block;
+        margin:0px auto;
         background: url(../img/public/footer/icon.png) no-repeat;
-        background-size: 138px 34px
+        width:23px;
+        height:25px; 
+        background-size: auto 23px!important;
+        vertical-align:middle;
+        
     }
     .mine {
-        height: 34px;
-        width: 34px;
+       
         background-position: 0 0;
     }
     .redpac {
-        height: 34px;
-        width: 34px;
-        background-position: -34px 0;
+        
+        background-position: -23px 0;
     }
     .car {
-        height: 34px;
-        width: 34px;
-        background-position: -69px 0;
+        
+        background-position: -46px 0;
     }
     .home {
-        height: 34px;
-        width: 34px;
-        background-position: -103px 0;
+      
+        background-position: -69px 0;
     }
     li {
         width: 25%;
@@ -32,5 +39,8 @@
         a {
             width: 100%;
         }
+    }
+    .act{
+        color:#ff4891;
     }
 }

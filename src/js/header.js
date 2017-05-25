@@ -1,25 +1,33 @@
-  // 顶部点击跳转
-  $('.top').on('click', function(e) {
+define(['jquery'],function($){
+  return{
+    head:function(){
+          $('.top').on('click', function(e) {
           if (e.target.className != "closebtn") {
 
-              window.open('http://www.baidu.com')
+              window.open('http://www.baidu.com');
 
           }
       })
-      // 顶部点击收起 
-  $('.top .closebtn').on('click', function() {
-          setTimeout(function() {
+          // 顶部点击收起 
+          $('.top .closebtn').on('click', function() {
+            setTimeout(function() {
               $('.top').slideUp()
-          }, 500)
-      })
+            }, 500)
+          })
       // 轮播图
 
-  //导航栏tab标签切换（暂时只有切换类名功能）
-  $('.nav li a').on('click', function() {
+  //导航栏tab标签切换
+  $('.nav li').each(function(i){
+    $(this).on('click',function(){
       $('.nav li a').attr('class', '');
-      $(this).attr('class', 'active');
+      $(this).children().attr('class', 'active');
+      var $main1_width = parseInt($('.main1').css('width'));
+      $('.main').css('transition-duration','300ms')
+      $('.main').css('transform','translate3d(-'+ i*$main1_width +'px,0px,0px)')
+    })
   });
 
+  
   // <!-- 内容推荐（小鲜说） -->
   var idx = 0;
   var $ul = $('.notice .wrap ul');
@@ -64,12 +72,28 @@
 
   // 轮播图 swiper插件
   $(function() {
-      var mySwiper = new Swiper('.swiper-container', {
+      var mySwiper = new Swiper('.carousel_box', {
           autoplay: 2000,
           pagination: '.swiper-pagination',
           slidesPerView: 1,
           paginationClickable: true,
           spaceBetween: 30,
-          loop: true
-      })
-  })
+          loop: true,
+          preventClicks : false,
+          autoplayDisableOnInteraction : false,
+      });
+
+      var indexSwiper = new Swiper('.swiper_box',{
+          preventClicks : false,
+         onSlideChangeEnd: function(swiper){
+          $('.nav li a').attr('class','');
+          $('.nav li a').eq(swiper.activeIndex).attr('class','active');
+          // alert(swiper.activeIndex) //切换结束时，告诉我现在是第几个slide
+          }
+      });
+
+  });
+
+    }
+  }
+});

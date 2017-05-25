@@ -1,7 +1,9 @@
 require(['config'],function(){
-	require(['jquery','mobile'],function($,m){
+	require(['jquery','mobile','header','swiper'],function($,m,h,s){
 		//移动端适配
 		m.mobile();
+
+
 
 		//购物车按钮效果
 		$('.s_car').each(function(i){
@@ -36,6 +38,29 @@ require(['config'],function(){
 				$('.car_num')[i].innerText = val + 1; 
 			})
 		});
+		
+		//搜索页面效果
+		
+		$('#header').load('html/header.html',function(){
+			h.head();
+			var $header_width = parseInt($('#header').css('width'));
+			$('.search_box').css('left',$header_width);
+			$('.search').on('click',function(){
+				$('.search_box').css('display','block');
+				$('.search_box').animate({
+					left:0,
+
+				},500);
+			});
+
+			$('.back').on('click',function(){
+				$('.search_box').animate({
+					left:$header_width,
+				},500);
+			})
+		});
+		$('#footer').load('html/footer.html');		
+
 		
 	})
 });
