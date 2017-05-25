@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+    <link href="index.css" rel="stylesheet">
+    <link href="bootstrapCustom.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="topbar">
+        <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#" id="toggle">每日优鲜后台管理系统</a>
+            </div>
+        </div>
+        </nav>
+    </div>
+    <aside id="aside" class="sideshow">
+        <ul class="vnav vnblack">
+            <li>
+                <h4 class="static-item"><span class="glyphicon glyphicon-equalizer"></span>内容管理</h4>
+                <ul class="vnav">
+                    <li class="goodslist"><a href="#"><span class="glyphicon glyphicon-th-large"></span>产品管理</a></li>                 
+                    <li><a href="#"><span class="glyphicon glyphicon-tags"></span>标签管理</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-edit"></span>评论管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <h4 class="static-item"><span class="glyphicon glyphicon-cog"></span>系统设置</h4>
+                <ul class="vnav">
+                    <li><a href="#">友链管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <h4 class="static-item"><span class="glyphicon glyphicon-user"></span>个人中心</h4>
+                <ul class="vnav">
+                    <li><a href="#"><span class="glyphicon glyphicon-asterisk"></span>修改密码</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>注销</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <div class="main ">
+			<!-- 添加商品弹窗 -->
+			<div class="addwindow">
+				<form >
+					<legend>添加商品</legend>
+					<label >商品ID：<input type="text"></label>
+					<label >商品图片：<input type="text"></label>
+					<label >广告词：<input type="text"></label>
+					<label >商品名称：<input type="text"></label>
+					<label >市场价：<input type="text"></label>
+					<label >折扣价：<input type="text"></label><label>销量：<input type="text"></label>商品卖点：
+					<label ><textarea name="" id="" cols="30" rows="5"></textarea></label>商品详情：
+					<label><textarea name="" id="" cols="30" rows="5"></textarea></label>
+					<button class="addcancel">取消</button>
+					<button class="addok">确定添加</button>
+				</form>
+			</div>
+        <div class="container-fluid">
+            <div class="row">
+                <ol class="breadcrumb">
+                        <li>欢迎<a href="#"> admin</a></li>
+                    </ol>
+                <div class="col-md-12">
+                    
+                  <!--   <div class=" box boxaccounts ">
+                        <div>
+                            
+                            <button class="btn btn-default">添加账户</button>&nbsp;&nbsp;&nbsp;<button class="btn btn-default">删除账户</button>
+                        </div>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                <th><input type="checkbox"> 全选</th>
+                                <th>用户ID</th>
+                                <th>用户邮箱</th>
+                                <th>电话号码</th>
+                                <th>用户密码</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> -->
+                     <div class="box boxgoodslist">
+                        <div>
+                            
+                             <button class="btn btn-default addgoods">添加商品</button>
+                             <button class="btn btn-default">删除商品</button>
+                        </div>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                <th><input type="checkbox"> 全选</th>
+                                <th>商品ID</th>
+                                <th>商品图片</th>
+                                <th>商品名</th>
+                                <th>市场价</th>
+                                <th>折扣价</th>
+                                <th>销量</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               <!--  <tr>
+                                <th><input type="checkbox"></th>
+                                <th>0</th>
+                                <td>img</td>
+                                <td>adword</td>
+                                <td>originPrice</td>
+                                <td>discount</td>
+                                <td>sellcounts</td>
+                                <td>selldetail</td>
+                                <td>gooddetail</td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                        
+                </div>
+            </div>
+        </div>
+     </div>
+   
+</body>
+
+</html>

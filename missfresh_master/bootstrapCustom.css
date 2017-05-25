@@ -1,0 +1,52 @@
+.vnblack {
+  background-color: #2E363F;
+}
+.vnblack h4 {
+  color: #EEE;
+  border-bottom: 1px solid #1F262D;
+  border-top: 1px solid #37414B;
+}
+.vnblack a {
+  color: #CCC;
+}
+.vnblack a:hover,
+.vnblack a.on,
+.vnblack a:focus {
+  background-color: #F3F3F3;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px 0 0 5px;
+  box-shadow: 0 0 2px #1F262D;
+}
+.vnblack .vnav {
+  background-color: #323b45;
+  border-bottom: 1px solid #1F262D;
+  border-top: 1px solid #37414B;
+  padding-left: 15px;
+}
+.vnav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.vnav li {
+  position: relative;
+  display: block;
+}
+.vnav li .glyphicon {
+  margin-right: 15px;
+}
+.vnav li h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 15px;
+}
+.vnav li a {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+.breadcrumb {
+  margin: 20px 10px;
+}

@@ -1,8 +1,8 @@
 require(['config'],function(){
-	require(['jquery','mobile','header','swiper'],function($,m,h,s){
+	require(['jquery','mobile'],function($,m){
 		//移动端适配
 		m.mobile();
-		
+
 		//购物车按钮效果
 		$('.s_car').each(function(i){
 			$('.s_car').eq(i).on('click',function(){
@@ -37,9 +37,25 @@ require(['config'],function(){
 			})
 		});
 		
-		$('#header').load('html/header.html',function(){
-			h.head();
-		});
-		$('#footer').load('html/footer.html');
+			var left;
+			// var top;
+			$('.main').addEventListener('touchstart',function(e){
+				left = e.targetTouches[0].clientX;
+				// top = e.targetTouches[0].clientY;
+			});
+			$('.main').addEventListener('touchmove',function(e){
+				var e_left = e.targetTouches[0].clientX;
+				if(e.targetTouches[0].clientX<left){
+					$('.main').css('tarnsform','translate(-'+ (left-e_left) +')')
+				}
+				left = e.targetTouches[0].clientX;
+				// top = e.targetTouches[0].clientY;
+			});
+		
+
+		// $('.main')[0].addEventListener('touchmove',function(e){
+		// 	console.log(e.targetTouches);
+		// });
+
 	})
 });

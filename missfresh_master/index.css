@@ -1,0 +1,72 @@
+* {
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  position: relative;
+  background-color: #F3F3F3 !important;
+}
+.topbar {
+  position: relative;
+  height: 50px;
+  z-index: 1030;
+}
+.topbar .navbar {
+  border-radius: 0;
+}
+aside {
+  position: absolute;
+  top: 0;
+  padding-top: 50px;
+  left: 0;
+  width: 230px;
+  min-height: 100%;
+  z-index: 880;
+  background-color: #2E363F;
+  overflow: hidden;
+}
+aside .vnav {
+  width: 230px;
+}
+.main {
+  padding-left: 230px;
+  width: 100%;
+  position: relative;
+}
+.box {
+  background-color: white;
+  border: 1px solid #DDDDDD;
+  padding: 20px;
+}
+
+.main .addwindow{
+  width: 320px;
+  position: absolute;
+  top: 60px;
+  left:600px;
+  background-color: pink;
+  padding: 20px;
+  display: none;
+  z-index: 100;
+}
+.main .addwindow label{
+  display: block;;
+  margin-top: 10px;
+}
+.main .addwindow label input{
+  width:200px;
+  display: block;
+  float: right;
+}
+.main .addwindow button{
+  display: inline-block;
+}
+.main .addwindow .addok{
+  margin-left: 100px;
+  background-color: yellow;
+}
+.main .addwindow .addcancel{
+  margin-left: 20px;
+  background-color: green;
+}
