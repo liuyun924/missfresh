@@ -5,7 +5,7 @@
 
     .a_foot{
         height:100%;
-        
+        position: relative;
     }
     .icon {
         display:block;
@@ -42,5 +42,18 @@
     }
     .act{
         color:#ff4891;
+    }
+    .wares_num{
+        position:absolute;
+        right:-2px;
+        top:-29px;
+        width:15px;
+        height:15px;
+        border-radius:20px;
+        display:none;
+        color:#fff;
+        text-align:center;
+        line-height:15px;
+        background:#ff4891;
     }
 }

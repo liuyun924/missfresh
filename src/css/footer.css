@@ -1,6 +1,6 @@
 .footer { margin-top: 5px; display: flex; font-size: 12px; }
 
-.footer .a_foot { height: 100%; }
+.footer .a_foot { height: 100%; position: relative; }
 
 .footer .icon { display: block; margin: 0px auto; background: url(../img/public/footer/icon.png) no-repeat; width: 23px; height: 25px; background-size: auto 23px !important; vertical-align: middle; }
 
@@ -17,3 +17,5 @@
 .footer li a { width: 100%; }
 
 .footer .act { color: #ff4891; }
+
+.footer .wares_num { position: absolute; right: -2px; top: -29px; width: 15px; height: 15px; border-radius: 20px; display: none; color: #fff; text-align: center; line-height: 15px; background: #ff4891; }
