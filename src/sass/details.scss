@@ -8,19 +8,23 @@
 }
 
 .top {
-	position: fixed;
-	top: 0;
+    z-index: 999;
+    position: fixed;
+    top: 0;
     padding-left: 1em;
     width: 100%;
     height: 43px;
     line-height: 43px;
     color: #4b4b4b;
     box-shadow: 0 0 10px rgba(0, 0, 0, .06);
-    position: relative;
+    background-color: #fff;
     i {
+        color: #969696;
         font-size: 40px;
     }
     h1 {
+        height: 100%;
+        display: inline-block;
         margin-left: 17em;
         font-weight: normal;
         font-size: 17px;
@@ -29,9 +33,16 @@
 }
 
 .carouserBox {
-    width: 100%;
+    margin-top: 45px;
+    position: relative;
     text-align: center;
-    img {
+    img.halfpr {
+        height: 44px;
+        position: absolute;
+        top: 0;
+        left: 2em;
+    }
+    img.maingood {
         width: 65%;
     }
 }
@@ -41,21 +52,229 @@
     background-size: 100% 106%;
     .box {
         margin-left: 20px;
-        padding-left: 5px;
-        padding-right: 22px;
+        padding-left: 40px;
+        padding-right: 40px;
         .title {
             padding-top: 32px;
             padding-bottom: 16px;
-            /*text-align: center;*/
-            span {
-                font-size: 21px;
-                color: #969696;
+            font-size: 21px;
+            color: #969696;
+        }
+        h2 {
+            font-size: 16px;
+            color: #262626;
+            margin: 0;
+            padding-bottom: 6px;
+        }
+        p {
+            margin: 10px 0;
+            font: inherit;
+            font-size: 100%;
+            color: rgb(255, 195, 141);
+        }
+        p.price {
+            color: #ff4891;
+            vertical-align: bottom;
+            font-size: 22px;
+            border-bottom: 1px solid #f5f5f5;
+            padding-bottom: 8px;
+            span.pricenow {
+                font-size: 40px;
             }
-            h2 {
-                font-size: 16px;
-                color: #262626;
-                margin: 0;
-                padding-bottom: 6px;
+            span.cellnum {
+                color: #969696;
+                font-size: 12px;
+                margin-top: 13px;
+                margin-right: 1.7em;
+            }
+        }
+        /*p.delivery {
+                line-height: 44px;
+                float: left;
+                color: #969696;
+                i.fa {
+                    font-size: 20px;
+                    margin: 0 20px;
+                }
+            }*/
+        .product-news {
+            display: flex;
+            height: 50px;
+            vertical-align: bottom;
+            justify-content: space-around;
+            p {
+                img {
+                    vertical-align: middle;
+                }
+                span {
+                    color: #969696;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+
+/*积分区*/
+
+.integral {
+    width: 100%;
+    border-radius: 10px;
+    border-top: 10px solid #f5f5f5;
+    border-left: 10px solid #f5f5f5;
+    border-right: 10px solid #f5f5f5;
+    padding-bottom: 10px;
+    .integral-detail {
+        padding: 0 10px;
+        line-height: 44px;
+        img {
+            vertical-align: middle;
+            margin: 0 20px;
+            width: 34px;
+        }
+        img.explain {
+            vertical-align: middle;
+        }
+    }
+    .sharepack {
+        background: rgba(255, 72, 145, .1);
+        margin: 0 10px;
+        border-radius: 3px;
+        width: 95%;
+        img {
+            width: 80px;
+            margin: 5px;
+            vertical-align: middle;
+        }
+        span {
+            line-height: 55px;
+        }
+    }
+}
+
+
+/*亮点*/
+
+.light-points {
+    padding: 0 40px;
+    .title {
+        font-size: 16px;
+        color: #262626;
+        clear: both;
+        padding-left: 20px;
+        text-align: center;
+        line-height: 36px;
+        img {
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
+        }
+    }
+    ul.mainlp {
+        padding: 0 14px;
+        background: url(../img/details/product-bg2.png) no-repeat;
+        background-size: 100% 100%;
+        li {
+            color: #262626;
+            line-height: 40px;
+            font-size: 14px;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:first-child {
+            padding-top: 20px;
+        }
+    }
+}
+
+
+/*详情区*/
+
+.graphic-details {
+    margin-top: 20px;
+    border: 10px solid #F5F5F5;
+    width: 80%;
+    padding: 0 40px;
+    .top-title {
+        text-align: center;
+        width: 100%;
+        font-size: 16px;
+        color: #262626;
+        clear: both;
+        position: relative;
+        margin: 0 auto;
+        line-height: 44px;
+    }
+    .detail-item {
+        color: #262626;
+        line-height: 40px;
+        font-size: 14px;
+        border-top: 1px solid #f5f5f5;
+    }
+}
+
+
+/*分享*/
+
+.share-menu {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font: inherit;
+    font-size: 100%;
+    p {
+        display: block;
+        -webkit-margin-before: 1em;
+        -webkit-margin-after: 1em;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        text-align: center;
+    }
+    ul {
+        width: 100%;
+        height: auto;
+        display: flex;
+        li {
+            width: 25%;
+            height: auto;
+            overflow: hidden;
+            float: left;
+            text-align: center;
+            margin: 5px 0;
+            .wechat {
+                background: url(../img/details/share-weixin.png) no-repeat;
+                background-size: 100% 100%;
+            }
+            .weibo {
+                background: url(../img/details/share-weibo.png) no-repeat;
+                background-size: 100% 100%;
+            }
+            .qq {
+                background: url(../img/details/share-qq.png) no-repeat;
+                background-size: 100% 100%;
+            }
+            .qqzone {
+                background: url(../img/details/share-qqzone.png) no-repeat;
+                background-size: 100% 100%;
+            }
+            p {
+                width: 53px;
+                height: 53px;
+                margin: 0 auto 10px;
+            }
+            span {
+                font-size: 13px;
+                color: #4B4B4B;
+                line-height: 24px;
+            }
+            .share-btn {
+                width: 100%;
+                height: auto;	
+                overflow: hidden;
+                text-align: center;
+                box-sizing: border-box;
+                padding: 0 10px;
             }
         }
     }
