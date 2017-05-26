@@ -18,16 +18,7 @@ require(['config'],function(){
 			console.log(arr);
 			$('.main_list').html(arr.map((item)=>{
 				console.log(obj[item]);
-				// obj[arr[i]].
-				// var num = arr[i] + '_num';
-				// console.log(obj[arr[i]]);
-				
-
-				// var img = obj[arr[i]].imgUrl;
-				// var title = obj[arr[i]].title;
-				// var vip = obj[arr[i]].discount;
-				// var keyong = obj[arr[i]].originPrice
-				// console.log(title,vip,keyong);
+			
 				var num = item + '_num';
 				console.log(num);
 				return `
@@ -70,6 +61,48 @@ require(['config'],function(){
 							</ul>
 						</div>
 					</a>	
+				</div>
+				`
+			})
+			)
+
+
+			$('.list_cate').find('ul').html(arr.map((item)=>{
+				console.log(obj[item]);
+			
+				var num = item + '_num';
+				console.log(num);
+				return `
+				<li>
+					<div class="pro_li_left"><img src="${obj[item].imgUrl}" alt=""></div>
+					<div class="pro_li_right">
+						<ul>
+							<li class="list_1">
+								<p>${obj[item].title}
+									<span><b>${localStorage[num]}</b>件</span>
+								</p>
+							</li>
+							<li class="list_2"><span>2小时达</span></li>
+							<li class="list_3">
+								<span class="span1">可用券价<b>￥${obj[item].originPrice}</b></span>
+								<span class="span2">舌尖会员价<b>￥${obj[item].discount}</b></span>
+							</li>
+						</ul>
+					</div>
+				</li>
+				`
+			})
+			)
+
+
+			$('.pro_lis_left').html(arr.map((item)=>{
+				console.log(obj[item]);
+			
+				var num = item + '_num';
+				console.log(num);
+				return `
+				<div class="img_item">
+					<img src="${obj[item].imgUrl}" alt="">
 				</div>
 				`
 			})
