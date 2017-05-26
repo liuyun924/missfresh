@@ -374,7 +374,29 @@ require(['config'],function(){
 			});
 		})
 
-		$('#footer').load('../html/footer.html');
+		var arr =[];
+
+		for (var i = 1; i <=13; i++) {
+			if(localStorage[i]){
+				arr.push(localStorage[i]);
+			}
+
+		}
+		console.log(arr);
+
+		$.post('./getgoods',function(res){
+			var obj = JSON.parse(res);
+			console.log(obj);
+			for(var i=0;i<=arr.length-1;i++){
+				// obj[arr[i]].
+				var num = arr[i] + '_num';
+				localStorage[num]
+			}
+		});
+
+
+		//尾部载入
+		$('#footer').load('html/footer.html');	
 	})
 })
 

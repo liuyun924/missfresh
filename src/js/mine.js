@@ -3,11 +3,6 @@ require(['config'],function(){
 		// 引入尾部
 		$('#webFooter').load('footer.html');
 
-
-		// 用户登录后显示用户信息
-		// var erp = erp || {};
-		// erp.baseUrl = 'http://127.0.0.1:888/';
-
 		// 显示
 		$.get('/mine', function(response){
 			if(response.status){
@@ -16,7 +11,7 @@ require(['config'],function(){
 				$('#user').css('display','block');
 				$('.username').text(response.data);
 			} else {
-				alert(response.status);
+				alert('您还没登录');
 				console.log(response.status)
 			}
 		})		

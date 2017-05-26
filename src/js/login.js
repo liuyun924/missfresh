@@ -13,7 +13,7 @@ require(['config'],function(){
 			}, function(response){
 				if(response.status){
 					console.log(response.status)
-					// window.location.href = "http://127.0.0.1:888/html/mine.html";
+					window.location.href = "http://10.3.133.77:88/src/html/mine.html";
 				} else {
 					alert(response.status);
 					console.log(response.status)

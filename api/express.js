@@ -15,26 +15,26 @@ var cookieParser = require('cookie-parser');
 //如果要使用session，需要单独包含这个模块
 var session = require('express-session');
 
-app.use(cookieParser());
+	app.use(cookieParser());
 	app.use(session({
 		secret: '12345',//用来对session数据进行加密的字符串.这个属性值为必须指定的属性
-		name: 'testapp',   //这里的name值得是cookie的name，默认cookie的name是：connect.sid
+		name: 'users',   //这里的name值得是cookie的name，默认cookie的name是：connect.sid
 		cookie: {maxAge: 80000 },  //设置maxAge是80000ms，即80s后session和相应的cookie失效过期
 		resave: false,
 		saveUninitialized: true,
 	}))
 
 
-app.post('/getgoods', urlencodedParser, function(request, response){
-		db.read('goodslist',function(data){
-			var _data=JSON.stringify(data);
-			response.send(_data);
-		})
-			
-})
+	app.post('/getgoods', urlencodedParser, function(request, response){
+			db.read('goodslist',function(data){
+				var _data=JSON.stringify(data);
+				response.send(_data);
+			})
+				
+	})
 
 	// 添加商品接口
-app.post('/addgoods', urlencodedParser, function(request, response){
+	app.post('/addgoods', urlencodedParser, function(request, response){
 		db.exists('goodslist',request.body,'dataId',function(result){
 			
 			if(result){
@@ -47,8 +47,8 @@ app.post('/addgoods', urlencodedParser, function(request, response){
 			
 	})
 
-// 删除商品接口
-app.post('/delgoods', urlencodedParser, function(request, response){
+	// 删除商品接口
+	app.post('/delgoods', urlencodedParser, function(request, response){
 		db.del('goodslist',request.body,'dataId',function(result){
 			
 			if(result){
@@ -64,16 +64,17 @@ app.post('/delgoods', urlencodedParser, function(request, response){
 
 
 
-	// 用户登录
+	// 登录
 	app.post('/login', urlencodedParser, function(request, response){
-			db.exists('account', request.body, 'name', function(data){
-				if(data){
-					request.session.name = request.body.name;
-					response.send(apiResult(true))
-				} else {
-					response.send(apiResult(false, '邮箱错误'));
-				}
-			})
+		db.exists('account', request.body, 'email', function(data){
+			if(data){
+				request.session.name = data.name;
+				console.log(data.name)
+				response.send(apiResult(true,'',data));
+			} else {
+				response.send(apiResult(false, '邮箱错误'));
+			}
+		})
 	})
 	// 用户注册
 	app.post('/register', urlencodedParser, function(request, response){
@@ -88,7 +89,7 @@ app.post('/delgoods', urlencodedParser, function(request, response){
 				response.send(apiResult(true));
 			}
 		})
-})
+	})
 
 	// 在我的页面判断是否登录
 	app.get('/mine', function(request, response){
@@ -96,5 +97,11 @@ app.post('/delgoods', urlencodedParser, function(request, response){
 		response.send(apiResult(request.session.name != null, null, request.session.name));
 	})
 
+	// 在设置页面判断是否登录
+	app.get('/setting', function(request, response){
+		console.log(request.session.name)
+		response.send(apiResult(request.session.name != null, null, request.session.name));
+	})
+
 app.use(express.static(path.join(__dirname, './../')));
-app.listen(88,'10.3.133.78');
+app.listen(88,'10.3.133.77');
