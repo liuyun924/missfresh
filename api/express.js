@@ -64,18 +64,18 @@ app.post('/delgoods', urlencodedParser, function(request, response){
 
 
 
-
-app.post('/login', urlencodedParser, function(request, response){
-		db.exists('account', request.body, 'name', function(data){
-			if(data){
-				request.session.name = request.body.name;
-				response.send(apiResult(true))
-			} else {
-				response.send(apiResult(false, '邮箱错误'));
-			}
-		})
+	// 用户登录
+	app.post('/login', urlencodedParser, function(request, response){
+			db.exists('account', request.body, 'name', function(data){
+				if(data){
+					request.session.name = request.body.name;
+					response.send(apiResult(true))
+				} else {
+					response.send(apiResult(false, '邮箱错误'));
+				}
+			})
 	})
-
+	// 用户注册
 	app.post('/register', urlencodedParser, function(request, response){
 		db.exists('account', request.body, 'email', function(result){
 
@@ -88,8 +88,13 @@ app.post('/login', urlencodedParser, function(request, response){
 				response.send(apiResult(true));
 			}
 		})
+})
+
+	// 在我的页面判断是否登录
+	app.get('/mine', function(request, response){
+		console.log(request.session.name)
+		response.send(apiResult(request.session.name != null, null, request.session.name));
 	})
 
-
 app.use(express.static(path.join(__dirname, './../')));
-app.listen(88,'10.3.133.77');
+app.listen(88,'10.3.133.78');

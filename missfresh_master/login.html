@@ -274,7 +274,7 @@
 <![endif]-->
 
 		<!--[if !IE]> -->
-		<script src="../libs/jQuery/jquery-3.1.1.js"></script>
+		<script src="jquery-3.1.1.js"></script>
 		<script type="text/javascript">
 			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
 		</script>
@@ -308,18 +308,18 @@
 				var username=$regform.find('input[type=text]').val();
 				var userpsw=$regform.find('input[type=password]').val();
 				
-					var erp = erp || {};
-				erp.baseUrl = 'http://127.0.0.1:888/';
+				// 	var erp = erp || {};
+				// erp.baseUrl = 'http://127.0.0.1:888/';
 
 				// 注册
-				$.post(erp.baseUrl +  'register', {
+				$.post('/register', {
 					email: $.trim(useremail),
 					name: $.trim(username),
 					password: $.trim(userpsw)
 				}, function(response){
 					if(response.status){
 						console.log(response.status)
-						window.location.href = "http://127.0.0.1:888/missfresh_master/index.html";
+						window.location.href = "http://10.3.133.77:88/missfresh_master/index.html";
 					} else {
 						alert(response.status);
 						console.log(response.status)
@@ -333,17 +333,15 @@
 				var $logform=jQuery('#login-box').find('form');
 				var username=$logform.find('input[type=text]').val();
 				var userpsw=$logform.find('input[type=password]').val();
-					var erp = erp || {};
-				erp.baseUrl = 'http://127.0.0.1:888/';
-
+	
 				// 注册
-				$.post(erp.baseUrl +  'login', {
+				$.post('/login', {
 					name: $.trim(username),
 					password: $.trim(userpsw)
 				}, function(response){
 					if(response.status){
 						console.log(response.status)
-						window.location.href = "http://127.0.0.1:888/missfresh_master/index.html";
+						window.location.href = "http://10.3.133.77:88/missfresh_master/index.html";
 					} else {
 						alert('用户名或密码错误！');
 						console.log(response.status)

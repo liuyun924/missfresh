@@ -27,7 +27,7 @@ $(function(){
                         return `<tr>
                                 <td><input type="checkbox" class="danxuan"></td>
                                 <td>${item.dataId}</td>
-                                <td>${item.imgUrl}></td>
+                                <td>${item.imgUrl}</td>
                                 <td>${item.title}</td>
                                 <td>${item.originPrice}</td>
                                 <td>${item.discount}</td>
@@ -75,7 +75,7 @@ $(function(){
         var newgoods=`
                         <td><input type="checkbox" class="danxuan"></td>
                         <td>${dataid}</td>
-                        <td><img src="${img}"></td>
+                        <td>${img}</td>
                         <td>${title}</td>
                         <td>${originprice}</td>
                         <td>${discount}</td>

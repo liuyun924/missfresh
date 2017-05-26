@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../lib/cartIconFont/iconfont.css">
 	<link rel="stylesheet" href="../css/cart.css">
+	<link rel="stylesheet" type="text/css" href="../css/footer.css">
 	<script src="../lib/require.js" data-main="../js/cart.js"></script>
 </head>
 <body>
@@ -268,17 +269,8 @@
 			</div>
 		</div>
 		</footer>
-		<div style="background: #fff;">
-			<ul class="footer">
-			    <li><a href="#"><span class="icon home">
-			        </span><p>首页</p></a></li>
-			    <li><a href="#"><span class="icon redpac"></span>
-			        <p>红包</p></a></li>
-			    <li><a href="#"><span class="icon car"></span>
-			        <p>购物车</p></a></li>
-			    <li><a href="#"><span class="icon mine"></span>
-			        <p>我的</p></a></li>
-			</ul>
+		<div id="footer">
+			
 		</div>
 		
 	</div>
@@ -370,35 +362,54 @@
 				</p>
 				<div class="main_hint">
 					<ul>
-						<li><p>舌尖会员优惠<span><i></i></span></p></li>
+						<li><p>舌尖会员优惠<span class="members"><i></i></span></p></li>
 						<div style="height: 1px;background:#ddd;"></div>
-						<li><p>用券优惠(您可使用80元券)<span><i></i></span></p></li>
+						<li><p>用券优惠(您可使用80元券)<span class="With_Offer"><i></i></span></p></li>
 					</ul>
 				</div>
+
+				<div class="main_clearNone">
+					<div class="clearNone_top">
+						<p>舌尖会员价<span>￥<i class="footing"></i></span></p>
+					</div>
+					<div class="clearNone_center">
+						<p>商品实付<span>￥<i class="footing"></i></span></p>
+					</div>
+					<div class="clearNone_bottom">
+						<p>运费<span>免邮</span></p>
+					</div>
+					<div class="summation">
+						<p><span>合计<span>￥<i class="footing"></i></span></span></p>
+					</div>
+				</div>
+
+
 				<div class="main_clearing">
 					<div class="rebate">
 						<p>可用券价<span>￥106.1</span></p>
 					</div>
 					<div class="coupon">
+						<div class="coupon_top">
+							<p>点击【去结算】可选择其他优惠券</p>
+						</div>
 						<div class="coupon_bottom">
 							<p><img src="../img/cart_img/ticket.png" alt="">优惠券(每日优鲜80元优惠券)<span>-￥80</span></p>
-						</div>
-						<div class="red_packet">
-							<p><img src="../img/cart_img/red.png" alt="">红包<span>无可用红包<b></b></span></p>
 						</div>
 					</div>
 					<div class="net">
 						<div class="net_top">
-							<p>商品实付<span>￥26.1</span></p>
+							<p>商品实付<span>￥<i class="footing"></i></span></p>
 						</div>
 						<div class="net_bottom">
-							<p>运费<span>￥10</span></p>
+							<p>运费<span>免邮</span></p>
 						</div>
 					</div>
 					<div class="total">
-						<p>合计<span>¥<i class="footing"></i></span></p>
+						<p>合计<span>￥<i class="footing"></i></span></p>
 					</div>
 				</div>
+
+
 				<p class="privilege">
 					优惠说明<span><img src="../img/cart_img/coupon-info.png" alt=""></span>
 				</p>

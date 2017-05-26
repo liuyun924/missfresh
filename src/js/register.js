@@ -8,18 +8,18 @@ require(['config'],function(){
 			// 		return false;
 			// 	}
 			
-			var erp = erp || {};
-			erp.baseUrl = 'http://127.0.0.1:888/';
+			// var erp = erp || {};
+			// erp.baseUrl = 'http://127.0.0.1:888/';
 
 			// 注册
-			$.post(erp.baseUrl +  'register', {
+			$.post('/register', {
 				email: $.trim($('#email').val()),
 				name: $.trim($('#username').val()),
 				password: $.trim($('#password').val())
 			}, function(response){
 				if(response.status){
 					console.log(response.status)
-					window.location.href = "http://127.0.0.1:888/html/login.html";
+					window.location.href = "http://10.3.133.77:88/src/html/login.html";
 				} else {
 					alert(response.status);
 					console.log(response.status)

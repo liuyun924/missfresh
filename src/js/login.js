@@ -3,11 +3,11 @@ require(['config'],function(){
 		$('#btn').click(function(){
 
 			
-			var erp = erp || {};
-			erp.baseUrl = 'http://127.0.0.1:888/';
+			// var erp = erp || {};
+			// erp.baseUrl = 'http://127.0.0.1:888/';
 
 			// 登录
-			$.post(erp.baseUrl +  'login', {
+			$.post('/login', {
 				email: $.trim($('#email').val()),
 				password: $.trim($('#password').val())
 			}, function(response){

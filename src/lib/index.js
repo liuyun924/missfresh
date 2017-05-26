@@ -37,12 +37,14 @@ require(['config'],function(){
 			}
 			
 			//购物车按钮效果
+			var arr2 = [];
 			$('.s_car').each(function(i){
-				console.log($('.s_car').eq(i));
+				
 				var $Div_wares = $('.s_car').eq(i).parent().parent().parent();
 				var id = $Div_wares.data('id');
-				var num = id + '_num';
+				var num = id + '_num';			
 				if(localStorage[num]){
+
 						$('.s_car').eq(i).css('display','none');
 						$('.s_car').eq(i).next().css('display','block');
 						$('.wares_num').css('display','block');
@@ -52,15 +54,29 @@ require(['config'],function(){
 						return;
 					}
 						$('.s_car').eq(i).on('click',function(){
-							
-							localStorage[id] = id;
-							localStorage[num] = 1;
-							$('.car_num').eq(i)[0].innerText = localStorage[num];
 							localStorage.max =parseInt(localStorage.max) + 1;
-							$('.wares_num').css('display','block');
 							$('.wares_num')[0].innerText = localStorage.max;
-							$(this).css('display','none');
-							$(this).next().css('display','block');
+							$('.s_car').each(function(l){
+								if($('.s_car').eq(l).parent().parent().parent().data('id')===id){
+									arr2.push(l);
+									console.log(arr2);
+									
+										for(var k=0;k<=arr2.length-1;k++){
+											console.log(arr2[k]);
+											localStorage[id] = id;
+											localStorage[num] = 1;
+											$('.car_num').eq(arr2[k])[0].innerText = localStorage[num];
+											
+											$('.wares_num').css('display','block');
+											
+											$('.s_car').eq(arr2[k]).css('display','none');
+											console.log($('.s_car').eq(arr2[k]));
+											$('.s_car').eq(arr2[k]).next().css('display','block');
+										}
+									
+								}
+						});
+							
 							console.log(localStorage);
 							//localStorage是一个集合
 							//$Div_wares.data('id') 商品id
@@ -91,27 +107,41 @@ require(['config'],function(){
 				
 			});
 		});
-		
-
+		var arr = [];
+		var arr1 = [];
 		//购物车删减效果
 		$('.car_remove').each(function(i){
+
 			$('.car_remove').eq(i).on('click',function(){
 				localStorage.max = parseInt(localStorage.max) - 1;
-				if(localStorage.max == 0){
-					$('.wares_num').css('display','none');
-				}				
 				var id = $(this).parent().parent().parent().parent().data('id');
 				var num = id + '_num';
-				localStorage.removeItem(num);
+				var val = $('.car_num').eq(i)[0].innerText;
+				if(localStorage.max == 0){
+
+					$('.wares_num').css('display','none');
+
+					localStorage.removeItem(num);
+				}				
+				
+				$('.car_remove').each(function(l){
+					if($('.car_remove').eq(l).parent().parent().parent().parent().data('id')===id){
+						arr.push(l);
+						if(val ==1){
+							for(var k=0;k<=arr.length-1;k++){
+								
+								$('.add_remove').eq(arr[k]).css('display','none');
+								$('.s_car').eq(arr[k]).css('display','block');
+							}
+						}
+					}
+				});
+				
+				
+				
+				
 				$('.wares_num')[0].innerText = localStorage.max;
-				var val = parseInt($('.car_num')[i].innerText);
-				if(val == 1){
-					$(this).parent().css('display','none');
-					$(this).parent().prev().css('display','block');
-					return;
-				}else{
-					$('.car_num')[i].innerText = val - 1;
-				}
+				
 
 			});
 		})
@@ -126,7 +156,18 @@ require(['config'],function(){
 				$('.wares_num')[0].innerText = localStorage.max;
 				var val = parseInt($('.car_num')[i].innerText);
 
-				$('.car_num')[i].innerText = val + 1; 
+				$('.car_add').each(function(l){
+					if($('.car_add').eq(l).parent().parent().parent().parent().data('id')===id){
+						arr1.push(l);
+						
+							for(var k=0;k<=arr1.length-1;k++){
+								console.log(localStorage[num]);
+								$('.car_num').eq(arr1[k])[0].innerText = localStorage[num];
+							}
+						
+
+					}
+				});
 			})
 		});
 		

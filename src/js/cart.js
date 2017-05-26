@@ -80,10 +80,10 @@ require(['config'],function(){
 		var $members = $('.members');
 		var $With_Offer = $('.With_Offer');
 
-		
 		//单选
 		$members.click(function(){
-			$(this).css({border:0}).find('i').show();
+			$members.css({border:0}).find('i').show();
+			$members.eq(1).css({border:0}).find('i').show();
 			$With_Offer.css({border:'1px solid #d1d1d1'}).find('i').hide();
 			//显示隐藏
 			$('.twon').hide();
@@ -113,7 +113,8 @@ require(['config'],function(){
 		})
 
 		$With_Offer.click(function(){
-			$(this).css({border:0}).find('i').show();
+			$With_Offer.css({border:0}).find('i').show();
+			$With_Offer.eq(1).css({border:0}).find('i').show();
 			$members.css({border:'1px solid #d1d1d1'}).find('i').hide();
 			//显示隐藏
 			$('.twob').hide();
@@ -372,6 +373,8 @@ require(['config'],function(){
 				$shippingAddress.hide();
 			});
 		})
+
+		$('#footer').load('../html/footer.html');
 	})
 })
 

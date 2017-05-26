@@ -1,4 +1,5 @@
 @import url(reset.css);
+@import url(footer.css);
 @import url(../lib/font/iconfont.css);
 html { font-size: 50px; }
 
