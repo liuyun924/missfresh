@@ -157,7 +157,7 @@ require(['config'],function(){
 			var id = $(this).parent().parent().parent().parent().data('id');
 			var num = id + '_num';
 			$('.car_add').eq(i).on('click',function(){
-				var arr1 = [];
+				var arr1 = []
 				localStorage.max = parseInt(localStorage.max) + 1;
 				localStorage[num] = parseInt(localStorage[num]) + 1;
 				$('.wares_num')[0].innerText = localStorage.max;
