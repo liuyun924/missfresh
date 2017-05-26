@@ -37,9 +37,15 @@ require(['config'],function(){
 								<li class="lis_title">${obj[item].title}</li>
 								<li class="lis_one">广东风味</li>
 								<li class="lis_two">
-									<s><i class="twoI">舌尖会员价</i>
+									<s class="twob">
+										<i>舌尖会员价</i>
 										<i>¥</i>
 										<span class="twoVip">${obj[item].discount}</span>
+									</s>
+									<s class="twon">
+										<i>可用券价</i>
+										<i>¥</i>
+										<span class="twoVip">${obj[item].originPrice}</span>
 									</s>
 								</li>
 								<li class="lis_three">
