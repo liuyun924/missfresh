@@ -15,7 +15,7 @@ table { border-collapse: collapse; }
 
 textarea { resize: none; overflow: hidden; }
 
-body { font-family: '微软雅黑',sans-serif; color: #555; font-size: 14px; }
+body { font-family: '微软雅黑', sans-serif; color: #555; font-size: 14px; }
 
 .wrap { /*width: 80%;*/ min-width: 1000px; width: 1200px; margin: 0 auto; }
 
@@ -27,6 +27,9 @@ input { border: none; /*获取焦点时的外边框*/ outline: none; /*清除移
 .clear:after { content: ''; display: block; clear: both; }
 
 .clearfix::before, .clearfix::after { display: block; height: 0; clear: both; content: ""; height: 0; line-height: 0; display: block; clear: both; visibility: hidden; }
+
+input { /*border: none;*/ /*获取焦点时的外边框*/ outline: none; /*清除移动端默认的表单样式:-webkit-appearance是用来改变按钮和其他控件的外观，使其外观类似于原生控件.
+通常我们可以在相应的元素上加上-webkit-appearance: none;来移除原生控件样式。*/ /*-webkit-appearance: none;*/ }
 
 img { width: 100%; }
 

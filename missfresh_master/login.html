@@ -3,8 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>用户登录与注册</title>
-		<!-- <meta name="keywords" content="Bootstrapģ��,Bootstrapģ������,Bootstrap�̳�,Bootstrap����" />
-		<meta name="description" content="վ���ز��ṩBootstrapģ��,Bootstrap�̳�,Bootstrap���ķ�������Bootstrap�������" /> -->
+		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!-- basic styles -->
@@ -303,7 +302,7 @@
 
 		<script>
 			// 注册
-			jQuery('#register').click(function(){
+			$('#register').click(function(){
 				var $regform=jQuery('#signup-box').find('form');
 				var useremail=$regform.find('input[type=email]').val();
 				var username=$regform.find('input[type=text]').val();
@@ -330,7 +329,7 @@
 			})
 
 			// 登录
-			jQuery('#login').click(function(){
+			$('#login').click(function(){
 				var $logform=jQuery('#login-box').find('form');
 				var username=$logform.find('input[type=text]').val();
 				var userpsw=$logform.find('input[type=password]').val();

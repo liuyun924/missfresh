@@ -6,22 +6,78 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <link rel="stylesheet" type="text/css" href="./css/swiper-3.4.2.min.css">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<script type="text/javascript" data-main="./lib/index.js" src="./lib/require.js"></script>
-
 </head>
 
-<body>	
-	<div id="container">
-		<div class="header">
-			<div class="sousuo"></div>
+<body>
+	<div id="container" class="swiper-container swiper_box">
+		<div id="header">
+			
 		</div>
-		<div class="main">
-			<div class="main1">
+		<div class="main swiper-wrapper">
+			<div class="main1 swiper-slide">
+				<div class="swiper-container carousel_box">
+	       			<div class="swiper-wrapper">
+		            	<div class="swiper-slide carousel">
+		            	<img class="s_img" src="img/public/header-banner1.jpg" alt="">
+		            	</div>
+		            	<div class="swiper-slide carousel">
+		            	<img class="s_img" src="img/public/header-banner2.jpg" alt="">
+		            	</div>
+	        		</div>
+	        		<div class="swiper-pagination"></div>
+    			</div>
+
+			    <ul class="navIcon">
+			        <li>
+			            <a href="#">
+			                <img class="navIcon_img" src="img/public/header-icon1.PNG" alt="">
+			                <p>新人专享</p>
+			            </a>
+			        </li>
+			        <li>
+			            <a href="#"><img class="navIcon_img" src="img/public/header-icon2.PNG" alt="">
+			                <p>邀请有礼</p>
+			            </a>
+			        </li>
+			        <li>
+			            <a href="#"><img class="navIcon_img" src="img/public/header-icon3.PNG" alt="">
+			                <p>每日签到</p>
+			            </a>
+			        </li>
+			        <li>
+			            <a href="#"><img class="navIcon_img" src="img/public/header-icon4.PNG" alt="">
+			                <p>会员任务</p>
+			            </a>
+			        </li>
+			    </ul>
+
+			    <div class="notice">
+			        <div class="wrap clearfix">
+			            <img src="img/public/header-xxs.png" alt="">
+			            <ul>
+			                <li class="first">火山村妃子笑荔枝 19.9元/500g 你想吃它 比杨贵妃更快得到</li>
+			                <li>所选商品实付满39，即可免运费哦</li>
+			            </ul>
+			        </div>
+			    </div>
+				<div class="box">
+			        <div class="seckill">
+			            <span style="color: rgb(255, 29, 63);">每日特价 </span>&nbsp;
+			            <span class="hour">00</span>&nbsp;&nbsp;:
+			            <span class="min">00</span>&nbsp;&nbsp;:
+			            <span class="sec">00</span>&nbsp;&nbsp;:
+			            <span class="milsec" style="background-color:#ff4891;">00</span>
+			        </div>
+			  	</div>			        			
 				<div class="content_box countdown">
-					<div class="wares_news">
+					<div class="wares_news" data-id="1">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">1老北京酱牛肉300g</p>
@@ -51,9 +107,9 @@
 					<div class="banner">
 						<img class="banner_img" src="./img/banner1.jpg">
 					</div>
-					<div class="wares_news">
+					<div class="wares_news" data-id="2">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -78,9 +134,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="wares_news">
+					<div class="wares_news" data-id="3">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -105,9 +161,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="wares_news">
+					<div class="wares_news" data-id="4">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -132,68 +188,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="wares_news">
+					<div class="wares_news" data-id="5">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
-						</div>
-						<div class="w_n_text">
-							<p class="text_p1">老北京酱牛肉300g</p>
-							<p class="text_p2">四九城的记忆，全在嘴里了</p>
-							<div class="text_tips"><span class="tips_span">北京风味</span></div>
-							<div class="text_prices">
-								<span>可用券价</span>
-								<span class="t_p_num">49</span>
-							</div>
-							<div class="text_vip_prices">
-								<span>舌尖会员价</span>
-								<span>¥</span>
-								<span class="t_v_p_num">25.8</span>
-							</div>
-							<div class="shop_car_box">
-								<img class="s_car" src="./img/shop_car.png">
-								<div class="add_remove">
-									<span class="car_remove"></span>
-									<span class="car_num">1</span>
-									<span class="car_add"></span>
-								</div>
-							</div>
-						</div>
-					</div>				
-				</div>
-				<div class="content_box">
-					<div class="banner">
-						<img class="banner_img" src="./img/banner1.jpg">
-					</div>
-					<div class="wares_news">
-						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
-						</div>
-						<div class="w_n_text">
-							<p class="text_p1">老北京酱牛肉300g</p>
-							<p class="text_p2">四九城的记忆，全在嘴里了</p>
-							<div class="text_tips"><span class="tips_span">北京风味</span></div>
-							<div class="text_prices">
-								<span>可用券价</span>
-								<span class="t_p_num">49</span>
-							</div>
-							<div class="text_vip_prices">
-								<span>舌尖会员价</span>
-								<span>¥</span>
-								<span class="t_v_p_num">25.8</span>
-							</div>
-							<div class="shop_car_box">
-								<img class="s_car" src="./img/shop_car.png">
-								<div class="add_remove">
-									<span class="car_remove"></span>
-									<span class="car_num">1</span>
-									<span class="car_add"></span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="wares_news">
-						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -223,9 +220,9 @@
 					<div class="banner">
 						<img class="banner_img" src="./img/banner1.jpg">
 					</div>
-					<div class="wares_news">
+					<div class="wares_news" data-id="6">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -250,9 +247,41 @@
 							</div>
 						</div>
 					</div>
-					<div class="wares_news">
+					<div class="wares_news" data-id="7">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>
+				<div class="content_box">
+					<div class="banner">
+						<img class="banner_img" src="./img/banner1.jpg">
+					</div>
+					<div class="wares_news" data-id="8">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -277,9 +306,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="wares_news">
+					<div class="wares_news" data-id="9">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -304,9 +333,36 @@
 							</div>
 						</div>
 					</div>
-					<div class="wares_news">
+					<div class="wares_news"  data-id="10">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="11">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -340,9 +396,9 @@
 						<div class="block"></div>
 						<div class="decorate">—</div>
 					</div>
-					<div class="wares_news">
+					<div class="wares_news" data-id="12">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -367,9 +423,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="wares_news">
+					<div class="wares_news" data-id="13">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -393,17 +449,40 @@
 								</div>
 							</div>
 						</div>
+					</div>
+					<div class="last_tips">
+						<p>没有更多了哦~</p>
 					</div>				
 				</div>									
 			</div>
-			<div class="main1">
+			<div class="main1 swiper-slide">
+				<div class="swiper-container carousel_box">
+	       			<div class="swiper-wrapper">
+		            	<div class="swiper-slide carousel">
+		            	<img class="s_img" src="img/public/header-banner1.jpg" alt="">
+		            	</div>
+		            	<div class="swiper-slide carousel">
+		            	<img class="s_img" src="img/public/header-banner2.jpg" alt="">
+		            	</div>
+	        		</div>
+	        		<div class="swiper-pagination"></div>
+    			</div>
+				<div class="box">
+			        <div class="seckill">
+			            <span style="color: rgb(255, 29, 63);">每日特价 </span>&nbsp;
+			            <span class="hour">00</span>&nbsp;&nbsp;:
+			            <span class="min">00</span>&nbsp;&nbsp;:
+			            <span class="sec">00</span>&nbsp;&nbsp;:
+			            <span class="milsec" style="background-color:#ff4891;">00</span>
+			        </div>
+			  	</div>			        			
 				<div class="content_box countdown">
-					<div class="wares_news">
+					<div class="wares_news" data-id="1">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
-							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p1">1老北京酱牛肉300g</p>
 							<p class="text_p2">四九城的记忆，全在嘴里了</p>
 							<div class="text_tips"><span class="tips_span">北京风味</span></div>
 							<div class="text_prices">
@@ -430,9 +509,9 @@
 					<div class="banner">
 						<img class="banner_img" src="./img/banner1.jpg">
 					</div>
-					<div class="wares_news">
+					<div class="wares_news" data-id="2">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -457,9 +536,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="wares_news">
+					<div class="wares_news" data-id="3">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -484,9 +563,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="wares_news">
+					<div class="wares_news" data-id="4">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -511,68 +590,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="wares_news">
+					<div class="wares_news" data-id="5">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
-						</div>
-						<div class="w_n_text">
-							<p class="text_p1">老北京酱牛肉300g</p>
-							<p class="text_p2">四九城的记忆，全在嘴里了</p>
-							<div class="text_tips"><span class="tips_span">北京风味</span></div>
-							<div class="text_prices">
-								<span>可用券价</span>
-								<span class="t_p_num">49</span>
-							</div>
-							<div class="text_vip_prices">
-								<span>舌尖会员价</span>
-								<span>¥</span>
-								<span class="t_v_p_num">25.8</span>
-							</div>
-							<div class="shop_car_box">
-								<img class="s_car" src="./img/shop_car.png">
-								<div class="add_remove">
-									<span class="car_remove"></span>
-									<span class="car_num">1</span>
-									<span class="car_add"></span>
-								</div>
-							</div>
-						</div>
-					</div>				
-				</div>
-				<div class="content_box">
-					<div class="banner">
-						<img class="banner_img" src="./img/banner1.jpg">
-					</div>
-					<div class="wares_news">
-						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
-						</div>
-						<div class="w_n_text">
-							<p class="text_p1">老北京酱牛肉300g</p>
-							<p class="text_p2">四九城的记忆，全在嘴里了</p>
-							<div class="text_tips"><span class="tips_span">北京风味</span></div>
-							<div class="text_prices">
-								<span>可用券价</span>
-								<span class="t_p_num">49</span>
-							</div>
-							<div class="text_vip_prices">
-								<span>舌尖会员价</span>
-								<span>¥</span>
-								<span class="t_v_p_num">25.8</span>
-							</div>
-							<div class="shop_car_box">
-								<img class="s_car" src="./img/shop_car.png">
-								<div class="add_remove">
-									<span class="car_remove"></span>
-									<span class="car_num">1</span>
-									<span class="car_add"></span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="wares_news">
-						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -602,9 +622,9 @@
 					<div class="banner">
 						<img class="banner_img" src="./img/banner1.jpg">
 					</div>
-					<div class="wares_news">
+					<div class="wares_news" data-id="6">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -629,9 +649,41 @@
 							</div>
 						</div>
 					</div>
-					<div class="wares_news">
+					<div class="wares_news" data-id="7">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>
+				<div class="content_box">
+					<div class="banner">
+						<img class="banner_img" src="./img/banner1.jpg">
+					</div>
+					<div class="wares_news" data-id="8">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -656,9 +708,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="wares_news">
+					<div class="wares_news" data-id="9">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -683,9 +735,36 @@
 							</div>
 						</div>
 					</div>
-					<div class="wares_news">
+					<div class="wares_news" data-id="10">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="11">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -719,9 +798,9 @@
 						<div class="block"></div>
 						<div class="decorate">—</div>
 					</div>
-					<div class="wares_news">
+					<div class="wares_news" data-id="12">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -746,9 +825,203 @@
 							</div>
 						</div>
 					</div>
-					<div class="wares_news">
+					<div class="wares_news" data-id="13">
 						<div class="w_n_img_box">
-							<img class="w_n_img" src="./img/01.jpg">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="1">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="last_tips">
+						<p>没有更多了哦~</p>
+					</div>				
+				</div>									
+			</div>
+			<div class="main1 swiper-slide">
+				<div class="swiper-container carousel_box">
+	       			<div class="swiper-wrapper">
+		            	<div class="swiper-slide carousel">
+		            	<img class="s_img" src="img/public/header-banner1.jpg" alt="">
+		            	</div>
+		            	<div class="swiper-slide carousel">
+		            	<img class="s_img" src="img/public/header-banner2.jpg" alt="">
+		            	</div>
+	        		</div>
+	        		<div class="swiper-pagination"></div>
+    			</div>
+				<div class="box">
+			        <div class="seckill">
+			            <span style="color: rgb(255, 29, 63);">每日特价 </span>&nbsp;
+			            <span class="hour">00</span>&nbsp;&nbsp;:
+			            <span class="min">00</span>&nbsp;&nbsp;:
+			            <span class="sec">00</span>&nbsp;&nbsp;:
+			            <span class="milsec" style="background-color:#ff4891;">00</span>
+			        </div>
+			  	</div>			        			
+				<div class="content_box countdown">
+					<div class="wares_news" data-id="1">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">1老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>		
+				<div class="content_box">
+					<div class="banner">
+						<img class="banner_img" src="./img/banner1.jpg">
+					</div>
+					<div class="wares_news" data-id="2">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="3">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="4">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="5">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
 						</div>
 						<div class="w_n_text">
 							<p class="text_p1">老北京酱牛肉300g</p>
@@ -773,12 +1046,1579 @@
 							</div>
 						</div>
 					</div>				
+				</div>
+				<div class="content_box">
+					<div class="banner">
+						<img class="banner_img" src="./img/banner1.jpg">
+					</div>
+					<div class="wares_news" data-id="6">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="7">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>
+				<div class="content_box">
+					<div class="banner">
+						<img class="banner_img" src="./img/banner1.jpg">
+					</div>
+					<div class="wares_news" data-id="8">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="9">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="10">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="11">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>
+				<div class="content_box">
+					<div class="remind">
+						<div class="decorate">—</div>
+						<div class="block"></div>
+						<span class="tixing">订阅到货提醒&nbsp;了解到货信息</span>
+						<div class="block"></div>
+						<div class="decorate">—</div>
+					</div>
+					<div class="wares_news" data-id="12">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="13">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news"  data-id="1">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="last_tips">
+						<p>没有更多了哦~</p>
+					</div>				
 				</div>									
-			</div>			
+			</div>
+			<div class="main1 swiper-slide">
+				<div class="swiper-container carousel_box">
+	       			<div class="swiper-wrapper">
+		            	<div class="swiper-slide carousel">
+		            	<img class="s_img" src="img/public/header-banner1.jpg" alt="">
+		            	</div>
+		            	<div class="swiper-slide carousel">
+		            	<img class="s_img" src="img/public/header-banner2.jpg" alt="">
+		            	</div>
+	        		</div>
+	        		<div class="swiper-pagination"></div>
+    			</div>
+				<div class="box">
+			        <div class="seckill">
+			            <span style="color: rgb(255, 29, 63);">每日特价 </span>&nbsp;
+			            <span class="hour">00</span>&nbsp;&nbsp;:
+			            <span class="min">00</span>&nbsp;&nbsp;:
+			            <span class="sec">00</span>&nbsp;&nbsp;:
+			            <span class="milsec" style="background-color:#ff4891;">00</span>
+			        </div>
+			  	</div>			        			
+				<div class="content_box countdown">
+					<div class="wares_news"  data-id="1">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">1老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>		
+				<div class="content_box">
+					<div class="banner">
+						<img class="banner_img" src="./img/banner1.jpg">
+					</div>
+					<div class="wares_news" data-id="2">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="3">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="4">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="5">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>
+				<div class="content_box">
+					<div class="banner">
+						<img class="banner_img" src="./img/banner1.jpg">
+					</div>
+					<div class="wares_news" data-id="6">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="7">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>
+				<div class="content_box">
+					<div class="banner">
+						<img class="banner_img" src="./img/banner1.jpg">
+					</div>
+					<div class="wares_news" data-id="8">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="9">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="10">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="11">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>
+				<div class="content_box">
+					<div class="remind">
+						<div class="decorate">—</div>
+						<div class="block"></div>
+						<span class="tixing">订阅到货提醒&nbsp;了解到货信息</span>
+						<div class="block"></div>
+						<div class="decorate">—</div>
+					</div>
+					<div class="wares_news" data-id="12">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="13">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="1">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="last_tips">
+						<p>没有更多了哦~</p>
+					</div>				
+				</div>									
+			</div>
+			<div class="main1 swiper-slide">
+				<div class="swiper-container carousel_box">
+	       			<div class="swiper-wrapper">
+		            	<div class="swiper-slide carousel">
+		            	<img class="s_img" src="img/public/header-banner1.jpg" alt="">
+		            	</div>
+		            	<div class="swiper-slide carousel">
+		            	<img class="s_img" src="img/public/header-banner2.jpg" alt="">
+		            	</div>
+	        		</div>
+	        		<div class="swiper-pagination"></div>
+    			</div>
+				<div class="box">
+			        <div class="seckill">
+			            <span style="color: rgb(255, 29, 63);">每日特价 </span>&nbsp;
+			            <span class="hour">00</span>&nbsp;&nbsp;:
+			            <span class="min">00</span>&nbsp;&nbsp;:
+			            <span class="sec">00</span>&nbsp;&nbsp;:
+			            <span class="milsec" style="background-color:#ff4891;">00</span>
+			        </div>
+			  	</div>			        			
+				<div class="content_box countdown">
+					<div class="wares_news" data-id="1">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">1老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>		
+				<div class="content_box">
+					<div class="banner">
+						<img class="banner_img" src="./img/banner1.jpg">
+					</div>
+					<div class="wares_news" data-id="2">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="3">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="4">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="5">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>
+				<div class="content_box">
+					<div class="banner">
+						<img class="banner_img" src="./img/banner1.jpg">
+					</div>
+					<div class="wares_news" data-id="6">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="7">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>
+				<div class="content_box">
+					<div class="banner">
+						<img class="banner_img" src="./img/banner1.jpg">
+					</div>
+					<div class="wares_news" data-id="8">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="9">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="10">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="11">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>
+				<div class="content_box">
+					<div class="remind">
+						<div class="decorate">—</div>
+						<div class="block"></div>
+						<span class="tixing">订阅到货提醒&nbsp;了解到货信息</span>
+						<div class="block"></div>
+						<div class="decorate">—</div>
+					</div>
+					<div class="wares_news" data-id="12">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="13">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="1">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="last_tips">
+						<p>没有更多了哦~</p>
+					</div>				
+				</div>									
+			</div>
+			<div class="main1 swiper-slide">
+				<div class="swiper-container carousel_box">
+	       			<div class="swiper-wrapper">
+		            	<div class="swiper-slide carousel">
+		            	<img class="s_img" src="img/public/header-banner1.jpg" alt="">
+		            	</div>
+		            	<div class="swiper-slide carousel">
+		            	<img class="s_img" src="img/public/header-banner2.jpg" alt="">
+		            	</div>
+	        		</div>
+	        		<div class="swiper-pagination"></div>
+    			</div>
+				<div class="box">
+			        <div class="seckill">
+			            <span style="color: rgb(255, 29, 63);">每日特价 </span>&nbsp;
+			            <span class="hour">00</span>&nbsp;&nbsp;:
+			            <span class="min">00</span>&nbsp;&nbsp;:
+			            <span class="sec">00</span>&nbsp;&nbsp;:
+			            <span class="milsec" style="background-color:#ff4891;">00</span>
+			        </div>
+			  	</div>			        			
+				<div class="content_box countdown">
+					<div class="wares_news" data-id="1">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">1老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>		
+				<div class="content_box">
+					<div class="banner">
+						<img class="banner_img" src="./img/banner1.jpg">
+					</div>
+					<div class="wares_news" data-id="2">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="3">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="4">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="5">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>
+				<div class="content_box">
+					<div class="banner">
+						<img class="banner_img" src="./img/banner1.jpg">
+					</div>
+					<div class="wares_news" data-id="6">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="7">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>
+				<div class="content_box">
+					<div class="banner">
+						<img class="banner_img" src="./img/banner1.jpg">
+					</div>
+					<div class="wares_news" data-id="8">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="9">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="10">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="11">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>				
+				</div>
+				<div class="content_box">
+					<div class="remind">
+						<div class="decorate">—</div>
+						<div class="block"></div>
+						<span class="tixing">订阅到货提醒&nbsp;了解到货信息</span>
+						<div class="block"></div>
+						<div class="decorate">—</div>
+					</div>
+					<div class="wares_news" data-id="12">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="13">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="wares_news" data-id="1">
+						<div class="w_n_img_box">
+							<img class="w_n_img" src="./img/1.jpg">
+						</div>
+						<div class="w_n_text">
+							<p class="text_p1">老北京酱牛肉300g</p>
+							<p class="text_p2">四九城的记忆，全在嘴里了</p>
+							<div class="text_tips"><span class="tips_span">北京风味</span></div>
+							<div class="text_prices">
+								<span>可用券价</span>
+								<span class="t_p_num">49</span>
+							</div>
+							<div class="text_vip_prices">
+								<span>舌尖会员价</span>
+								<span>¥</span>
+								<span class="t_v_p_num">25.8</span>
+							</div>
+							<div class="shop_car_box">
+								<img class="s_car" src="./img/shop_car.png">
+								<div class="add_remove">
+									<span class="car_remove"></span>
+									<span class="car_num">1</span>
+									<span class="car_add"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="last_tips">
+						<p>没有更多了哦~</p>
+					</div>				
+				</div>									
+			</div>		
 		</div>
 
-		<div class="footer">
+		<div id="footer">
 			
+		</div>
+		<div class="search_box">
+			<div class="search_div">
+				<div class="back">
+					<img src="./img/back-search.png">
+				</div>
+				<div class="input_box">
+					<img src="./img/icon-search.png">
+					<input type="text" name="search" placeholder="请输入商品名称"></input>
+				</div>
+				<div class="search_button">
+					<input type="submit" value="">搜索</input>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </body>

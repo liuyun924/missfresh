@@ -1,13 +1,11 @@
 var path = require('path');
 
 var AccountRouter = require('./Account.router.js');
-var GoodsRouter=require('./Goods.router.js');
 
 exports.Register = function(express){
 	var app = express();
 
 	AccountRouter.Register(app);
-	GoodsRouter.Register(app);
 
 	app.get('/', function(request, response){
 		response.send('root');

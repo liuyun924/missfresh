@@ -14,15 +14,12 @@ $(function(){
     // $('.accounts').click(function(){
     //     $('.boxaccounts').css('display','block').siblings().css('display','none');
     // }); 
-         var erp = erp || {};
-        erp.baseUrl = 'http://127.0.0.1:888/';
-
     $('.goodslist').click(function(){
         $('.boxgoodslist').css('display','block').siblings().css('display','none');
             // 从数据库获得商品数据
 
                
-            $.post(erp.baseUrl +  'getgoods', function(response){
+            $.post('/getgoods', function(response){
                     var data_arr=JSON.parse(response);
 
                    $('.boxgoodslist').find('tbody').html(
@@ -30,7 +27,7 @@ $(function(){
                         return `<tr>
                                 <td><input type="checkbox" class="danxuan"></td>
                                 <td>${item.dataId}</td>
-                                <td><img src="${item.imgUrl}"></td>
+                                <td>${item.imgUrl}></td>
                                 <td>${item.title}</td>
                                 <td>${item.originPrice}</td>
                                 <td>${item.discount}</td>
@@ -49,11 +46,16 @@ $(function(){
     $('.addgoods').click(function(){
 
         $('.addwindow').css('display','block');
+        $('.addwindow').find('input').val('');
+         $('.addwindow').find('textarea').val('');
+
 
     })
 
     $('.addcancel').click(function(){
          $('.addwindow').css('display','none');
+          $('.addwindow').find('input').val('');
+         $('.addwindow').find('textarea').val('');
 
     })
     // 添加商品信息
@@ -84,7 +86,7 @@ $(function(){
         $tr.html(newgoods).appendTo($('tbody'));
 
 
-        $.post(erp.baseUrl +  'addgoods', {
+        $.post('/addgoods', {
                     dataId:dataid,
                     imgUrl:img,
                     adword:adword,
@@ -115,7 +117,7 @@ $(function(){
          var dataid = $(this).parents('tr').find('td').eq(1).text();
          
                       
-                $.post(erp.baseUrl +  'delgoods',{dataId:dataid},function(response){
+                $.post('/delgoods',{dataId:dataid},function(response){
                     if(response.status){
                         console.log(response.status)
                        alert('成功删除此商品');

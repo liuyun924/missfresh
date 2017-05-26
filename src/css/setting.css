@@ -1,0 +1,23 @@
+@import url(reset.css);
+@import url(../lib/font/iconfont.css);
+html { font-size: 50px; }
+
+#top { height: 0.86rem; width: 100%; text-align: center; position: relative; line-height: 0.86rem; border-bottom: 0.02rem solid #e6e6e6; box-shadow: 0 0 10px rgba(0, 0, 0, 0.06); }
+
+#top h1 { font-size: 0.32rem; font-weight: 100; }
+
+#top #back { display: block; width: 0.72rem; height: 0.66rem; position: absolute; left: 0.2rem; top: 0.1rem; font-size: 0.48rem; line-height: 0.66rem; color: #4b4b4b; }
+
+#main { padding: 20px; }
+
+#main .userhead { display: block; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+
+#main .userhead img { width: 48px; height: 48px; border-radius: 48px; }
+
+#main ul li a { display: block; height: 49px; border-bottom: 1px solid #ccc; line-height: 49px; overflow: hidden; color: #695e6b; font-size: 14px; }
+
+#main ul li a .msg { float: left; }
+
+#main ul li a .show { float: right; }
+
+#main #logout { margin-top: 40px; width: 100%; background: #FC6D41 !important; border: none; border-radius: 3px; color: #fff; vertical-align: top; text-align: center; text-overflow: ellipsis; font-size: 16px; line-height: 42px; cursor: pointer; }
