@@ -2,83 +2,10 @@ require(['config'],function(){
 	require(['jquery','mobile'],function($,m){
 		//移动端适配
 		m.mobile();
-				var arr =[];
-
-		for (var i = 1; i <=13; i++) {
-			if(localStorage[i]){
-				arr.push(localStorage[i]);
-			}
-
-		}
-		console.log(arr);
-
-		$.post('./../../getgoods',function(res){
-			var obj = JSON.parse(res);
-			// console.log(obj);
-			console.log(arr);
-			$('.main_list').html(arr.map((item)=>{
-				console.log(obj[item]);
-				// obj[arr[i]].
-				// var num = arr[i] + '_num';
-				// console.log(obj[arr[i]]);
-				
-
-				// var img = obj[arr[i]].imgUrl;
-				// var title = obj[arr[i]].title;
-				// var vip = obj[arr[i]].discount;
-				// var keyong = obj[arr[i]].originPrice
-				// console.log(title,vip,keyong);
-				var num = item + '_num';
-				console.log(num);
-				return `
-				<div class="product-style">
-					<div class="list_checkbox">
-						<span class="commodity_radio">
-							<i class="radio_img"></i>
-						</span>
-					</div>
-					<a href="#">
-						<div class="list_img">
-							<img src="${obj[item].imgUrl}" alt="">
-						</div>
-						<div class="list_introduce">
-							<ul>
-								<li class="lis_title">${obj[item].title}</li>
-								<li class="lis_one">广东风味</li>
-								<li class="lis_two">
-									<s><i class="twoI">舌尖会员价</i>
-										<i>¥</i>
-										<span class="twoVip">${obj[item].discount}</span>
-									</s>
-								</li>
-								<li class="lis_three">
-									<s class="threeb"><i  class="threeI">可用券价</i>
-										<b>¥</b>
-										<span class="unit_price">${obj[item].originPrice}</span>
-									</s>
-									<s class="threen">
-										<i>舌尖会员价</i>
-										<b>¥</b>
-										<span>${obj[item].discount}</span>
-									</s>
-									<div class="list_count">
-										<i><img src="../img/cart_img/reduce-img.png" alt="" class="del_img"></i>
-										<span>${localStorage[num]}</span>
-										<i><img src="../img/cart_img/add-img.png" alt="" class="add_img"></i>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</a>	
-				</div>
-				`
-			})
-			)
-		});
 
 
-		setTimeout(function(){
-var $unit_price = $('.unit_price');
+		//总价
+		var $unit_price = $('.unit_price');
 		var $footing = $('.footing');
 		var res = 0;
 		$unit_price.each(function(i){
@@ -145,14 +72,6 @@ var $unit_price = $('.unit_price');
 					res += Number(num) * idx;
 				})
 				$footing.text(res.toFixed(1));
-
-				for(var i=0;i<=arr.length-1;i++){
-					var id = arr[i];
-					var num = id + '_num';
-
-				}
-				localStorage.removeItem(id);
-				localStorage.removeItem(num);
 			})
 		})
 
@@ -301,9 +220,9 @@ var $unit_price = $('.unit_price');
 			}
 		})
 
+
 		//产品的选项
 		var $lisChe = $('.list_checkbox').find('span');
-
 		$productStyle.on('click','span',function(){
 			var res = 0;
 			var $hide;
@@ -455,16 +374,66 @@ var $unit_price = $('.unit_price');
 			});
 		})
 
-
-	},500);
-		//总价
-		
-
-
-
-
 		//尾部载入
-		$('#footer').load('footer.html');	
+		$('#footer').load('html/footer.html',function(){
+
+			//如果没有总数量，就创建总数量，并且赋值为0
+			if(!localStorage.max){
+				localStorage.max = 0;
+			}
+			//如果总数量为0，购物车数量不显示
+			if(localStorage.max == 0){
+					$('.wares_num').css('display','none');
+			}
+			
+			//购物车按钮效果
+			var arr2 = [];
+			$('.s_car').each(function(i){
+				
+				var $Div_wares = $('.s_car').eq(i).parent().parent().parent();
+				var id = $Div_wares.data('id');
+				var num = id + '_num';			
+				if(localStorage[num]){
+
+						$('.s_car').eq(i).css('display','none');
+						$('.s_car').eq(i).next().css('display','block');
+						$('.wares_num').css('display','block');
+						console.log(localStorage);
+						$('.wares_num')[0].innerText = localStorage.max;
+						console.log($('.wares_num'));
+						return;
+					}
+						$('.s_car').eq(i).on('click',function(){
+							localStorage.max =parseInt(localStorage.max) + 1;
+							$('.wares_num')[0].innerText = localStorage.max;
+							$('.s_car').each(function(l){
+								if($('.s_car').eq(l).parent().parent().parent().data('id')===id){
+									arr2.push(l);
+									console.log(arr2);
+									
+										for(var k=0;k<=arr2.length-1;k++){
+											console.log(arr2[k]);
+											localStorage[id] = id;
+											localStorage[num] = 1;
+											$('.car_num').eq(arr2[k])[0].innerText = localStorage[num];
+											
+											$('.wares_num').css('display','block');
+											
+											$('.s_car').eq(arr2[k]).css('display','none');
+											console.log($('.s_car').eq(arr2[k]));
+											$('.s_car').eq(arr2[k]).next().css('display','block');
+										}
+									
+								}
+						});
+							
+							console.log(localStorage);
+							//localStorage是一个集合
+							//$Div_wares.data('id') 商品id
+						});
+								
+			});
+		});	
 	})
 })
 

@@ -15,7 +15,7 @@ $(function(){
     //     $('.boxaccounts').css('display','block').siblings().css('display','none');
     // }); 
     $('.goodslist').click(function(){
-        $('.boxgoodslist').css('display','block').siblings().css('display','none');
+        $('.boxgoodslist').show().siblings().hide();
             // 从数据库获得商品数据
 
                

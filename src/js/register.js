@@ -2,6 +2,15 @@ require(['config'],function(){
 	require(['jquery'],function(){
 		$('#btn').click(function(){
 
+			// if(!$(':input').val()){
+			// 		console.log($(':input').val())
+			// 		alert('请不要留空')
+			// 		return false;
+			// 	}
+			
+			// var erp = erp || {};
+			// erp.baseUrl = 'http://127.0.0.1:888/';
+
 			// 注册
 			$.post('/register', {
 				email: $.trim($('#email').val()),

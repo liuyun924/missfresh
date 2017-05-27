@@ -40,39 +40,44 @@ require(['config'],function(){
 			var arr2 = [];
 			$('.s_car').each(function(i){
 				
-							
-				
+				var $Div_wares = $('.s_car').eq(i).parent().parent().parent();
+				var id = $Div_wares.data('id');
+				var num = id + '_num';			
+				if(localStorage[num]){
+
+						$('.s_car').eq(i).css('display','none');
+						$('.s_car').eq(i).next().css('display','block');
+						$('.wares_num').css('display','block');
+						// console.log(localStorage);
+						$('.wares_num')[0].innerText = localStorage.max;
+						// console.log($('.wares_num'));
+						return;
+					}
 						$('.s_car').eq(i).on('click',function(){
-							var id = null;
-							var arr2 = []; 
-							var $Div_wares = $(this).parent().parent().parent();
-							 id = $Div_wares.data('id');
-							var num = id + '_num';
 							localStorage.max =parseInt(localStorage.max) + 1;
 							$('.wares_num')[0].innerText = localStorage.max;
 							$('.s_car').each(function(l){
 								if($('.s_car').eq(l).parent().parent().parent().data('id')===id){
 									arr2.push(l);
-									// console.log(arr2);
 									console.log(arr2);
+									
 										for(var k=0;k<=arr2.length-1;k++){
-											
+											console.log(arr2[k]);
 											localStorage[id] = id;
 											localStorage[num] = 1;
 											$('.car_num').eq(arr2[k])[0].innerText = localStorage[num];
 											
-											$('.wares_num').eq(arr2[k]).css('display','block');
+											$('.wares_num').css('display','block');
 											
 											$('.s_car').eq(arr2[k]).css('display','none');
-											
+											console.log($('.s_car').eq(arr2[k]));
 											$('.s_car').eq(arr2[k]).next().css('display','block');
 										}
 									
 								}
-								
 						});
 							
-							console.log(localStorage);
+							// console.log(localStorage);
 							//localStorage是一个集合
 							//$Div_wares.data('id') 商品id
 						});
@@ -102,13 +107,12 @@ require(['config'],function(){
 				
 			});
 		});
-		// var arr = [];
-		// var arr1 = [];
+		var arr = [];
+		var arr1 = [];
 		//购物车删减效果
 		$('.car_remove').each(function(i){
 
 			$('.car_remove').eq(i).on('click',function(){
-				var arr = [];
 				localStorage.max = parseInt(localStorage.max) - 1;
 				var id = $(this).parent().parent().parent().parent().data('id');
 				var num = id + '_num';
@@ -117,9 +121,9 @@ require(['config'],function(){
 
 					$('.wares_num').css('display','none');
 
-					
+					localStorage.removeItem(num);
 				}				
-				localStorage[num] = parseInt(localStorage[num]) - 1;
+				
 				$('.car_remove').each(function(l){
 					if($('.car_remove').eq(l).parent().parent().parent().parent().data('id')===id){
 						arr.push(l);
@@ -128,17 +132,7 @@ require(['config'],function(){
 								
 								$('.add_remove').eq(arr[k]).css('display','none');
 								$('.s_car').eq(arr[k]).css('display','block');
-								localStorage.removeItem(num);
-								localStorage.removeItem(id);
-
-								// console.log(localStorage);
 							}
-						}else{
-							for(var k=0;k<=arr.length-1;k++){
-
-								$('.car_num').eq(arr[k])[0].innerText = localStorage[num];
-							}
-							
 						}
 					}
 				});
@@ -157,7 +151,6 @@ require(['config'],function(){
 			var id = $(this).parent().parent().parent().parent().data('id');
 			var num = id + '_num';
 			$('.car_add').eq(i).on('click',function(){
-				var arr1 = []
 				localStorage.max = parseInt(localStorage.max) + 1;
 				localStorage[num] = parseInt(localStorage[num]) + 1;
 				$('.wares_num')[0].innerText = localStorage.max;
@@ -168,7 +161,7 @@ require(['config'],function(){
 						arr1.push(l);
 						
 							for(var k=0;k<=arr1.length-1;k++){
-								// console.log(localStorage[num]);
+								console.log(localStorage[num]);
 								$('.car_num').eq(arr1[k])[0].innerText = localStorage[num];
 							}
 						
