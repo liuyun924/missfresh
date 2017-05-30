@@ -1,9 +1,35 @@
 @charset "UTF-8";
-body, html, h1, h2, h3, h4, p, ul, ol, li, img { padding: 0; margin: 0; list-style: none; }
+::before, ::after { /* 清除默认的间距和边距*/ padding: 0; margin: 0; /*去除移动端特有的点击高亮效果*/ -webkit-tap-highlight-color: transparent; /*设置所有的盒子都以边框开始计算宽度*/ -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-body, html { width: 100%; height: 100%; margin: 0 auto; position: relative; }
+body, h1, h2, h3, h4, h5, h6, p, dl, dd, ul, ol, pre, form, input, textarea, th, td, select { margin: 0; padding: 0; }
 
-* { box-sizing: border-box; }
+em { font-style: normal; }
+
+ul, li { list-style: none; }
+
+a { text-decoration: none; color: #333; }
+
+img { border: none; }
+
+table { border-collapse: collapse; }
+
+textarea { resize: none; overflow: hidden; }
+
+body { font-family: '微软雅黑', sans-serif; color: #555; font-size: 14px; }
+
+.wrap { /*width: 80%;*/ min-width: 1000px; width: 1200px; margin: 0 auto; }
+
+input { border: none; /*获取焦点时的外边框*/ outline: none; /*清除移动端默认的表单样式:-webkit-appearance是用来改变按钮和其他控件的外观，使其外观类似于原生控件.
+通常我们可以在相应的元素上加上-webkit-appearance: none;来移除原生控件样式。*/ /*-webkit-appearance: none;*/ }
+
+.clear { zoom: 1; }
+
+.clear:after { content: ''; display: block; clear: both; }
+
+.clearfix::before, .clearfix::after { display: block; height: 0; clear: both; content: ""; height: 0; line-height: 0; display: block; clear: both; visibility: hidden; }
+
+input { /*border: none;*/ /*获取焦点时的外边框*/ outline: none; /*清除移动端默认的表单样式:-webkit-appearance是用来改变按钮和其他控件的外观，使其外观类似于原生控件.
+通常我们可以在相应的元素上加上-webkit-appearance: none;来移除原生控件样式。*/ /*-webkit-appearance: none;*/ }
 
 .container { width: 100%; height: 100%; display: flex; background: #F0F0F0; flex-direction: column; padding: 0; margin: 0; }
 
@@ -177,11 +203,25 @@ footer .clearing > div .to-settle-accounts span { vertical-align: middle; line-h
 
 footer .clearing > div .to-settle-accounts i { display: inline-block; width: 7px; height: 10px; background: url("../img/cart_img/youjiantou.png") no-repeat; position: absolute; background-size: 100% 100%; top: 40%; margin-left: 4px; }
 
-#footer { box-shadow: 0 0 10px rgba(0, 0, 0, 0.06); border-color: #ddd; border-top: 2px solid #ddd; }
+.footer { margin-top: 5px; display: flex; font-size: 12px; }
 
-#footer a{
-	color:#333;
-}
+.footer .a_foot { height: 100%; }
+
+.footer .icon { display: block; margin: 0px auto; background: url(../img/public/footer/icon.png) no-repeat; width: 23px; height: 25px; background-size: auto 23px !important; vertical-align: middle; }
+
+.footer .mine { background-position: 0 0; }
+
+.footer .redpac { background-position: -23px 0; }
+
+.footer .car { background-position: -46px 0; }
+
+.footer .home { background-position: -69px 0; }
+
+.footer li { width: 25%; text-align: center; }
+
+.footer li a { width: 100%; }
+
+.footer .act { color: #ff4891; }
 
 #clearing_bottom { display: flex; flex-direction: column; width: 100%; height: 100%; position: absolute; top: 9.375rem; display: none; background: #F0F0F0; }
 
@@ -237,69 +277,53 @@ footer .clearing > div .to-settle-accounts i { display: inline-block; width: 7px
 
 #clearing_bottom .clearing_main .preferential_Way { height: 38px; color: #969696; font-size: 12px; padding: 0 15px; line-height: 38px; }
 
-#clearing_bottom .main_hint { background: #fff; }
+#clearing_bottom .clearing_main .main_hint { background: #fff; }
 
-#clearing_bottom .main_hint ul { display: flex; flex-direction: column; height: 89px; padding: 0 15px; }
+#clearing_bottom .clearing_main .main_hint ul { display: flex; flex-direction: column; height: 89px; padding: 0 15px; }
 
-#clearing_bottom .main_hint ul li { flex: 1; line-height: 44px; position: relative; }
+#clearing_bottom .clearing_main .main_hint ul li { flex: 1; line-height: 44px; position: relative; }
 
-#clearing_bottom .main_hint ul li span { display: inline-block; width: 22px; height: 22px; border: 1px solid #d1d1d1; border-radius: 50%; position: absolute; top: 50%; right: 0; margin-top: -12px; }
+#clearing_bottom .clearing_main .main_hint ul li span { display: inline-block; width: 24px; height: 24px; border: 1px solid #d1d1d1; border-radius: 50%; position: absolute; top: 50%; right: 0; margin-top: -12px; }
 
-#clearing_bottom .main_hint ul li span i { display: inline-block; width: 22px; height: 22px; background: url("../img/cart_img/checked.png") no-repeat; background-size: 22px 22px; position: absolute; }
+#clearing_bottom .clearing_main .main_hint ul li span i { display: inline-block; width: 22px; height: 22px; background: url("../img/cart_img/checked.png") no-repeat; background-size: 22px 22px; position: absolute; }
 
-#clearing_bottom .main_hint ul li .members { border: 0; }
+#clearing_bottom .clearing_main .main_clearing { margin-top: 8px; background: #fff; }
 
-#clearing_bottom .main_hint ul li .With_Offer i { display: none; }
+#clearing_bottom .clearing_main .main_clearing > div { height: 75px; padding: 10px 15px 0; border-bottom: 1px solid #ddd; }
 
-#clearing_bottom .main_clearNone { margin-top: 8px; background: #fff; }
+#clearing_bottom .clearing_main .main_clearing .rebate { height: 40px; }
 
-#clearing_bottom .main_clearNone p { position: relative; }
+#clearing_bottom .clearing_main .main_clearing .rebate p { position: relative; }
 
-#clearing_bottom .main_clearNone p > span { position: absolute; right: 0; }
+#clearing_bottom .clearing_main .main_clearing .rebate p span { position: absolute; right: 0; }
 
-#clearing_bottom .main_clearNone p > span span { color: #ff4891; }
+#clearing_bottom .clearing_main .main_clearing .coupon .coupon_top p { width: 203px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; color: #969696; }
 
-#clearing_bottom .main_clearNone p > span span i { font-style: normal; }
+#clearing_bottom .clearing_main .main_clearing .coupon .coupon_bottom p { font-size: 14px; position: relative; }
 
-#clearing_bottom .main_clearNone .clearNone_top { height: 40px; padding: 10px 15px 5px 15px; border-bottom: 1px solid #ddd; line-height: 25px; }
+#clearing_bottom .clearing_main .main_clearing .coupon .coupon_bottom p img { width: 16px; height: 16px; margin-top: -3px; margin-right: 5px; }
 
-#clearing_bottom .main_clearNone .clearNone_center { height: 35px; padding: 10px 15px 0; line-height: 15px; }
+#clearing_bottom .clearing_main .main_clearing .coupon .coupon_bottom p span { position: absolute; right: 0; color: #ff4891; }
 
-#clearing_bottom .main_clearNone .clearNone_bottom { height: 40px; padding: 10px 15px 5px 15px; border-bottom: 1px solid #ddd; line-height: 25px; }
+#clearing_bottom .clearing_main .main_clearing .coupon .red_packet { padding-top: 8px; padding-bottom: 8px; }
 
-#clearing_bottom .main_clearNone .summation { height: 44px; padding: 0 15px; line-height: 44px; }
+#clearing_bottom .clearing_main .main_clearing .coupon .red_packet p { font-size: 14px; position: relative; }
 
-#clearing_bottom .main_clearing { margin-top: 8px; background: #fff; display: none; }
+#clearing_bottom .clearing_main .main_clearing .coupon .red_packet p img { width: 16px; height: 16px; margin-top: -3px; margin-right: 5px; }
 
-#clearing_bottom .main_clearing > div { height: 75px; padding: 10px 15px 0; border-bottom: 1px solid #ddd; }
+#clearing_bottom .clearing_main .main_clearing .coupon .red_packet p span { position: absolute; right: 0; color: #c6c6c6; padding-right: 18px; }
 
-#clearing_bottom .main_clearing .rebate { height: 40px; }
+#clearing_bottom .clearing_main .main_clearing .coupon .red_packet p b { display: inline-block; position: absolute; right: 0; top: 50%; margin-top: -5px; content: ''; width: 6px; height: 11px; background: url("../img/cart_img/goes_03.png") no-repeat; background-size: 100% 100%; }
 
-#clearing_bottom .main_clearing .rebate p { position: relative; }
+#clearing_bottom .clearing_main .main_clearing .net .net_bottom { padding-top: 14px; }
 
-#clearing_bottom .main_clearing .rebate p span { position: absolute; right: 0; }
+#clearing_bottom .clearing_main .main_clearing .net p { position: relative; }
 
-#clearing_bottom .main_clearing .coupon .coupon_top p { width: 203px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; color: #969696; }
+#clearing_bottom .clearing_main .main_clearing .net p span { position: absolute; right: 0; }
 
-#clearing_bottom .main_clearing .coupon .coupon_bottom { padding-top: 10px; }
+#clearing_bottom .clearing_main .main_clearing .total { height: 44px; text-align: right; background: #fff; font-size: 18px; }
 
-#clearing_bottom .main_clearing .coupon .coupon_bottom p { font-size: 14px; position: relative; }
-
-#clearing_bottom .main_clearing .coupon .coupon_bottom p img { width: 16px; height: 16px; margin-top: -3px; margin-right: 5px; }
-
-#clearing_bottom .main_clearing .coupon .coupon_bottom p span { position: absolute; right: 0; color: #ff4891; }
-
-#clearing_bottom .main_clearing .net .net_bottom { padding-top: 14px; }
-
-#clearing_bottom .main_clearing .net p { position: relative; }
-
-#clearing_bottom .main_clearing .net p span { position: absolute; right: 0; }
-
-#clearing_bottom .main_clearing .total { height: 44px; text-align: right; background: #fff; font-size: 14px; }
-
-#clearing_bottom .main_clearing .total span { color: #ff4891; font-size: 12px; }
-
-
+#clearing_bottom .clearing_main .main_clearing .total span { color: #ff4891; }
 
 #clearing_bottom .clearing_main .privilege { padding: 0 15px; text-align: right; font-size: 12px; color: #969696; line-height: 30px; }
 
