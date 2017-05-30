@@ -1,4 +1,8 @@
 @import 'common';
+html {
+    font-size: 200px;
+}
+
 .fll {
     float: left;
 }
@@ -9,42 +13,50 @@
 
 .top {
     z-index: 10;
-        text-align: center;
+    text-align: center;
     position: fixed;
     top: 0;
-    padding-left: 1em;
+    display: flex;
     width: 100%;
-    height: 43px;
-    line-height: 43px;
+    justify-content: space-between;
+    height: 0.28rem;
+    line-height: 0.28rem;
     color: #4b4b4b;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .06);
+    box-shadow: 0 0 0.05rem rgba(0, 0, 0, .06);
     background-color: #fff;
+    a {
+        display: inline-block;
+        height: 100%;
+        width: 0.4rem;
+    }
     i {
         color: #969696;
-        font-size: 40px;
+        font-size: 0.2rem;
+        margin-top: 0.015rem;
     }
     h1 {
+        font-size: 0.18rem;
         height: 100%;
         display: inline-block;
+        width: 80%;
         /*margin-left: 17em;*/
         font-weight: normal;
-        font-size: 17px;
         color: #4b4b4b;
     }
 }
 
 .carouserBox {
-    margin-top: 45px;
+    margin-top: 0.3rem;
     position: relative;
     text-align: center;
     img.halfpr {
-        height: 44px;
+        height: 0.42rem;
         position: absolute;
         top: 0;
-        left: 2em;
+        left: 0.16rem;
     }
     img.maingood {
-        width: 65%;
+        width: 70%;
     }
 }
 
@@ -52,17 +64,21 @@
     background: url(../img/product-bg.png) no-repeat;
     background-size: 100% 106%;
     .box {
-        margin-left: 20px;
-        padding-left: 40px;
-        padding-right: 40px;
+        margin-left: 0.1rem;
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
         .title {
-            padding-top: 32px;
+            font-size: .18rem;
+            padding-top: 0.16rem;
             padding-bottom: 16px;
             font-size: 21px;
             color: #969696;
+            .title-product {
+                font-size: .18rem;
+            }
         }
         h2 {
-            font-size: 16px;
+            font-size: .15rem;
             color: #262626;
             margin: 0;
             padding-bottom: 6px;
@@ -70,13 +86,13 @@
         p {
             margin: 10px 0;
             font: inherit;
-            font-size: 100%;
+            font-size: 0.13rem;
             color: rgb(255, 195, 141);
         }
         p.price {
             color: #ff4891;
             vertical-align: bottom;
-            font-size: 22px;
+            font-size: 0.125rem;
             border-bottom: 1px solid #f5f5f5;
             padding-bottom: 8px;
             span.pricenow {
@@ -84,23 +100,14 @@
             }
             span.cellnum {
                 color: #969696;
-                font-size: 12px;
-                margin-top: 13px;
-                margin-right: 1.7em;
+                font-size: 0.085rem;
+                margin-top: 0.065rem;
+                margin-right: 0.1rem;
             }
         }
-        /*p.delivery {
-                line-height: 44px;
-                float: left;
-                color: #969696;
-                i.fa {
-                    font-size: 20px;
-                    margin: 0 20px;
-                }
-            }*/
         .product-news {
             display: flex;
-            height: 50px;
+            height: 0.35rem;
             vertical-align: bottom;
             justify-content: space-around;
             p {
@@ -109,7 +116,7 @@
                 }
                 span {
                     color: #969696;
-                    margin-bottom: 15px;
+                    margin-bottom: 0.085rem;
                 }
             }
         }
@@ -120,14 +127,15 @@
 /*积分区*/
 
 .integral {
+    font-size: 0.1rem;
     width: 100%;
-    border-radius: 10px;
-    border-top: 10px solid #f5f5f5;
-    border-left: 10px solid #f5f5f5;
-    border-right: 10px solid #f5f5f5;
-    padding-bottom: 10px;
+    border-radius: 0.05rem;
+    border-top: 0.05rem solid #f5f5f5;
+    border-left: 0.05rem solid #f5f5f5;
+    border-right: 0.05rem solid #f5f5f5;
+    padding-bottom: 0.05rem;
     .integral-detail {
-        padding: 0 10px;
+        padding: 0 0.05rem;
         line-height: 44px;
         img {
             vertical-align: middle;
@@ -140,16 +148,17 @@
     }
     .sharepack {
         background: rgba(255, 72, 145, .1);
-        margin: 0 10px;
-        border-radius: 3px;
+        margin: 0 0.05rem;
+        border-radius: 0.015rem;
         width: 95%;
         img {
-            width: 80px;
+            width: 0.8rem;
             margin: 5px;
             vertical-align: middle;
         }
         span {
-            line-height: 55px;
+            line-height: 0.3rem;
+            margin-left: 1.4rem;
         }
     }
 }
@@ -160,30 +169,30 @@
 .light-points {
     padding: 0 40px;
     .title {
-        font-size: 16px;
+        font-size: 0.15rem;
         color: #262626;
         clear: both;
-        padding-left: 20px;
+        padding-left: 0.1rem;
         text-align: center;
-        line-height: 36px;
+        line-height: 0.2rem;
         img {
-            width: 16px;
-            height: 16px;
+            width: 0.15rem;
+            height: 0.15rem;
             vertical-align: middle;
         }
     }
     ul.mainlp {
-        padding: 0 14px;
+        padding: 0 0.07rem;
         background: url(../img/details/product-bg2.png) no-repeat;
         background-size: 100% 100%;
         li {
             color: #262626;
-            line-height: 40px;
-            font-size: 14px;
+            line-height: 0.3rem;
+            font-size: 0.14rem;
             border-bottom: 1px solid #f5f5f5;
         }
         li:first-child {
-            padding-top: 20px;
+            padding-top: 0.1rem;
         }
     }
 }
@@ -199,17 +208,18 @@
     .top-title {
         text-align: center;
         width: 100%;
-        font-size: 16px;
+        font-size: 0.15rem;
         color: #262626;
         clear: both;
         position: relative;
         margin: 0 auto;
-        line-height: 44px;
+        line-height: 0.225rem;
     }
     .detail-item {
         color: #262626;
-        line-height: 40px;
-        font-size: 14px;
+        padding: 0.1rem 0;
+        line-height: 0.2rem;
+        font-size: 0.125rem;
         border-top: 1px solid #f5f5f5;
     }
 }
@@ -218,12 +228,12 @@
 /*分享*/
 
 .share-menu {
-	position: fixed;
-	z-index: 30;
-	display: none;
-	background-color: #fff;
-	width: 100%;
-	bottom: 0;
+    position: fixed;
+    z-index: 30;
+    display: none;
+    background-color: #fff;
+    width: 100%;
+    bottom: 0;
     margin: 0;
     padding: 0;
     border: 0;
@@ -266,18 +276,18 @@
                 background-size: 100% 100%;
             }
             p {
-                width: 53px;
-                height: 53px;
-                margin: 0 auto 10px;
+                width: 0.265rem;
+                height: 0.265rem;
+                margin: 0 auto 0.05rem;
             }
             span {
-                font-size: 13px;
+                font-size: 0.085rem;
                 color: #4B4B4B;
-                line-height: 24px;
+                line-height: 0.135rem;
             }
             .share-btn {
-	                width: 100%;
-                height: auto;	
+                width: 100%;
+                height: auto;
                 overflow: hidden;
                 text-align: center;
                 box-sizing: border-box;
@@ -287,14 +297,16 @@
     }
 }
 
-/*	<!-- 黑色区块 -->*/
-.cover{
-	display: none;
-	position: fixed;
-	background-color: black;
-	opacity: 0.5;
-	top: 0;
-	width: 100%;
-	height: 50000px;
-	z-index: 20;
+
+/*  <!-- 黑色区块 -->*/
+
+.cover {
+    display: none;
+    position: fixed;
+    background-color: black;
+    opacity: 0.5;
+    top: 0;
+    width: 100%;
+    height: 50000px;
+    z-index: 20;
 }

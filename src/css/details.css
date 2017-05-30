@@ -31,78 +31,84 @@ input { border: none; /*获取焦点时的外边框*/ outline: none; /*清除移
 input { /*border: none;*/ /*获取焦点时的外边框*/ outline: none; /*清除移动端默认的表单样式:-webkit-appearance是用来改变按钮和其他控件的外观，使其外观类似于原生控件.
 通常我们可以在相应的元素上加上-webkit-appearance: none;来移除原生控件样式。*/ /*-webkit-appearance: none;*/ }
 
+html { font-size: 200px; }
+
 .fll { float: left; }
 
 .flr { float: right; }
 
-.top { z-index: 10; text-align: center; position: fixed; top: 0; padding-left: 1em; width: 100%; height: 43px; line-height: 43px; color: #4b4b4b; box-shadow: 0 0 10px rgba(0, 0, 0, 0.06); background-color: #fff; }
+.top { z-index: 10; text-align: center; position: fixed; top: 0; display: flex; width: 100%; justify-content: space-between; height: 0.28rem; line-height: 0.28rem; color: #4b4b4b; box-shadow: 0 0 0.05rem rgba(0, 0, 0, 0.06); background-color: #fff; }
 
-.top i { color: #969696; font-size: 40px; }
+.top a { display: inline-block; height: 100%; width: 0.4rem; }
 
-.top h1 { height: 100%; display: inline-block; /*margin-left: 17em;*/ font-weight: normal; font-size: 17px; color: #4b4b4b; }
+.top i { color: #969696; font-size: 0.2rem; margin-top: 0.015rem; }
 
-.carouserBox { margin-top: 45px; position: relative; text-align: center; }
+.top h1 { font-size: 0.18rem; height: 100%; display: inline-block; width: 80%; /*margin-left: 17em;*/ font-weight: normal; color: #4b4b4b; }
 
-.carouserBox img.halfpr { height: 44px; position: absolute; top: 0; left: 2em; }
+.carouserBox { margin-top: 0.3rem; position: relative; text-align: center; }
 
-.carouserBox img.maingood { width: 65%; }
+.carouserBox img.halfpr { height: 0.42rem; position: absolute; top: 0; left: 0.16rem; }
+
+.carouserBox img.maingood { width: 70%; }
 
 .textures { background: url(../img/product-bg.png) no-repeat; background-size: 100% 106%; }
 
-.textures .box { margin-left: 20px; padding-left: 40px; padding-right: 40px; /*p.delivery { line-height: 44px; float: left; color: #969696; i.fa { font-size: 20px; margin: 0 20px; } }*/ }
+.textures .box { margin-left: 0.1rem; padding-left: 0.2rem; padding-right: 0.2rem; }
 
-.textures .box .title { padding-top: 32px; padding-bottom: 16px; font-size: 21px; color: #969696; }
+.textures .box .title { font-size: .18rem; padding-top: 0.16rem; padding-bottom: 16px; font-size: 21px; color: #969696; }
 
-.textures .box h2 { font-size: 16px; color: #262626; margin: 0; padding-bottom: 6px; }
+.textures .box .title .title-product { font-size: .18rem; }
 
-.textures .box p { margin: 10px 0; font: inherit; font-size: 100%; color: #ffc38d; }
+.textures .box h2 { font-size: .15rem; color: #262626; margin: 0; padding-bottom: 6px; }
 
-.textures .box p.price { color: #ff4891; vertical-align: bottom; font-size: 22px; border-bottom: 1px solid #f5f5f5; padding-bottom: 8px; }
+.textures .box p { margin: 10px 0; font: inherit; font-size: 0.13rem; color: #ffc38d; }
+
+.textures .box p.price { color: #ff4891; vertical-align: bottom; font-size: 0.125rem; border-bottom: 1px solid #f5f5f5; padding-bottom: 8px; }
 
 .textures .box p.price span.pricenow { font-size: 40px; }
 
-.textures .box p.price span.cellnum { color: #969696; font-size: 12px; margin-top: 13px; margin-right: 1.7em; }
+.textures .box p.price span.cellnum { color: #969696; font-size: 0.085rem; margin-top: 0.065rem; margin-right: 0.1rem; }
 
-.textures .box .product-news { display: flex; height: 50px; vertical-align: bottom; justify-content: space-around; }
+.textures .box .product-news { display: flex; height: 0.35rem; vertical-align: bottom; justify-content: space-around; }
 
 .textures .box .product-news p img { vertical-align: middle; }
 
-.textures .box .product-news p span { color: #969696; margin-bottom: 15px; }
+.textures .box .product-news p span { color: #969696; margin-bottom: 0.085rem; }
 
 /*积分区*/
-.integral { width: 100%; border-radius: 10px; border-top: 10px solid #f5f5f5; border-left: 10px solid #f5f5f5; border-right: 10px solid #f5f5f5; padding-bottom: 10px; }
+.integral { font-size: 0.1rem; width: 100%; border-radius: 0.05rem; border-top: 0.05rem solid #f5f5f5; border-left: 0.05rem solid #f5f5f5; border-right: 0.05rem solid #f5f5f5; padding-bottom: 0.05rem; }
 
-.integral .integral-detail { padding: 0 10px; line-height: 44px; }
+.integral .integral-detail { padding: 0 0.05rem; line-height: 44px; }
 
 .integral .integral-detail img { vertical-align: middle; margin: 0 20px; width: 34px; }
 
 .integral .integral-detail img.explain { vertical-align: middle; }
 
-.integral .sharepack { background: rgba(255, 72, 145, 0.1); margin: 0 10px; border-radius: 3px; width: 95%; }
+.integral .sharepack { background: rgba(255, 72, 145, 0.1); margin: 0 0.05rem; border-radius: 0.015rem; width: 95%; }
 
-.integral .sharepack img { width: 80px; margin: 5px; vertical-align: middle; }
+.integral .sharepack img { width: 0.8rem; margin: 5px; vertical-align: middle; }
 
-.integral .sharepack span { line-height: 55px; }
+.integral .sharepack span { line-height: 0.3rem; margin-left: 1.4rem; }
 
 /*亮点*/
 .light-points { padding: 0 40px; }
 
-.light-points .title { font-size: 16px; color: #262626; clear: both; padding-left: 20px; text-align: center; line-height: 36px; }
+.light-points .title { font-size: 0.15rem; color: #262626; clear: both; padding-left: 0.1rem; text-align: center; line-height: 0.2rem; }
 
-.light-points .title img { width: 16px; height: 16px; vertical-align: middle; }
+.light-points .title img { width: 0.15rem; height: 0.15rem; vertical-align: middle; }
 
-.light-points ul.mainlp { padding: 0 14px; background: url(../img/details/product-bg2.png) no-repeat; background-size: 100% 100%; }
+.light-points ul.mainlp { padding: 0 0.07rem; background: url(../img/details/product-bg2.png) no-repeat; background-size: 100% 100%; }
 
-.light-points ul.mainlp li { color: #262626; line-height: 40px; font-size: 14px; border-bottom: 1px solid #f5f5f5; }
+.light-points ul.mainlp li { color: #262626; line-height: 0.3rem; font-size: 0.14rem; border-bottom: 1px solid #f5f5f5; }
 
-.light-points ul.mainlp li:first-child { padding-top: 20px; }
+.light-points ul.mainlp li:first-child { padding-top: 0.1rem; }
 
 /*详情区*/
 .graphic-details { margin-top: 20px; border: 10px solid #F5F5F5; width: 80%; padding: 0 40px; }
 
-.graphic-details .top-title { text-align: center; width: 100%; font-size: 16px; color: #262626; clear: both; position: relative; margin: 0 auto; line-height: 44px; }
+.graphic-details .top-title { text-align: center; width: 100%; font-size: 0.15rem; color: #262626; clear: both; position: relative; margin: 0 auto; line-height: 0.225rem; }
 
-.graphic-details .detail-item { color: #262626; line-height: 40px; font-size: 14px; border-top: 1px solid #f5f5f5; }
+.graphic-details .detail-item { color: #262626; padding: 0.1rem 0; line-height: 0.2rem; font-size: 0.125rem; border-top: 1px solid #f5f5f5; }
 
 /*分享*/
 .share-menu { position: fixed; z-index: 30; display: none; background-color: #fff; width: 100%; bottom: 0; margin: 0; padding: 0; border: 0; vertical-align: baseline; font: inherit; font-size: 100%; }
@@ -121,11 +127,11 @@ input { /*border: none;*/ /*获取焦点时的外边框*/ outline: none; /*清�
 
 .share-menu ul li .qqzone { background: url(../img/details/share-qqzone.png) no-repeat; background-size: 100% 100%; }
 
-.share-menu ul li p { width: 53px; height: 53px; margin: 0 auto 10px; }
+.share-menu ul li p { width: 0.265rem; height: 0.265rem; margin: 0 auto 0.05rem; }
 
-.share-menu ul li span { font-size: 13px; color: #4B4B4B; line-height: 24px; }
+.share-menu ul li span { font-size: 0.085rem; color: #4B4B4B; line-height: 0.135rem; }
 
 .share-menu ul li .share-btn { width: 100%; height: auto; overflow: hidden; text-align: center; box-sizing: border-box; padding: 0 10px; }
 
-/*	<!-- 黑色区块 -->*/
+/*  <!-- 黑色区块 -->*/
 .cover { display: none; position: fixed; background-color: black; opacity: 0.5; top: 0; width: 100%; height: 50000px; z-index: 20; }
