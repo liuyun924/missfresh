@@ -140,7 +140,7 @@ input { border: none; /*获取焦点时的外边框*/ outline: none; /*清除移
 
 #container #footer { box-shadow: 0 0 10px rgba(0, 0, 0, 0.06); border-color: #ddd; border-top: 2px solid #ddd; }
 
-#container .search_box { width: 100%; height: 1000px; background: #f0f0f0; position: absolute; top: 0; z-index: 99; }
+#container .search_box { width: 100%; height: 1000px; background: #f0f0f0; position: absolute; top: 0; z-index: 99; display: none;}
 
 #container .search_box .search_div { display: flex; background: #fff; height: 44px; box-sizing: border-box; padding: 5px 0; }
 
@@ -157,3 +157,7 @@ input { border: none; /*获取焦点时的外边框*/ outline: none; /*清除移
 #container .search_box .search_div .back, #container .search_box .search_div .search_button { width: 48px; height: 34px; }
 
 #container .search_box .search_div .search_button { text-align: center; line-height: 30px; font-size: 16px; }
+
+#container .loading { width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 55; background: #fffffe;}
+
+#container .loading .loading_img { position: absolute; top: 50%; left: 50%; margin-left: -102px; margin-top: -45px;}

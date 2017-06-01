@@ -1,11 +1,17 @@
 @import 'common';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ly
 html {
     font-size: 200px;
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
+=======
+>>>>>>> ly
 .fll {
     float: left;
 }
@@ -16,6 +22,7 @@ html {
 
 .top {
     z-index: 10;
+<<<<<<< HEAD
 <<<<<<< HEAD
     text-align: center;
     position: fixed;
@@ -47,31 +54,47 @@ html {
         font-weight: normal;
 =======
         text-align: center;
+=======
+    text-align: center;
+>>>>>>> ly
     position: fixed;
     top: 0;
-    padding-left: 1em;
+    display: flex;
     width: 100%;
-    height: 43px;
-    line-height: 43px;
+    justify-content: space-between;
+    height: 0.28rem;
+    line-height: 0.28rem;
     color: #4b4b4b;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .06);
+    box-shadow: 0 0 0.05rem rgba(0, 0, 0, .06);
     background-color: #fff;
+    a {
+        display: inline-block;
+        height: 100%;
+        width: 0.4rem;
+    }
     i {
         color: #969696;
-        font-size: 40px;
+        font-size: 0.2rem;
+        margin-top: 0.015rem;
     }
     h1 {
+        font-size: 0.18rem;
         height: 100%;
         display: inline-block;
+        width: 80%;
         /*margin-left: 17em;*/
         font-weight: normal;
+<<<<<<< HEAD
         font-size: 17px;
 >>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
+=======
+>>>>>>> ly
         color: #4b4b4b;
     }
 }
 
 .carouserBox {
+<<<<<<< HEAD
 <<<<<<< HEAD
     margin-top: 0.3rem;
     position: relative;
@@ -86,17 +109,24 @@ html {
         width: 70%;
 =======
     margin-top: 45px;
+=======
+    margin-top: 0.3rem;
+>>>>>>> ly
     position: relative;
     text-align: center;
     img.halfpr {
-        height: 44px;
+        height: 0.42rem;
         position: absolute;
         top: 0;
-        left: 2em;
+        left: 0.16rem;
     }
     img.maingood {
+<<<<<<< HEAD
         width: 65%;
 >>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
+=======
+        width: 70%;
+>>>>>>> ly
     }
 }
 
@@ -104,6 +134,7 @@ html {
     background: url(../img/product-bg.png) no-repeat;
     background-size: 100% 106%;
     .box {
+<<<<<<< HEAD
 <<<<<<< HEAD
         margin-left: 0.1rem;
         padding-left: 0.2rem;
@@ -124,15 +155,28 @@ html {
         margin-left: 20px;
         padding-left: 40px;
         padding-right: 40px;
+=======
+        margin-left: 0.1rem;
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+>>>>>>> ly
         .title {
-            padding-top: 32px;
+            font-size: .18rem;
+            padding-top: 0.16rem;
             padding-bottom: 16px;
             font-size: 21px;
             color: #969696;
+            .title-product {
+                font-size: .18rem;
+            }
         }
         h2 {
+<<<<<<< HEAD
             font-size: 16px;
 >>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
+=======
+            font-size: .15rem;
+>>>>>>> ly
             color: #262626;
             margin: 0;
             padding-bottom: 6px;
@@ -141,20 +185,28 @@ html {
             margin: 10px 0;
             font: inherit;
 <<<<<<< HEAD
+<<<<<<< HEAD
             font-size: 0.13rem;
 =======
             font-size: 100%;
 >>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
+=======
+            font-size: 0.13rem;
+>>>>>>> ly
             color: rgb(255, 195, 141);
         }
         p.price {
             color: #ff4891;
             vertical-align: bottom;
 <<<<<<< HEAD
+<<<<<<< HEAD
             font-size: 0.125rem;
 =======
             font-size: 22px;
 >>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
+=======
+            font-size: 0.125rem;
+>>>>>>> ly
             border-bottom: 1px solid #f5f5f5;
             padding-bottom: 8px;
             span.pricenow {
@@ -162,6 +214,7 @@ html {
             }
             span.cellnum {
                 color: #969696;
+<<<<<<< HEAD
 <<<<<<< HEAD
                 font-size: 0.085rem;
                 margin-top: 0.065rem;
@@ -175,21 +228,21 @@ html {
                 font-size: 12px;
                 margin-top: 13px;
                 margin-right: 1.7em;
+=======
+                font-size: 0.085rem;
+                margin-top: 0.065rem;
+                margin-right: 0.1rem;
+>>>>>>> ly
             }
         }
-        /*p.delivery {
-                line-height: 44px;
-                float: left;
-                color: #969696;
-                i.fa {
-                    font-size: 20px;
-                    margin: 0 20px;
-                }
-            }*/
         .product-news {
             display: flex;
+<<<<<<< HEAD
             height: 50px;
 >>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
+=======
+            height: 0.35rem;
+>>>>>>> ly
             vertical-align: bottom;
             justify-content: space-around;
             p {
@@ -199,10 +252,14 @@ html {
                 span {
                     color: #969696;
 <<<<<<< HEAD
+<<<<<<< HEAD
                     margin-bottom: 0.085rem;
 =======
                     margin-bottom: 15px;
 >>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
+=======
+                    margin-bottom: 0.085rem;
+>>>>>>> ly
                 }
             }
         }
@@ -214,6 +271,7 @@ html {
 
 .integral {
 <<<<<<< HEAD
+<<<<<<< HEAD
     font-size: 0.1rem;
     width: 100%;
     border-radius: 0.05rem;
@@ -224,15 +282,22 @@ html {
     .integral-detail {
         padding: 0 0.05rem;
 =======
+=======
+    font-size: 0.1rem;
+>>>>>>> ly
     width: 100%;
-    border-radius: 10px;
-    border-top: 10px solid #f5f5f5;
-    border-left: 10px solid #f5f5f5;
-    border-right: 10px solid #f5f5f5;
-    padding-bottom: 10px;
+    border-radius: 0.05rem;
+    border-top: 0.05rem solid #f5f5f5;
+    border-left: 0.05rem solid #f5f5f5;
+    border-right: 0.05rem solid #f5f5f5;
+    padding-bottom: 0.05rem;
     .integral-detail {
+<<<<<<< HEAD
         padding: 0 10px;
 >>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
+=======
+        padding: 0 0.05rem;
+>>>>>>> ly
         line-height: 44px;
         img {
             vertical-align: middle;
@@ -246,6 +311,7 @@ html {
     .sharepack {
         background: rgba(255, 72, 145, .1);
 <<<<<<< HEAD
+<<<<<<< HEAD
         margin: 0 0.05rem;
         border-radius: 0.015rem;
         width: 95%;
@@ -258,16 +324,28 @@ html {
         img {
             width: 80px;
 >>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
+=======
+        margin: 0 0.05rem;
+        border-radius: 0.015rem;
+        width: 95%;
+        img {
+            width: 0.8rem;
+>>>>>>> ly
             margin: 5px;
             vertical-align: middle;
         }
         span {
+<<<<<<< HEAD
 <<<<<<< HEAD
             line-height: 0.3rem;
             margin-left: 1.4rem;
 =======
             line-height: 55px;
 >>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
+=======
+            line-height: 0.3rem;
+            margin-left: 1.4rem;
+>>>>>>> ly
         }
     }
 }
@@ -278,6 +356,7 @@ html {
 .light-points {
     padding: 0 40px;
     .title {
+<<<<<<< HEAD
 <<<<<<< HEAD
         font-size: 0.15rem;
         color: #262626;
@@ -290,28 +369,41 @@ html {
             height: 0.15rem;
 =======
         font-size: 16px;
+=======
+        font-size: 0.15rem;
+>>>>>>> ly
         color: #262626;
         clear: both;
-        padding-left: 20px;
+        padding-left: 0.1rem;
         text-align: center;
-        line-height: 36px;
+        line-height: 0.2rem;
         img {
+<<<<<<< HEAD
             width: 16px;
             height: 16px;
 >>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
+=======
+            width: 0.15rem;
+            height: 0.15rem;
+>>>>>>> ly
             vertical-align: middle;
         }
     }
     ul.mainlp {
 <<<<<<< HEAD
+<<<<<<< HEAD
         padding: 0 0.07rem;
 =======
         padding: 0 14px;
 >>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
+=======
+        padding: 0 0.07rem;
+>>>>>>> ly
         background: url(../img/details/product-bg2.png) no-repeat;
         background-size: 100% 100%;
         li {
             color: #262626;
+<<<<<<< HEAD
 <<<<<<< HEAD
             line-height: 0.3rem;
             font-size: 0.14rem;
@@ -327,6 +419,14 @@ html {
         li:first-child {
             padding-top: 20px;
 >>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
+=======
+            line-height: 0.3rem;
+            font-size: 0.14rem;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:first-child {
+            padding-top: 0.1rem;
+>>>>>>> ly
         }
     }
 }
@@ -343,14 +443,19 @@ html {
         text-align: center;
         width: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
         font-size: 0.15rem;
 =======
         font-size: 16px;
 >>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
+=======
+        font-size: 0.15rem;
+>>>>>>> ly
         color: #262626;
         clear: both;
         position: relative;
         margin: 0 auto;
+<<<<<<< HEAD
 <<<<<<< HEAD
         line-height: 0.225rem;
     }
@@ -367,6 +472,15 @@ html {
         line-height: 40px;
         font-size: 14px;
 >>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
+=======
+        line-height: 0.225rem;
+    }
+    .detail-item {
+        color: #262626;
+        padding: 0.1rem 0;
+        line-height: 0.2rem;
+        font-size: 0.125rem;
+>>>>>>> ly
         border-top: 1px solid #f5f5f5;
     }
 }
@@ -376,12 +490,16 @@ html {
 
 .share-menu {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ly
     position: fixed;
     z-index: 30;
     display: none;
     background-color: #fff;
     width: 100%;
     bottom: 0;
+<<<<<<< HEAD
 =======
 	position: fixed;
 	z-index: 30;
@@ -390,6 +508,8 @@ html {
 	width: 100%;
 	bottom: 0;
 >>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
+=======
+>>>>>>> ly
     margin: 0;
     padding: 0;
     border: 0;
@@ -433,6 +553,7 @@ html {
             }
             p {
 <<<<<<< HEAD
+<<<<<<< HEAD
                 width: 0.265rem;
                 height: 0.265rem;
                 margin: 0 auto 0.05rem;
@@ -449,16 +570,26 @@ html {
                 width: 53px;
                 height: 53px;
                 margin: 0 auto 10px;
+=======
+                width: 0.265rem;
+                height: 0.265rem;
+                margin: 0 auto 0.05rem;
+>>>>>>> ly
             }
             span {
-                font-size: 13px;
+                font-size: 0.085rem;
                 color: #4B4B4B;
-                line-height: 24px;
+                line-height: 0.135rem;
             }
             .share-btn {
+<<<<<<< HEAD
 	                width: 100%;
                 height: auto;	
 >>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
+=======
+                width: 100%;
+                height: auto;
+>>>>>>> ly
                 overflow: hidden;
                 text-align: center;
                 box-sizing: border-box;
@@ -469,6 +600,9 @@ html {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ly
 
 /*  <!-- 黑色区块 -->*/
 
@@ -481,6 +615,7 @@ html {
     width: 100%;
     height: 50000px;
     z-index: 20;
+<<<<<<< HEAD
 =======
 /*	<!-- 黑色区块 -->*/
 .cover{
@@ -493,4 +628,6 @@ html {
 	height: 50000px;
 	z-index: 20;
 >>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
+=======
+>>>>>>> ly
 }
