@@ -24,8 +24,13 @@
              $shareitem.slideToggle("fast", function() {
                  $cover.fadeOut("fast")
              })
+<<<<<<< HEAD
 
          }
      })
 
+=======
+         }
+     })
+>>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
  })

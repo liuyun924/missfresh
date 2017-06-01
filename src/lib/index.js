@@ -3,6 +3,7 @@ require(['config'],function(){
 		//移动端适配
 		m.mobile();
 
+<<<<<<< HEAD
 		//头部载入
 		$('#header').load('html/header.html',function(){
 			h.head();
@@ -21,6 +22,15 @@ require(['config'],function(){
 				$('.search_box').animate({
 					left:$header_width,
 				},500);
+=======
+
+
+		//购物车按钮效果
+		$('.s_car').each(function(i){
+			$('.s_car').eq(i).on('click',function(){
+				$(this).css('display','none');
+				$(this).next().css('display','block');
+>>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
 			});
 		});
 
@@ -178,6 +188,7 @@ require(['config'],function(){
 			})
 		});
 		
+<<<<<<< HEAD
 		//单个商品数量显示
 		$('.car_num').each(function(i){
 			var id = $('.car_num').eq(i).parent().parent().parent().parent().data('id');
@@ -186,6 +197,30 @@ require(['config'],function(){
 			
 			$('.car_num').eq(i)[0].innerText = localStorage[num];
 		});
+=======
+		//搜索页面效果
+		
+		$('#header').load('html/header.html',function(){
+			h.head();
+			var $header_width = parseInt($('#header').css('width'));
+			$('.search_box').css('left',$header_width);
+			$('.search').on('click',function(){
+				$('.search_box').css('display','block');
+				$('.search_box').animate({
+					left:0,
+
+				},500);
+			});
+
+			$('.back').on('click',function(){
+				$('.search_box').animate({
+					left:$header_width,
+				},500);
+			})
+		});
+		$('#footer').load('html/footer.html');		
+
+>>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
 		
 	})
 });

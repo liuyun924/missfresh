@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // 引入gulp模块
+=======
+﻿// 引入gulp模块
+>>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
 // commonjs规范引用模块
 var gulp = require('gulp');
 var sass = require('gulp-sass');
@@ -56,10 +60,17 @@ gulp.task('jtSass', function() {
 var browserSync = require('browser-sync');
 gulp.task('server', function() {
     browserSync({
+<<<<<<< HEAD
         // server: "./src",
 
         // 代理服务器
         proxy: 'http://localhost/',
+=======
+        server: "./src",
+
+        // 代理服务器
+        // proxy: 'http://localhost/project/',
+>>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
 
         // 自定义端口
         // port: 8080,

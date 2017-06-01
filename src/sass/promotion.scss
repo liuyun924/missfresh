@@ -1,12 +1,16 @@
 @import 'common';
+<<<<<<< HEAD
 html {
     font-size: 200px;
 }
 
+=======
+>>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
 img {
     width: 100%;
 }
 
+<<<<<<< HEAD
 .content {
     width: 100%;
     margin: 0.05rem auto;
@@ -35,6 +39,46 @@ img {
                 width: 1.0rem;
                 height: 0.25rem;
                 font-size: 0.12rem;
+=======
+html {
+    font-size: 85.3333px;
+}
+
+.content {
+    width: 100%;
+    margin: .17rem auto;
+    padding: .2rem;
+    text-align: center;
+    .input {
+        margin: .17rem auto;
+        position: relative;
+        padding: 0 .2rem;
+        width: 6.2rem;
+        height: .82rem;
+        font-size: .28rem;
+        border: none;
+        outline: 0;
+        border-radius: 0;
+        -moz-appearance: none;
+        appearance: none;
+        -webkit-appearance: none;
+        background-color: transparent;
+        -webkit-tap-highlight-color: transparent;
+        .item {
+        	width: 100%;height: 100%;
+            border-bottom: 1px solid #dfdffd;
+            input{width: 100%;height: 100%;
+            	font-size: .28rem;}
+            .code-btn {
+                position: absolute;
+                right: .3rem;
+                top: .15rem;
+                padding: .3rem .2rem;
+                line-height: 0;
+                display: block;
+                background: #ff2e89;
+                font-size: .28rem;
+>>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
                 color: #fff;
                 border-style: none;
                 outline: 0;
@@ -43,6 +87,7 @@ img {
             }
         }
     }
+<<<<<<< HEAD
 }
 
 .receive-btn {
@@ -63,6 +108,27 @@ p.goShop {
     font-size: 0.16rem;
     text-align: center;
     margin-top: 0.15rem;
+=======
+    .receive-btn {
+        width: 6.13rem;
+        height: .8rem;
+        text-align: center;
+        padding: 0;
+        line-height: 0;
+        display: inline-block;
+        background: url(../img/code-btn.jpg) center no-repeat;
+        background-size: 100%;
+        border-style: none;
+        outline: 0;
+    }
+}
+
+p.goShop {
+    	font-size: .28rem;
+
+    text-align: center;
+    margin-top: .4rem;
+>>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
     a {
         color: #959595;
         text-decoration: underline;

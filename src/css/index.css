@@ -72,7 +72,11 @@ input { border: none; /*获取焦点时的外边框*/ outline: none; /*清除移
 
 #container .main .main1 .content_box { padding-top: 10px; }
 
+<<<<<<< HEAD
 #container .main .main1 .content_box .banner .banner_img { width: 100%; display: block; height: 1.265625rem; }
+=======
+#container .main .main1 .content_box .banner .banner_img { display: block; height: 1.265625rem; }
+>>>>>>> 334896f0b39c6d7509943ab7b1d0ca89729cf0a2
 
 @media screen and (min-width: 410px) and (max-height: 720px) { #container .main .main1 .content_box .banner .banner_img { height: 0.962962962962963rem; } }
 
