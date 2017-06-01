@@ -6,33 +6,45 @@
     <title>每日优鲜</title>
     <link rel="stylesheet" href="../css/promotion.css">
 </head>
- <img src="../img/promotion1.jpg" alt=""> 
-<!--内容-->
-<div class="content">
-    <div class="input">
-        <div class="item">
-            <input class="phone-num font-center" maxlength="11" name="phone" placeholder="请输入您的手机号" type="tel">
-        </div>
-        <span class="del-phone"></span>
-    </div>
 
-    <div class="input">
-        <div class="item">
-            <input class="code-num" maxlength="6" name="code" placeholder="请输入短信验证码" type="tel">
-            <button class="code-btn ">发送短信验证码</button>
-        </div>
-    </div>
-
-    <button class="receive-btn"></button>
-
-</div>
-<p class="goShop"><a href="../index.html">直接进入商城买买买</a></p>
-
-<!--内容-->
-
- <img src="../img/promotion2.jpg" alt=""> 
 <body>
-
+    <img src="../img/promotion1.jpg" alt="">
+    <!--内容-->
+    <div class="content">
+        <div class="input">
+            <div class="item">
+                <input class="phone-num font-center" maxlength="11" name="phone" placeholder="请输入您的手机号" type="tel">
+            </div>
+            <span class="del-phone"></span>
+        </div>
+        <div class="input">
+            <div class="item">
+                <input class="code-num" maxlength="6" name="code" placeholder="请输入短信验证码" type="tel">
+                <button class="code-btn ">发送短信验证码</button>
+            </div>
+        </div>
+        <button class="receive-btn"></button>
+    </div>
+    <p class="goShop"><a href="../index.html">直接进入商城买买买</a></p>
+    <!--内容-->
+    <img src="../img/promotion2.jpg" alt="">
+    <script src="../lib/jQuery/jquery-3.1.1.js"></script>
+    <script>
+        $(function(){
+            var $codeBtn = $(".code-btn");
+            function randomNum(){
+                var num =String(Math.floor(1000000*Math.random()));
+                while(num.length<6){
+                    num+='0'
+                }
+                return num;
+            }
+            console.log(randomNum())
+            $codeBtn.click(function(){
+                $('.code-num').val(randomNum())
+            })
+        })
+    </script>
 </body>
 
 </html>

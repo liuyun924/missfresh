@@ -10,17 +10,13 @@ require(['config'],function(){
 			}
 
 		}
-		console.log(arr);
-
 		$.post('./../../getgoods',function(res){
 			var obj = JSON.parse(res);
 			// console.log(obj);
-			console.log(arr);
 			$('.main_list').html(arr.map((item)=>{
 				console.log(obj[item]);
-			
+				console.log( obj[parseInt(item)-1]);
 				var num = item + '_num';
-				console.log(num);
 				return `
 				<div class="product-style">
 					<div class="list_checkbox">
@@ -30,33 +26,33 @@ require(['config'],function(){
 					</div>
 					<a href="#">
 						<div class="list_img">
-							<img src="${obj[item].imgUrl}" alt="">
+							<img src="${obj[parseInt(item)-1].imgUrl}" alt="">
 						</div>
 						<div class="list_introduce">
 							<ul>
-								<li class="lis_title">${obj[item].title}</li>
+								<li class="lis_title">${obj[parseInt(item)-1].title}</li>
 								<li class="lis_one">广东风味</li>
 								<li class="lis_two">
 									<s class="twob">
 										<i>舌尖会员价</i>
 										<i>¥</i>
-										<span class="twoVip">${obj[item].discount}</span>
+										<span class="twoVip">${obj[parseInt(item)-1].discount}</span>
 									</s>
 									<s class="twon">
 										<i>可用券价</i>
 										<i>¥</i>
-										<span class="twoVip">${obj[item].originPrice}</span>
+										<span class="twoVip">${obj[parseInt(item)-1].originPrice}</span>
 									</s>
 								</li>
 								<li class="lis_three">
 									<s class="threeb"><i  class="threeI">可用券价</i>
 										<b>¥</b>
-										<span class="unit_price">${obj[item].originPrice}</span>
+										<span class="unit_price">${obj[parseInt(item)-1].originPrice}</span>
 									</s>
 									<s class="threen">
 										<i>舌尖会员价</i>
 										<b>¥</b>
-										<span>${obj[item].discount}</span>
+										<span>${obj[parseInt(item)-1].discount}</span>
 									</s>
 									<div class="list_count">
 										<i><img src="../img/cart_img/reduce-img.png" alt="" class="del_img"></i>
@@ -74,24 +70,22 @@ require(['config'],function(){
 
 
 			$('.list_cate').find('ul').html(arr.map((item)=>{
-				console.log(obj[item]);
 			
 				var num = item + '_num';
-				console.log(num);
 				return `
 				<li>
-					<div class="pro_li_left"><img src="${obj[item].imgUrl}" alt=""></div>
+					<div class="pro_li_left"><img src="${obj[parseInt(item)-1].imgUrl}" alt=""></div>
 					<div class="pro_li_right">
 						<ul>
 							<li class="list_1">
-								<p>${obj[item].title}
+								<p>${obj[parseInt(item)-1].title}
 									<span><b>${localStorage[num]}</b>件</span>
 								</p>
 							</li>
 							<li class="list_2"><span>2小时达</span></li>
 							<li class="list_3">
-								<span class="span1">可用券价<b>￥${obj[item].originPrice}</b></span>
-								<span class="span2">舌尖会员价<b>￥${obj[item].discount}</b></span>
+								<span class="span1">可用券价<b>￥${obj[parseInt(item)-1].originPrice}</b></span>
+								<span class="span2">舌尖会员价<b>￥${obj[parseInt(item)-1].discount}</b></span>
 							</li>
 						</ul>
 					</div>
@@ -102,13 +96,11 @@ require(['config'],function(){
 
 
 			$('.pro_lis_left').html(arr.map((item)=>{
-				console.log(obj[item]);
 			
 				var num = item + '_num';
-				console.log(num);
 				return `
 				<div class="img_item">
-					<img src="${obj[item].imgUrl}" alt="">
+					<img src="${obj[parseInt(item)-1].imgUrl}" alt="">
 				</div>
 				`
 			})
@@ -117,7 +109,7 @@ require(['config'],function(){
 
 
 		setTimeout(function(){
-var $unit_price = $('.unit_price');
+		var $unit_price = $('.unit_price');
 		var $footing = $('.footing');
 		var res = 0;
 		$unit_price.each(function(i){
@@ -138,63 +130,93 @@ var $unit_price = $('.unit_price');
 			$(this).click(function(){
 				var num =0;
 				//获取img父级上个兄弟元素。
-				var span = $(this).parent().prev();
-				//获取单价
-				var total = span.parent().prev().find('.unit_price').text();
-				var spanText = span.text();
-				spanText ++;
-				span.text(spanText);
-				num = total * spanText;
-				//点击添加合计
-				var res = 0;	
-				$unit_price.each(function(i){
-					var num = $(this).text();
-					var idx = $(this).parent().next().next().find('span').text();
-					res += Number(num) * idx;
-				})
-				$footing.text(res.toFixed(1));
+				var $radio_img = $(this).parents('.product-style').find('.radio_img');
+				if ($radio_img.attr('class') == 'radio_img') {
+					
+					//单价
+					var span = $radio_img.parents('.product-style').find('.unit_price').text();
+					// 数量
+					var number = $radio_img.parents('.product-style').find('.list_count').find('span');
+					var numberText = number.text();
+					numberText ++;
+					// console.log(number);
+					number.text(numberText);
+					num = numberText * span;
+					//点击添加合计
+					var res = 0;	
+					$unit_price.each(function(i){
+						var num = $(this).text();
+						var idx = $(this).parent().next().next().find('span').text();
+						res += Number(num) * idx;
+						$footing.text(res.toFixed(1));
+
+						for(var i=0;i<=arr.length-1;i++){
+							var id = arr[i];
+							var num = id + '_num';
+						}
+						localStorage[id + 1];
+						localStorage[num + 1];
+					})
+				}else{
+					$('.pop_up').show();
+				}
+				
 			})
 
 		})
+		
 
 
 		//购物车删除的数量
 		var $del_img = $('.del_img');
 		$del_img.each(function(i){
 			$(this).click(function(){
-				//获取img父级下个兄弟元素。
-				var span = $(this).parent().next();
-				var productStyle = $(this).parents('.product-style');
-				var spanText = span.text();
-				if (spanText <= 1) {
-					//spanText小于等于1，隐藏product-style
-					productStyle.hide();
-					spanText =0;
+				var num =0;
+				//获取img父级上个兄弟元素。
+				var $radio_img = $(this).parents('.product-style').find('.radio_img');
+				var $productStyle = $(this).parents('.product-style');
+				if ($radio_img.attr('class') == 'radio_img') {
+					//单价
+					var span = $radio_img.parents('.product-style').find('.unit_price').text();
+					// 数量
+					var number = $radio_img.parents('.product-style').find('.list_count').find('span');
+					var numberText = number.text();
+					if (numberText <= 1) {
+						//spanText小于等于1，隐藏product-style
+						$productStyle.hide();
+						numberText =0;
+					}else{
+						numberText--;
+					}
 				}else{
-					spanText--;
+					$('.pop_up').show();
 				}
-				span.text(spanText);
-
-
+				number.text(numberText);
+				num = numberText * span;
+				console.log(num);
 				//点击添加合计
 				var res = 0;	
 				$unit_price.each(function(i){
 					var num = $(this).text();
 					var idx = $(this).parent().next().next().find('span').text();
 					res += Number(num) * idx;
+
+					$footing.text(res.toFixed(1));
+
+					for(var i=0;i<=arr.length-1;i++){
+						var id = arr[i];
+						var num = id + '_num';
+						console.log(id);
+					}
+					localStorage.removeItem(id);
+					localStorage.removeItem(num);
 				})
-				$footing.text(res.toFixed(1));
-
-				for(var i=0;i<=arr.length-1;i++){
-					var id = arr[i];
-					var num = id + '_num';
-
-				}
-				localStorage.removeItem(id);
-				localStorage.removeItem(num);
 			})
 		})
-
+		//弹框页面
+		$('.pop_up').on('click','span',function(){
+			$('.pop_up').hide();
+		})
 
 		//优惠选项
 		var $members = $('.members');
@@ -350,6 +372,7 @@ var $unit_price = $('.unit_price');
 				//true时，隐藏图片，显示边框
 				$(this).css({border:'1px solid #d1d1d1'});
 				$(this).find('i').hide();
+				$(this).find('i').removeClass('radio_img');
 				$(this).removeClass('commodity_radio');
 				//把jiage变为0；
 				
@@ -360,6 +383,7 @@ var $unit_price = $('.unit_price');
 				//false时，显示图片，隐藏边框
 				$(this).css({border:'none'});
 				$(this).find('i').show();
+				$(this).find('i').addClass('radio_img');
 				$(this).addClass('commodity_radio');
 				$hide = $('.commodity_radio').parent().next().find('.unit_price');
 			}
@@ -494,7 +518,27 @@ var $unit_price = $('.unit_price');
 			});
 		})
 
+		//新增收货地址1
+		$addAddress = $('.addAddress');
+		$addAddress.click(function(){
+			$('.new_address').css({display: 'flex',}).animate({right:0});
+		})
 
+		// 新增收货地址2
+		$choices_address = $('.choices_address');
+		$choices_address.on('click','i',function(){
+			$('.new_address').animate({right: '-7.8125rem'},function(){
+				$('.new_address').hide();
+			})
+		})
+
+
+		//地址类型
+		$type_checked = $('.type_checked');
+		$type_checked.on('click','span',function(){
+			$(this).addClass('Highlight');
+			$(this).siblings().removeClass('Highlight');
+		})
 	},500);
 		//总价
 		
@@ -502,11 +546,8 @@ var $unit_price = $('.unit_price');
 
 
 
-		//尾部载入
-		$('#footer').load('footer.html');	
+	// 	//尾部载入
+	// 	$('#footer').load('footer.html');	
+	// })
 	})
 })
-
-
-
-	
