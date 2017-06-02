@@ -2,11 +2,6 @@ require(['config'],function(){
 	require(['jquery','mobile','header','swiper'],function($,m,h,s){
 		//移动端适配
 		m.mobile();
-
-		//延迟代码执行
-		$(function($){
-			//头部载入
-			setTimeout(function(){$('.loading').css('display','none');},1000);
 			$('#header').load('html/header.html',function(){
 				h.head();
 				//搜索页面效果
@@ -81,9 +76,15 @@ require(['config'],function(){
 							});
 									
 				});
-			});		
-
+			});	
+		//延迟代码执行
+		$(function($){
+			//头部载入
+			
+	
+			
 			$.post('/getgoods',function(res){
+				$('.loading').css('display','none');	
 				var obj = JSON.parse(res);
 				$('.wares_news').each(function(i){
 					
@@ -186,11 +187,124 @@ require(['config'],function(){
 				var num = id + '_num';
 				
 				$('.car_num').eq(i)[0].innerText = localStorage[num];
-			});						
+			});	
+
+			//高仿动态加载。（或许也能叫懒加载） 
+			$('.jiazai').each(function(num){
+				$('.jiazai').eq(num).css('opacity',0);
+				$('.jiazai').eq(num).css('display','none');
+			});
+
+			$('.main1').each(function(num){
+				var $main1 = $('.main1').eq(num);
+				
+				var l = 0;
+				$main1[0].addEventListener('touchmove',function(){
+					
+					if($main1.scrollTop() > 400){
+						
+						// setInterval(function(){},1500);
+						// for(var l=0;l<=2;l++){}
+							if(l>=3){
+								l = 0;
+							}
+							var num1 = l+3*num;//每个div的jiazai都有规律
+							 
+							$('.jiazai').eq(num1).css('display','block');
+							$('.jiazai').eq(num1).animate({opacity: 1},1000,function(){
+								l++;
+							});
+						
+					}
+					
+				});
+				
+			});
+			
+			//搜索
+			$('.search_button').on('click',function(){
+
+				var val = $('.input_box input').val();
+				if(val === ''){
+					$('.search_result')[0].innerText = "请输入内容";
+					$('.search_result').css('color','red');
+					$('.search_result').css('display','block');
+					return;
+				}
+				$('.search_result')[0].innerText = "搜索结果如下";
+				$('.search_result').css('color','#020');
+				$('.search_result').css('display','block');
+				$.post('/sergoods',{keyword:val},function(res){
+					if(res.length == 0){
+						$('.search_result')[0].innerText = "抱歉···搜索不到您想要的商品";
+					}else{
+						$('.search_create').css('display','block');
+						
+						res.forEach(function(item){
+							
+							var $wares1 = $('<div/>').addClass('wares1');
+							$wares1.appendTo($('.search_create'));
+							$wares1.attr('dataId',item.dataId);
+							var $wares1_news = $('<div/>').addClass('wares1_news');
+							$wares1_news.appendTo($wares1);
+
+							var $wares1_text = $('<div/>').addClass('wares1_text');
+							$wares1_text.appendTo($wares1);
+
+							var $wares1_news_img = $('<img/>').addClass('wares1_news_img');
+							$wares1_news_img[0].src = item.imgUrl.slice(3);
+							$wares1_news_img.appendTo($wares1_news);
+
+							var $wares1_text_p1 = $('<p/>').addClass('wares1_text_p1');
+							var $wares1_text_p2 = $('<p/>').addClass('wares1_text_p2');
+							$wares1_text_p1.appendTo($wares1_text);
+							$wares1_text_p2.appendTo($wares1_text);
+
+							var $wares1_text_prices = $('<p/>').addClass('wares1_text_prices');
+							var $wares1_text_vip = $('<P/>').addClass('wares1_text_vip');
+							$wares1_text_prices.appendTo($wares1_text);
+							$wares1_text_vip.appendTo($wares1_text);
+
+							$wares1_text_p1[0].innerText = item.title;
+							$wares1_text_p2[0].innerText = item.adword;
+							$wares1_text_vip[0].innerText = "会员价：￥" + item.discount;
+							$wares1_text_prices[0].innerText = "可用券价：￥" + item.originPrice;
+
+							});	
+							$('.wares1').on('click',function(e){
+								
+								if(e.target.tagName.toLowerCase() === 'img'){
+									localStorage.click = $(this).attr('dataId');
+								}								
+						});
+					}
+					
+					
+
+				});
+			});	
+
+		
+			//搜索框吸顶
+			$('.search_box')[0].addEventListener('touchmove',function(){
+				var top = $('.search_box').scrollTop();
+				if(top>=1){
+					$('.search_div').css('position','fixed');
+				}else{
+					$('.search_div').css('position','');
+				}
+
+			});
+
+			$('.wares_news').on('click',function(e){
+				if(e.target.tagName.toLowerCase() === 'img'){
+					localStorage.click = $(this).attr('data-id');
+
+				}
+				
+			});
+
 		})
-
-
-
 		
 	})
 });

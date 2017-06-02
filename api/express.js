@@ -61,8 +61,58 @@ var session = require('express-session');
 		})
 			
 	})
+	// 搜索商品
+app.post('/sergoods', urlencodedParser, function(request, response){
+		db.search('goodslist',request.body,function(result){
+			
+			if(result){
+				response.send(result);
+			}else{
+
+				response.send(apiResult(false));
+			
+			}
+		})
+			
+	})
+
+// 获取详情页列表
+app.post('/todetail',urlencodedParser,function(request, response){
+	db.exists('goodslist',request.body,dataId,function(result){
+			
+			if(result){
+				response.send(result);
+			} else {	
+				response.send(apiResult(false));
+			}
+		})
+})
 
 
+// 给用户添加地址
+
+app.post('/addAddress', urlencodedParser, function(request, response){
+		db.exists('address',request.body,'name',function(result){
+			console.log(result);
+			if(result){
+				db.update('address',request.body);
+				response.send('updata');
+			} else {
+				db.save('address', request.body); 	
+				response.send(apiResult(true));
+				
+			}
+		})
+			
+	})
+// 获取用户地址及信息
+app.post('/getAddress', urlencodedParser, function(request, response){
+		db.exists('address',request.body,'name',function(result){
+			
+			response.send(result);
+		})
+			
+	})
 
 	// 登录
 	app.post('/login', urlencodedParser, function(request, response){
