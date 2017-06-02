@@ -52,7 +52,7 @@ var session = require('express-session');
 		db.del('goodslist',request.body,'dataId',function(result){
 			
 			if(result){
-				response.send(apiResult(ture, '该商品已删除'));
+				response.send(apiResult(true, '该商品已删除'));
 			}else{
 
 				response.send(apiResult(false));
