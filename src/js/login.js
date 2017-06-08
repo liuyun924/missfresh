@@ -12,11 +12,11 @@ require(['config'],function(){
 				password: $.trim($('#password').val())
 			}, function(response){
 				if(response.status){
-					console.log(response.status)
+					console.log(response.message)
 					window.location.href = "http://10.3.133.77:88/src/html/mine.html";
 				} else {
-					alert(response.status);
-					console.log(response.status)
+					alert(response.message);
+					console.log(response.message)
 				}
 			})
 		})

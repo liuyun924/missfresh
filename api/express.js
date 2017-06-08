@@ -78,7 +78,7 @@ app.post('/sergoods', urlencodedParser, function(request, response){
 
 // 获取详情页列表
 app.post('/todetail',urlencodedParser,function(request, response){
-	db.exists('goodslist',request.body,dataId,function(result){
+	db.exists('goodslist',request.body,'dataId',function(result){
 			
 			if(result){
 				response.send(result);
@@ -107,22 +107,51 @@ app.post('/addAddress', urlencodedParser, function(request, response){
 	})
 // 获取用户地址及信息
 app.post('/getAddress', urlencodedParser, function(request, response){
-		db.exists('address',request.body,'name',function(result){
+		db.findadd('address',request.body,'name',function(result){
 			
 			response.send(result);
 		})
 			
 	})
 
-	// 登录
-	app.post('/login', urlencodedParser, function(request, response){
-		db.exists('account', request.body, 'email', function(data){
+
+	// 管理员注册
+	app.post('/adminReg',urlencodedParser,function(request,response){
+		db.exists('admin', request.body, 'email', function(result){
+
+			// console.log(result);
+
+			if(result){
+				response.send(apiResult(false, '该邮箱已注册过'));
+			} else{
+				console.log(1)
+				db.save('admin', request.body); 	
+				response.send(apiResult(true));
+			}
+		})
+
+	})
+	// 管理员登录
+	app.post('/adminLogin',urlencodedParser,function(request,response){
+		db.verify('admin', request.body,function(result){
+				console.log(result);
+				response.send(result);
+		})
+
+	})
+
+	// 客户登录
+	app.post('/login',urlencodedParser,function(request,response){
+		db.check('account', request.body, function(data){
+			console.log(data);
+			request.session.name = data.name;
 			if(data){
-				request.session.name = data.name;
-				console.log(data.name)
-				response.send(apiResult(true,'',data));
-			} else {
-				response.send(apiResult(false, '邮箱错误'));
+				console.log(data.name);
+				response.send(apiResult(true,'登录成功',data.name));
+			} else if(data == 0){
+				response.send(apiResult(false, '用户名不正确'));
+			}else {
+				response.send(apiResult(false, '密码不正确'));
 			}
 		})
 	})

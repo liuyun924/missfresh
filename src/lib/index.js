@@ -32,8 +32,12 @@ require(['config'],function(){
 				//如果总数量为0，购物车数量不显示
 				if(localStorage.max == 0){
 						$('.wares_num').css('display','none');
+				}else{
+					var num = localStorage.max;
+					$('.wares_num')[0].innerText = num;
+					$('.wares_num').css('display','block');
 				}
-				
+
 				//购物车按钮效果
 				var arr2 = [];
 				$('.s_car').each(function(i){
@@ -59,7 +63,7 @@ require(['config'],function(){
 												localStorage[num] = 1;
 												$('.car_num').eq(arr2[k])[0].innerText = localStorage[num];
 												
-												$('.wares_num').eq(arr2[k]).css('display','block');
+												$('.wares_num').css('display','block');
 												
 												$('.s_car').eq(arr2[k]).css('display','none');
 												
@@ -104,6 +108,16 @@ require(['config'],function(){
 					
 				});
 			});
+			$('.car_num').each(function(i){
+				var id = $('.car_num').eq(i).parent().parent().parent().parent().data('id');
+				var num = id + '_num';
+				if(localStorage[num]){
+					
+					$('.car_num').eq(i)[0].innerText = localStorage[num];
+					$('.car_num').eq(i).parent().css('display','block');
+					$('.s_car').eq(i).css('display','none');
+				}
+			})	
 			// var arr = [];
 			// var arr1 = [];
 			//购物车删减效果
@@ -270,13 +284,16 @@ require(['config'],function(){
 							$wares1_text_vip[0].innerText = "会员价：￥" + item.discount;
 							$wares1_text_prices[0].innerText = "可用券价：￥" + item.originPrice;
 
-							});	
-							$('.wares1').on('click',function(e){
-								
-								if(e.target.tagName.toLowerCase() === 'img'){
-									localStorage.click = $(this).attr('dataId');
-								}								
-						});
+							});
+							$('.wares1').each(function(i){
+								$('.wares1').eq(i)[0].addEventListener('touchend',function(e){
+									if(e.target.tagName.toLowerCase() === 'img'){
+										localStorage.click = $(this).attr('dataId');
+										window.location = 'html/details.html';
+									}
+								})
+							})	
+							
 					}
 					
 					
@@ -295,14 +312,18 @@ require(['config'],function(){
 				}
 
 			});
-
-			$('.wares_news').on('click',function(e){
-				if(e.target.tagName.toLowerCase() === 'img'){
-					localStorage.click = $(this).attr('data-id');
-
-				}
+			$('.wares_news').each(function(i){
 				
-			});
+				$('.wares_news').eq(i)[0].addEventListener('touchend',function(e){
+					console.log(e.target)
+					if(e.target.tagName.toLowerCase() === 'img'&& $(e.target).hasClass('w_n_img')){
+
+						localStorage.click = $(this).attr('data-id');
+						window.location = 'html/details.html';
+					}
+				})
+			})
+			
 
 		})
 		

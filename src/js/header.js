@@ -4,7 +4,7 @@ define(['jquery'],function($){
           $('.top').on('click', function(e) {
           if (e.target.className != "closebtn") {
 
-              window.open('http://www.baidu.com');
+              location.href='http://a.app.qq.com/o/simple.jsp?pkgname=cn.missfresh.application&ckey=CK1341501716812'
 
           }
       })

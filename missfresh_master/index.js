@@ -114,10 +114,10 @@ $(function(){
     var $tbody = $('.boxgoodslist').find('tbody');
 
         $tbody.on('click','button',function(e){
-         var dataid = $(this).parents('tr').find('td').eq(1).text();
+         var dataId = $(this).parents('tr').find('td').eq(1).text();
          
                       
-                $.post('/delgoods',{dataId:dataid},function(response){
+                $.post('/delgoods',{dataId:dataId},function(response){
                     if(response.status){
                         console.log(response.status)
                        alert('成功删除此商品');

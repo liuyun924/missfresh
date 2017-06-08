@@ -1,6 +1,7 @@
 @import url(reset.css);
 @import url(footer.css);
 @import url(../lib/font/iconfont.css);
+@import url(../lib/jquery-ui-1.12.1.custom/jquery-ui.css);
 html { font-size: 50px; }
 
 #top { height: 0.86rem; width: 100%; text-align: center; position: relative; line-height: 0.86rem; border-bottom: 0.02rem solid #e6e6e6; box-shadow: 0 0 10px rgba(0, 0, 0, 0.06); }

@@ -13,7 +13,7 @@ var cookieParser = require('cookie-parser');
 var session = require('express-session');
 
 
-exports.Register = function(app){
+exports.handle = function(app){
 
 	//设置 session
 	app.use(cookieParser());

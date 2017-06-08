@@ -71,7 +71,7 @@
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
+															<input type="email" class="form-control" placeholder="请输入您的邮箱地址" />
 															<i class="icon-user"></i>
 														</span>
 													</label>
@@ -87,7 +87,7 @@
 
 													<div class="clearfix">
 														<label class="inline">
-															<input type="checkbox" class="ace" />
+															<input type="checkbox" class="ace" checked />
 															<span class="lbl"> Remember Me</span>
 														</label>
 
@@ -221,7 +221,7 @@
 													</label>
 
 													<label class="block">
-														<input type="checkbox" class="ace" />
+														<input type="checkbox" class="ace" checked />
 														<span class="lbl">
 															我接受
 															<a href="#">用户协议</a>
@@ -311,7 +311,7 @@
 				// erp.baseUrl = 'http://127.0.0.1:888/';
 
 				// 注册
-				$.post('/register', {
+				$.post('/adminReg', {
 					email: $.trim(useremail),
 					name: $.trim(username),
 					password: $.trim(userpsw)
@@ -320,7 +320,7 @@
 						console.log(response.status)
 						window.location.href = "http://10.3.133.77:88/missfresh_master/index.html";
 					} else {
-						alert(response.status);
+						alert('该邮箱已注册');
 						console.log(response.status)
 					}
 				})
@@ -330,20 +330,23 @@
 			// 登录
 			$('#login').click(function(){
 				var $logform=jQuery('#login-box').find('form');
+				var useremail=$logform.find('input[type=email]').val();
 				var username=$logform.find('input[type=text]').val();
 				var userpsw=$logform.find('input[type=password]').val();
 	
-				// 注册
-				$.post('/login', {
-					name: $.trim(username),
+				
+				$.post('/adminLogin', {
+					email: $.trim(useremail),
 					password: $.trim(userpsw)
 				}, function(response){
-					if(response.status){
+					if(response=='true'){
 						console.log(response.status)
 						window.location.href = "http://10.3.133.77:88/missfresh_master/index.html";
-					} else {
-						alert('用户名或密码错误！');
+					} else if(response=='wrong'){
+						alert('密码错误！');
 						console.log(response.status)
+					}else{
+						alert('用户不存在，请先注册！');
 					}
 				})
 

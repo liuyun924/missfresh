@@ -20,14 +20,47 @@ var exists = function(_collection, data, key, callback){
 					data[key]=Number(data[key]);
 				}
 				obj[key] = data[key];
-				// console.log(obj);
+				console.log(obj);
 				collection.find(obj).toArray(function(err, docs){
-					// console.log(docs[0]);
+					console.log(docs[0]);
 					callback(docs[0])
 
 				});
 			}
 			db.close();
+		})
+	})	
+}
+
+//登陆验证
+var check = function(_collection, data,callback){
+	db.open(function(error, db){
+		if(error){
+			console.log('connect db:', error);
+		}
+		//Account => 集合名（表名）
+		db.collection(_collection, function(error, collection){
+			if(error){
+				console.log(error);	
+			} else {
+				collection.find({email:data.email}).toArray(function(err, docs){
+					console.log(data)
+					if(docs[0]){
+						if(docs[0].password === data.password){
+							callback(docs[0]);
+							db.close();
+						}else{
+							callback(null);
+							db.close();
+						}	
+					}else{
+						callback(0);
+						db.close();
+					}
+					
+				});
+			}
+			
 		})
 	})	
 }
@@ -111,7 +144,9 @@ var del = function(_collection, data, key, callback){
 				console.log(error)	
 			} else {
 				var obj = {};
-				obj[key] = data[key];
+
+				obj[key] = Number(data[key]);
+
 				collection.remove(obj);
 				callback(true);
 					
@@ -150,9 +185,68 @@ var update = function(_collection, data, key,callback){
 }
 
 
+// 验证帐号密码
+var verify=function(_collection,data,callback){
+	db.open(function(error,db){
+		if(error){
+			console.log('connect db:',error);
+		}
+		db.collection(_collection,function(err,collection){
+			if(err){
+				console.log('collection',err);
+			}
+			var obj={};
+			obj.email=data.email
+			collection.find(obj).toArray(function(err,docs){
+				if(docs[0]){
+					if(docs[0].password===data.password){
+						console.log(666);
+						callback('true')
+					}else{
+						callback('wrong');
+					}
+				}else{
+					callback('false')
+				}
+			})
+		})
+		db.close();
+	})
+}
+
+// 收货地址
+var findadd = function(_collection, data, key, callback){
+	db.open(function(error, db){
+		if(error){
+			console.log('connect db:', error);
+		}
+		//Account => 集合名（表名）
+		db.collection(_collection, function(error, collection){
+			if(error){
+				console.log(error)	
+			} else {
+				var obj = {};
+				if(key=='dataId'){
+					data[key]=Number(data[key]);
+				}
+				obj[key] = data[key];
+				
+				collection.find(obj).toArray(function(err, docs){
+					
+					callback(docs)
+
+				});
+			}
+			db.close();
+		})
+	})	
+}
 exports.exists = exists;
 exports.save = save;
 exports.read=read;
 exports.del=del;
 exports.search=search;
 exports.update=update;
+exports.check = check;
+exports.verify=verify;
+exports.findadd=findadd;

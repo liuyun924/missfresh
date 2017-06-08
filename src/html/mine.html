@@ -5,35 +5,104 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>个人中心</title>
 	<link rel="stylesheet" type="text/css" href="../css/mine.css">
-	<script src="../js/require.js" data-main="../js/mine.js"></script></head>
+	<script src="../js/require.js" data-main="../js/mine.js"></script>
+	</head>
 <body>
-	<div id="top">
-		<div id="login">
-			<a href="http://10.3.133.77:88/src/html/login.html">用户登录</a>
+	<div id="mine">
+		<div id="top">
+			<div id="login">
+				<a href="http://10.3.133.77:88/src/html/login.html">用户登录</a>
+			</div>
+			<div id="user">
+				<img src="../img/user.png" class="head">
+				<span class="username"></span>
+				<a href="#3"><img src="../img/vip.png"></a>
+			</div>
 		</div>
-		<div id="user">
-			<img src="../img/user.png" class="head">
-			<span class="username"></span>
-			<a href="#3"><img src="../img/vip.png"></a>
+		<div id="main">
+			<ul>
+				<li><a href="http://10.3.133.77:88/src/html/promotion.html" class="invite">邀请好友赢福利</a></li>
+				<li><a href="http://10.3.133.77:88/src/index.html" class="order">我的订单</a></li>
+				<li><a class="surplus">我的余额</a></li>
+				<li><a href="promotion.html" class="redpacket">我的红包</a></li>
+				<li><a href="promotion.html" class="coupon">我的优惠券</a></li>
+				<li><a class="integral">积分<span>0积分</span></a></li>
+				<li><a class="site">我的地址</a></li>
+				<li><a href="http://a.app.qq.com/o/simple.jsp?pkgname=cn.missfresh.application&ckey=CK1341501716812" class="download">下载每日优鲜APP</a></li>
+				<li><a href="#" class="service">联系客服</a></li>
+				<li><a href="http://10.3.133.77:88/src/html/idea.html" class="idea">意见反馈</a></li>
+				<li><a href="#" class="message">消息</a></li>
+				<li><a href="http://10.3.133.77:88/src/html/about.html" class="about">关于我们</a></li>
+				<li><a href="http://10.3.133.77:88/src/html/setting.html" class="setting">设置</a></li>
+			</ul>
+		</div>
+		<div id="webFooter">
+			<ul class="footer">
+			    <li><a class="a_foot" href="../index.html"><span class="icon home">
+			        </span><span>首页</span></a></li>
+			    <li><a class="a_foot" href="promotion.html"><span class="icon redpac"></span>
+			        <span>红包</span></a></li>
+			    <li><a class="a_foot" href="shopping_cart.html"><span class="icon car"></span>
+			        <span>购物车</span><span class="wares_num"></span></a></li>
+			    <li><a class="a_foot" href="mine.html"><span class="icon mine"></span>
+			        <span class="act">我的</span></a></li>
+			</ul>
 		</div>
 	</div>
-	<div id="main">
-		<ul>
-			<li><a href="#" class="invite">邀请好友赢福利</a></li>
-			<li><a href="#" class="order">我的订单</a></li>
-			<li><a href="#" class="surplus">我的余额</a></li>
-			<li><a href="#" class="redpacket">我的红包</a></li>
-			<li><a href="#" class="coupon">我的优惠券</a></li>
-			<li><a href="#" class="integral">积分</a></li>
-			<li><a href="#" class="site">我的地址</a></li>
-			<li><a href="#" class="download">下载每日优鲜APP</a></li>
-			<li><a href="#" class="service">联系客服</a></li>
-			<li><a href="http://10.3.133.77:88/src/html/idea.html" class="idea">意见反馈</a></li>
-			<li><a href="#" class="message">消息</a></li>
-			<li><a href="http://10.3.133.77:88/src/html/about.html" class="about">关于我们</a></li>
-			<li><a href="http://10.3.133.77:88/src/html/setting.html" class="setting">设置</a></li>
-		</ul>
+
+	<!-- 余额页面 -->
+	<div id="surplus">
+		<div id="surplustop">
+			<a href="#3" id="back" class="iconfont icon-houtui"></a>
+			<h1>我的余额</h1>
+		</div>
+		<div id="showsurplus">
+			<p>优鲜余额</p>
+			<span>0</span>
+		</div>
+		<div id="tab">
+			<div class="title">
+				<span><i class="iconfont icon-xinyongqia"></i>&nbsp;充值有礼</span>
+				<span><i class="iconfont icon-quan"></i>&nbsp;卡券兑换</span>
+				<span><i class="iconfont icon-renminbi"></i>&nbsp;账单记录</span>
+			</div>
+			<p class="tip">余额目前不支持提现</p>
+		 	<div class="content">
+		 		<div class="one">
+		 			<ul>
+		 				<li class="low">
+		 					<span>￥100</span>
+		 					<p>仅消费得积分</p>
+		 				</li>
+		 				<li class="low">
+		 					<span>￥200</span>
+		 					<p>消费前后共得双倍积分</p>
+		 				</li>
+		 				<li class="low">
+		 					<span>￥500</span>
+		 					<p>消费前后共得双倍积分</p>
+		 				</li>
+		 				<li class="high">
+		 					<span>￥1000</span>
+		 					<p>消费前后共得三倍积分</p>
+		 				</li>
+		 				<li class="high">
+		 					<span>￥5000</span>
+		 					<p>消费前后共得三倍积分</p>
+		 				</li>
+		 				<li class="high">
+		 					<span>￥10000</span>
+		 					<p>消费前后共得三倍积分</p>
+		 				</li>
+		 			</ul>
+		 		</div>
+		 		<div class="two">
+		 			<input type="text" placeholder="请输入卡券兑换码">
+		 			<a href="#3" class="btn_exchange">兑换</a>
+		 		</div>
+		 		<div>没有记录</div>
+		 	</div>
+		</div>
 	</div>
-	<div id="webFooter"></div>
 </body>
 </html>

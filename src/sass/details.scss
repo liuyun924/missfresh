@@ -157,8 +157,7 @@ html {
             vertical-align: middle;
         }
         span {
-            line-height: 0.3rem;
-            margin-left: 1.4rem;
+            line-height: 0.301rem;
         }
     }
 }
@@ -202,6 +201,7 @@ html {
 
 .graphic-details {
     margin-top: 20px;
+    margin-bottom: 100px;
     border: 10px solid #F5F5F5;
     width: 80%;
     padding: 0 40px;
@@ -294,6 +294,51 @@ html {
                 padding: 0 10px;
             }
         }
+    }
+}
+
+// 底部加入购物车
+#toCart {
+    z-index: 10;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 0.28rem;
+    line-height: 0.28rem;
+    background-color: #fff;
+    font-size: 0.18rem;
+    span {
+        display: block;
+    }
+    span.icon {
+        width: 15%;
+        background-color: #fff;
+        display: block;
+        margin: 0px auto;
+        background: url(../img/public/footer/car.png) no-repeat center;
+        background-size: .25rem .25rem;
+    }
+    span.addTocar {
+        width: 83%;
+        color: #fff;
+        background-color: #ff4891;
+    }
+    span.wares_num {
+        position: absolute;
+        top: 0px;
+        left: 71px;
+        color: #fff;
+        background-color: #ff4891;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 17px;
+        border-radius: 50%;
+        // display: block;
+        display: none;
     }
 }
 

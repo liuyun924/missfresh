@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1495508883162'); /* IE9*/
-  src: url('iconfont.eot?t=1495508883162#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1495508883162') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1495508883162') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1495508883162#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1496397628327'); /* IE9*/
+  src: url('iconfont.eot?t=1496397628327#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1496397628327') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1496397628327') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1496397628327#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -16,4 +16,10 @@
 }
 
 .icon-houtui:before { content: "\e675"; }
+
+.icon-quan:before { content: "\e6ab"; }
+
+.icon-xinyongqia:before { content: "\e62a"; }
+
+.icon-renminbi:before { content: "\e667"; }
 

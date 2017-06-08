@@ -105,7 +105,6 @@ require(['config'],function(){
 			)
 		});
 
-
 		setTimeout(function(){
       //总价
   		var $unit_price = $('.unit_price');
@@ -125,8 +124,10 @@ require(['config'],function(){
   		$del_img.click(function() {
   			var t = $(this).parents('.list_count').find('span');
   			t.text(parseInt(t.text()) - 1);
-  			if (t.text() <= 1) {
-  				t.text(1);
+  			if (t.text() < 1) {
+  				t.text(0);
+          $(this).parents('.product-style').hide();
+           // localStorage.removeItem()
   			}
   			TotalPrice();
   		});
@@ -392,6 +393,13 @@ require(['config'],function(){
   		$address.click(function(){
   			$shippingAddress.css({display:'flex'}).animate({top:0});
   		})
+
+
+      $newAdd = $('.newAdd');
+      $newAdd.click(function(){
+        $shippingAddress.css({display:'flex'}).animate({top:0});
+      })
+
   		$choice_address.on('click','i',function(){
   			$shippingAddress.animate({top:'9.375rem'},function(){
   				$shippingAddress.hide();
@@ -422,7 +430,18 @@ require(['config'],function(){
 
 
       var $save_p = $('.save_p');
+      var address_name;
+      var address_phone;
+      var address_type;
+      var newAddress;
       $save_p.click(function(){
+        address_name = $('.address_name').text();
+        address_phone = $('.address_phone').text();
+        address_type = $('.address_type').text();
+        newAddress = $('.newAddress').text();
+        
+
+
         var address_name = $('#name').val();
         var address_phone = $('#phone').val();
         var address_shipping = $('#address').val();
@@ -439,6 +458,7 @@ require(['config'],function(){
         // 手机号码
         if (!/^1[34578]\d{9}$/.test(address_phone)) {
           alert('输入的手机号码不合法');
+          return false;
         }
         // 收货地址
         if(address_shipping == ''){
@@ -450,25 +470,210 @@ require(['config'],function(){
           alert('楼号门牌不能为空');
           return false;
         }
-        var username='dk';
-        // $.post('/addAddress',{
-        //   name:username,
-        //   address_name:$.trim(address_name),
-        //   address_phone:$.trim(address_phone),
-        //   newAddress:$.trim(newAddress),
-        //   address_type:$.trim(address_type)
-        // },function(response){
-        //   if (!response) {
-        //     alert('设置失败');
-        //   }else{
-        //     location.reload;
-        //     alert('添加成功');
-        //   }
-        // })
+
+        $.post('/addAddress',{
+          name:username,
+          address_name:$.trim(address_name),
+          address_phone:$.trim(address_phone),
+          newAddress:$.trim(newAddress),
+          address_type:$.trim(address_type)
+        },function(response){
+          if (!response) {
+            alert('设置失败');
+          }else{
+            location.reload;
+            alert('添加成功');
+          }
+        })
+
+      })
+
+      var username='lrs';
+     
+      var $address = $('.address');
+      $address.on('click',function(){
         $.post('/getAddress',{name:username},function(response){
-          console.log(response);
+          var newObj = response;
+          var html = newObj.map(function(item){
+            return `
+            <div class="address_list">
+              <div class="address_left">
+                <span><i></i></span>
+              </div>
+              <div class="address_center">
+              <ul>
+                <li class="address_name">${item.address_name}</li>
+                <li class="address_phone">${item.address_phone}</li>
+                <li>
+                <span class="add_list">
+                  <span>[</span>
+                  <i class="address_type">${item.address_type}</i>
+                  <span>]</span>
+                </span>
+                <i class="newAddress">${item.newAddress}</i>
+              </li>
+              </ul>
+              </div>
+              <div class="address_right">
+                <div class="address_edit">
+                  <span>编辑</span>
+                </div>
+              </div>
+            </div>
+          `
+          })
+          $('.receiver').html(html);
+          // 本地储存地址
+          $address_list = $('.address_list');
+          $address_list.click(function(){
+            var $address_name = $(this).find('.address_name').text();
+            var $address_phone = $(this).find('.address_phone').text();
+            var $address_type = $(this).find('.address_type').text();
+            var $newAddress = $(this).find('.newAddress').text();
+
+            if (!window.localStorage) {
+              alert("浏览器支持localstorage");
+            }else{
+              var storage=window.localStorage;
+
+              storage.name = $address_name;
+              storage.phone = $address_phone;
+              storage.type = $address_type;
+              storage.address = $newAddress;
+              
+              $newAdd = $('.newAdd');
+              var html = 
+              ` 
+                  <ul>
+                    <li>${storage.name}<span>${storage.phone}</span></li>
+                    <li>${storage.address}<span class="newAdd_span">${storage.type}</span></li>
+                  </ul>
+              `
+              console.log(storage);
+              $newAdd.html(html);
+              $address.hide();
+              $newAdd.show();
+              $('#shipping_address').animate({top:'9.375rem'},function(){
+                $('#shipping_address').hide();
+              });
+            }
+
+            
+          })
         })
       })
+
+      $newAdd.on('click',function(){
+        $.post('/getAddress',{name:username},function(response){
+          var newObj = response;
+          var html = newObj.map(function(item){
+            return `
+            <div class="address_list">
+              <div class="address_left">
+                <span><i></i></span>
+              </div>
+              <div class="address_center">
+              <ul>
+                <li class="address_name">${item.address_name}</li>
+                <li class="address_phone">${item.address_phone}</li>
+                <li>
+                <span class="add_list">
+                  <span>[</span>
+                  <i class="address_type">${item.address_type}</i>
+                  <span>]</span>
+                </span>
+                <i class="newAddress">${item.newAddress}</i>
+              </li>
+              </ul>
+              </div>
+              <div class="address_right">
+                <div class="address_edit">
+                  <span>编辑</span>
+                </div>
+              </div>
+            </div>
+          `
+          })
+          $('.receiver').html(html);
+          // 本地储存地址
+          $address_list = $('.address_list');
+          $address_list.click(function(){
+            var $address_name = $(this).find('.address_name').text();
+            var $address_phone = $(this).find('.address_phone').text();
+            var $address_type = $(this).find('.address_type').text();
+            var $newAddress = $(this).find('.newAddress').text();
+
+            if (!window.localStorage) {
+              alert("浏览器支持localstorage");
+            }else{
+              var storage=window.localStorage;
+
+              storage.name = $address_name;
+              storage.phone = $address_phone;
+              storage.type = $address_type;
+              storage.address = $newAddress;
+              
+              $newAdd = $('.newAdd');
+              var html = 
+              ` 
+                  <ul>
+                    <li>${storage.name}<span>${storage.phone}</span></li>
+                    <li>${storage.address}<span class="newAdd_span">${storage.type}</span></li>
+                  </ul>
+              `
+              $newAdd.html(html);
+
+              $address.hide();
+              $newAdd.show();
+              $('#shipping_address').animate({top:'9.375rem'},function(){
+                $('#shipping_address').hide();
+              });
+            }
+
+            
+          })
+        })
+      })
+      //地址更新后显示到页面
+      var username='lrs';
+      var $choices_address = $('.choices_address');
+      $choices_address.on('click','i',function(){
+        $(this).parents('.new_address').hide();
+        $.post('/getAddress',{name:username,},function(response){
+          var newObj = response;
+          var html = newObj.map(function(item){
+              return `
+              <div class="address_list">
+                <div class="address_left">
+                  <span><i></i></span>
+                </div>
+                <div class="address_center">
+                <ul>
+                  <li class="address_name">${item.address_name}</li>
+                  <li class="address_phone">${item.address_phone}</li>
+                  <li>
+                  <span class="add_list">
+                    <span>[</span>
+                    <i class="address_type">${item.address_type}</i>
+                    <span>]</span>
+                  </span>
+                  <i class="newAddress">${item.newAddress}</i>
+                </li>
+                </ul>
+                </div>
+                <div class="address_right">
+                  <div class="address_edit">
+                    <span>编辑</span>
+                  </div>
+                </div>
+              </div>
+            `
+          })
+          $('.receiver').html(html);
+        })
+      })  
+    
+      
 	  },500);
 	})
 })

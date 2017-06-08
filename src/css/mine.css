@@ -1,57 +1,128 @@
+@charset "UTF-8";
 @import url(reset.css);
-@import url(footer.css);
+@import url(../lib/font/iconfont.css);
 html::-webkit-scrollbar { display: none; }
 
-#top { height: 200px; background: url("../img/my-bg.png") no-repeat; background-size: 100% 100%; overflow: hidden; }
+html { font-size: 50px; font-family: 'Microsoft YaHei',"Comic Sans MS","幼圆","黑体",sans-serif; background-color: #f0f0f0; }
 
-#top #login { margin-top: 80px; text-align: center; }
+#mine #top { height: 200px; background: url("../img/my-bg.png") no-repeat; background-size: 100% 100%; overflow: hidden; }
 
-#top #login a { padding: 5px; background: 0 0; min-height: 26px; line-height: 26px; font-size: 14px; color: #ff4891; border: 1px solid #ff4891; border-radius: 4px; position: relative; }
+#mine #top #login { margin-top: 80px; text-align: center; }
 
-#top #user { margin-top: 40px; display: none; text-align: center; }
+#mine #top #login a { padding: 5px; background: 0 0; min-height: 26px; line-height: 26px; font-size: 14px; color: #ff4891; border: 1px solid #ff4891; border-radius: 4px; position: relative; }
 
-#top #user .head { margin: 0 auto; width: 74px; height: 74px; border-radius: 40px; border: 1px solid #262626; vertical-align: middle; }
+#mine #top #user { margin-top: 40px; display: none; text-align: center; }
 
-#top #user span { font-size: 16px; color: #262626; display: inherit; margin-top: 10px; }
+#mine #top #user .head { margin: 0 auto; width: 74px; height: 74px; border-radius: 40px; border: 1px solid #262626; vertical-align: middle; }
 
-#top #user a img { margin: 0 auto; width: 100px; margin-top: 13px; vertical-align: middle; }
+#mine #top #user span { font-size: 16px; color: #262626; display: inherit; margin-top: 10px; }
 
-#main { padding-top: 10px; background-color: #f5f5f5;  padding-bottom: 30px;}
+#mine #top #user a img { margin: 0 auto; width: 100px; margin-top: 13px; vertical-align: middle; }
 
-#main ul li a { display: block; line-height: 43px; color: #262626; font-size: 15px; background: #fff; padding-left: 35px; border-bottom: 1px solid #f0f0f0; position: relative; }
+#mine #main { padding-top: 10px; background-color: #f5f5f5; }
 
-#main ul li a:before { content: ""; width: 17px; height: 17px; background-size: 100% 100%; position: absolute; top: 13px; left: 10px; background-repeat: no-repeat; }
+#mine #main ul li a { display: block; line-height: 43px; color: #262626; font-size: 15px; background: #fff; padding-left: 35px; border-bottom: 1px solid #f0f0f0; position: relative; }
 
-#main ul li a:after { content: ""; width: 6px; height: 11px; background: url(../img/youjt.png) no-repeat; background-size: 100% 100%; position: absolute; right: 15px; top: 17px; }
+#mine #main ul li a:before { content: ""; width: 17px; height: 17px; background-size: 100% 100%; position: absolute; top: 13px; left: 10px; background-repeat: no-repeat; }
 
-#main ul li .invite:before { background: url("../img/mine.fw.png") 0 0; }
+#mine #main ul li a:after { content: ""; width: 6px; height: 11px; background: url(../img/youjt.png) no-repeat; background-size: 100% 100%; position: absolute; right: 15px; top: 17px; }
 
-#main ul li .order:before { background: url("../img/mine.fw.png") 0 -23px; }
+#mine #main ul li .invite:before { background: url("../img/mine.fw.png") 0 0; }
 
-#main ul li .surplus:before { background: url("../img/mine.fw.png") 0 -46px; }
+#mine #main ul li .order:before { background: url("../img/mine.fw.png") 0 -23px; }
 
-#main ul li .redpacket:before { background: url("../img/mine.fw.png") 0 -73px; }
+#mine #main ul li .surplus:before { background: url("../img/mine.fw.png") 0 -46px; }
 
-#main ul li .coupon:before { background: url("../img/mine.fw.png") 0 -98px; }
+#mine #main ul li .redpacket:before { background: url("../img/mine.fw.png") 0 -73px; }
 
-#main ul li .integral:before { background: url("../img/mine.fw.png") 0 -122px; }
+#mine #main ul li .coupon:before { background: url("../img/mine.fw.png") 0 -98px; }
 
-#main ul li .site { margin-bottom: 10px; }
+#mine #main ul li .integral span { float: right; margin-right: 34px; color: #b8b8b8; }
 
-#main ul li .site:before { background: url("../img/mine.fw.png") 0 -144px; }
+#mine #main ul li .integral:before { background: url("../img/mine.fw.png") 0 -122px; }
 
-#main ul li .download:before { background: url("../img/mine.fw.png") 0 -170px; }
+#mine #main ul li .site { margin-bottom: 10px; }
 
-#main ul li .service:before { background: url("../img/mine.fw.png") 0 -192px; }
+#mine #main ul li .site:before { background: url("../img/mine.fw.png") 0 -144px; }
 
-#main ul li .idea { margin-bottom: 10px; }
+#mine #main ul li .download:before { background: url("../img/mine.fw.png") 0 -170px; }
 
-#main ul li .idea:before { background: url("../img/mine.fw.png") 0 -215px; }
+#mine #main ul li .service:before { background: url("../img/mine.fw.png") 0 -192px; }
 
-#main ul li .message:before { background: url("../img/mine.fw.png") 0 -239px; }
+#mine #main ul li .idea { margin-bottom: 10px; }
 
-#main ul li .about { margin-bottom: 10px; }
+#mine #main ul li .idea:before { background: url("../img/mine.fw.png") 0 -215px; }
 
-#main ul li .about:before { background: url("../img/mine.fw.png") 0 -263px; }
+#mine #main ul li .message:before { background: url("../img/mine.fw.png") 0 -239px; }
 
-#main ul li .setting:before { background: url("../img/mine.fw.png") 0 -284px; }
+#mine #main ul li .about { margin-bottom: 10px; }
+
+#mine #main ul li .about:before { background: url("../img/mine.fw.png") 0 -263px; }
+
+#mine #main ul li .setting:before { background: url("../img/mine.fw.png") 0 -284px; }
+
+#webFooter .footer { margin-top: 5px; display: flex; font-size: 12px; }
+
+#webFooter .footer .a_foot { height: 100%; }
+
+#webFooter .footer .icon { display: block; margin: 0px auto; background: url(../img/public/footer/icon.png) no-repeat; width: 23px; height: 25px; background-size: auto 23px !important; vertical-align: middle; }
+
+#webFooter .footer .mine { background: url("../img/public/footer/mine1.png"); }
+
+#webFooter .footer .redpac { background-position: -23px 0; }
+
+#webFooter .footer .car { background-position: -46px 0; }
+
+#webFooter .footer .home { background: url("../img/public/footer/home2.png"); }
+
+#webFooter .footer li { width: 25%; text-align: center; }
+
+#webFooter .footer li a { width: 100%; }
+
+#webFooter .footer .act { color: #ff4891; }
+
+#surplus { display: none; overflow: hidden; }
+
+#surplus #surplustop { background-color: #fff; height: 0.86rem; width: 100%; text-align: center; position: relative; line-height: 0.86rem; border-bottom: 0.02rem solid #e6e6e6; box-shadow: 0 0 10px rgba(0, 0, 0, 0.06); }
+
+#surplus #surplustop h1 { font-size: 0.32rem; font-weight: 100; }
+
+#surplus #surplustop #back { display: block; width: 0.72rem; height: 0.66rem; position: absolute; left: 0.2rem; top: 0.1rem; font-size: 0.48rem; line-height: 0.66rem; color: #4b4b4b; }
+
+#surplus #showsurplus { color: #fff; width: 100%; height: 110px; background: url(../img/bg-surplus.png) no-repeat; background-size: 100% 100%; text-align: center; padding-top: 20px; }
+
+#surplus #showsurplus p { font-size: 14px; }
+
+#surplus #showsurplus span { position: relative; font-size: 45px; font-weight: bold; }
+
+#surplus #showsurplus span:before { display: block; position: absolute; left: -45px; top: 0; width: 50px; height: 60px; content: '￥'; }
+
+#surplus #tab { overflow: hidden; margin-top: 20px; padding-bottom: 20px; text-align: center; font-size: 14px; }
+
+#surplus #tab .active { color: #ff4891; }
+
+#surplus #tab .title { overflow: hidden; }
+
+#surplus #tab .title i { font-size: 16px; }
+
+#surplus #tab .title span { width: 33%; float: left; }
+
+#surplus #tab .tip { display: block; height: 60px; text-align: center; height: 60px; line-height: 60px; color: #ff4891; font-size: 12px; }
+
+#surplus #tab .content .one { height: 270px; margin-top: 20px; overflow-x: hidden; overflow-y: auto; }
+
+#surplus #tab .content .one ul li { margin-top: 10px; text-align: center; width: 46%; height: 165px; margin-left: 9px; padding-top: 30px; float: left; }
+
+#surplus #tab .content .one ul li span { font-size: 20px; }
+
+#surplus #tab .content .one ul li p { margin-top: 20px; font-size: 12px; }
+
+#surplus #tab .content .one ul .low { background: url("../img/bg-tab1.png"); background-size: 100% 100%; }
+
+#surplus #tab .content .one ul .high { background: url("../img/bg-tab2.png"); background-size: 100% 100%; }
+
+#surplus #tab .content .two { overflow: hidden; }
+
+#surplus #tab .content .two input { background: #f1f5f8; border: 1px solid #e3e7ea; border-radius: 30px; line-height: 29px; padding-left: 12px; }
+
+#surplus #tab .content .two .btn_exchange { padding: 0 20px; padding-top: 5px; padding-bottom: 5px; border: 1px solid #d1d1d1; border-radius: 30px; color: #4b4b4b; line-height: 32px; margin-left: 12px; }
